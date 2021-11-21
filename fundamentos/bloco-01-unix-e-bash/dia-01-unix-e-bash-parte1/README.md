@@ -39,7 +39,7 @@
 > Neste caso não podemos usar o comando "rmdir" pois o diretório não está vazio. Assim, podemos usar o comando "**rm**" para remover seguido de "**-r**", parâmetro de força a ação de remoção. Assim, escrevemos "**rm -r backup**" para eliminar o diretório sem necessitar confirmar a eliminação. 
 
 ###### 13) Limpe o terminal.
-Usamos o comando "**clear**" ("limpo" em inglês) para limpar o conteúdo da tela. Em alguns sistemas, o comando apenas traz o prompt de comando para a primeira linha da tela, mas mantém o conteúdo fora de vista.
+> Usamos o comando "**clear**" ("limpo" em inglês) para limpar o conteúdo da tela. Em alguns sistemas, o comando apenas traz o prompt de comando para a primeira linha da tela, mas mantém o conteúdo fora de vista.
 
 
 ###### Para os exercícios 14 e 15, crie, de forma manual na parte gráfica do seu sistema operacional (através do mouse), um arquivo de texto com o conteúdo abaixo, chamado skills.txt :
