@@ -8,7 +8,7 @@ Code com o atalho ctrl + alt + n.
 
 1) Crie uma constante chamada myName e atribua a ela o seu nome (Exemplo: Carolina).
   
-  var myName = "Tiago Viegas";
+  let myName = "Tiago Viegas";
 
 2) Crie uma constante chamada birthCity e atribua a ela a sua cidade natal.
   
@@ -16,14 +16,14 @@ Code com o atalho ctrl + alt + n.
 
 3) Crie uma variável chamada birthYear e atribua a ela o ano em que você nasceu.
   
-  var birthYear = 1981;
+  let birthYear = 1981;
 
 4) Utilize o console.log() para imprimir as constantes e variáveis que você criou.
   
   console.log(myName, birthCity, birthYear)
 
 5) Altere o valor atribuído à variável birthYear para 2030. Faça um console.log(birthYear) novamente para ver o que acontece!
-var birthYear = 2030;
+let birthYear = 2030;
 
   console.log(myName, birthCity, birthYear)
   o ano de nascimento impresso na tela foi o valor da variável birthYear atualizada;
@@ -54,11 +54,11 @@ const patientInfo = {
 };
 const patientEmail = 'ana@email.com';
 
-console.log(typeof patientId); // resultado: number
-console.log(typeof isEnrolled); // resultado: boolean
-console.log(typeof patientInfo); // resultado: object
-console.log(typeof patientEmail); // resultado: string
-console.log(typeof patientAge); // resultado: undefined
+console.log(typeof(patientId)); // resultado: number
+console.log(typeof(isEnrolled)); // resultado: boolean
+console.log(typeof(patientInfo)); // resultado: object
+console.log(typeof(patientEmail)); // resultado: string
+console.log(typeof(patientAge)); // resultado: undefined
 
 let patientId = '50';
 console.log(typeof patientId); // resultado: string
@@ -72,21 +72,19 @@ simples para encontrarmos a área e o perímetro de um retângulo de base 5 e al
   const base = 5;
   let height = 8;
   
- console.log(base, height)
+ console.log(base, height);
 
 2) Crie uma constante chamada area e atribua a ela o resultado da multiplicação da base pela altura. Dica: lembre-se de usar
 sempre o console.log() para imprimir as variáveis e checar os resultados das operações!
 
   const area = base * height
 
-  console.log(area)
+  console.log(area);
 
 3) Crie uma constante chamada perimeter e atribua a ela a soma de todos os lados do retângulo.
 
   let perimeter = base + area + height
   console.log(perimeter);
-
-
 
 
 // EXERCÍCIOS | If e Else
@@ -107,11 +105,50 @@ se aplicam a cada situação.
 const nota = 80;
 
 if (nota >= 80){
-  console.log("Parabéns, você foi aprovada(o)!")
+  console.log("Parabéns, você foi aprovada(o)!");
 } else if (nota < 80 && nota >= 60){
-  console.log("Você está na nossa lista de espera")
+  console.log("Você está na nossa lista de espera");
 } else {
-  console.log("Você foi reprovada(o)")
+  console.log("Você foi reprovada(o)");
 }
 
+// EXERCÍCIOS 4.1
+1) Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b , definidas no começo
+com os valores que serão operados. Faça programas para:
+
+Adição (a + b)
+Subtração (a - b)
+Multiplicação (a * b)
+Divisão (a / b)
+Módulo (a % b)
+
+  let a = 20;
+  let b = 15;
+
+  let sum = a + b
+  let sub = a - b
+  let mult = a * b
+  let div = a / b
+  let mod = a % b
+
+
+2) Faça um programa que retorne o maior de dois números. Defina no começo do programa duas constantes com os valores que serão
+comparados.
 */
+function numeros(a,b){
+  if(a > b){
+    console.log("a é maior");
+  } else if(a == b) {
+    console.log("os números são iguais")
+  } else {
+    console.log("os números são iguais")
+  }
+  return numeros
+}
+numeros(15,20)
+
+/*
+3) Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
+
+
+  */
