@@ -27,3 +27,13 @@ for (let index =0; index < numbers.length; index += 1) {
 
 9) Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
 */
+
+
+
+let linha = "";
+for(let contador = 0; contador < 5; contador += 1){
+  for(let index = 0; contador < 5; contador += 1){
+    linha += "*";
+  }
+  console.log(linha);
+}
