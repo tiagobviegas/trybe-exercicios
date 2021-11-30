@@ -70,8 +70,35 @@
 //  
 // 7) Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 // 
+//  let menor = 101;
+//  for (let index = 0; index < numbers.length; index += 1){
+//    if (numbers[index] < menor){
+//      menor = numbers[index]
+//    };
+//  }
+//  console.log(menor)
+//  
+//
 // 8) Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
-// 
+//
+//  let naturais = [];
+//  for(let index = 1; index <=25; index += 1){
+//    naturais.push(index)
+//  }
+//  console.log(naturais)
+//
+//  
 // 9) Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
 // 
-// */
+//  
+//  let naturais = [];
+//  let resultado = [];
+//  for(let index = 1; index <=25; index += 1){
+//    naturais.push(index)
+//  }
+//  for(let index = 0; index < naturais.length; index += 1){
+//    resultado.push(naturais[index]/2)
+//  }
+//  console.log(resultado)
+//
+//
