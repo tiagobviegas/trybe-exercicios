@@ -22,7 +22,7 @@
 //
     birthCity = 'Distrito Federal';
     console.log(birthCity);
-    O erro ocorre porque não é possível alterar um valor atribuído a uma constante de forma direta ou por redeclarção.
+//  O erro ocorre porque não é possível alterar um valor atribuído a uma constante de forma direta ou por redeclarção.
 //
 //
 //  EXERCÍCIOS | TIPOS PRIMITIVOS, TIPAGEM DINÂMICA E OPERAÇÕES ARITMÉTICAS
