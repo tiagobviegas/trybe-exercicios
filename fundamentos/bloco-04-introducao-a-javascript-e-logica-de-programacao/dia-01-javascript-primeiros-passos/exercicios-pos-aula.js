@@ -181,7 +181,7 @@
 //  > O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
 //    > valorCustoTotal = valorCusto + impostoSobreOCusto
 //    > lucro = valorVenda - valorCustoTotal (lucro de um produto)
-//
+//  
 //  const valorCusto = -2;
 //  const valorVenda = 0;
 //  const impostoSobreOCusto = valorCusto * 0.20;
@@ -235,3 +235,40 @@
 //  > Resultado: R$ 2.612,55.
 //
 //  Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?
+//  
+//  let salarioBruto;
+//  let salarioComInss; 
+//  let irAliquota;
+//  let inssAliquota;
+//  
+//  salarioBruto = prompt('Digite seu salário bruto, utilizando "." no lugar da vírgula que separa os centavos');
+//  
+//  if (salarioBruto < 0) {
+//    alert('Erro! Valor inválido');
+//  } else if (salarioBruto < 1556.94) {
+//    inssAliquota = salarioBruto * 0.08;
+//  } else if (salarioBruto <= 2594.92) {
+//    inssAliquota = salarioBruto * 0.09;
+//  } else if (salarioBruto <= 5189.82) {
+//    inssAliquota = salarioBruto * 0.11;
+//  } else {
+//    inssAliquota = 570.88;
+//  }
+//  
+//  salarioComInss = (salarioBruto - inssAliquota);
+//  
+//  if (salarioComInss <= 1903.98) {
+//    irAliquota = 0
+//  } else if (salarioComInss <= 2826.65) {
+//    irAliquota = salarioComInss * 0.075 - 142.80;
+//  } else if (salarioComInss <= 3751.05) {
+//    irAliquota = salarioComInss * 0.15 - 354.80;  
+//  } else if (salarioComInss <= 4664.68) {
+//    irAliquota = salarioComInss * 0.225 - 636.13;
+//  } else if (salarioComInss > 4664.68) {
+//    irAliquota = salarioComInss * 0.227 - 869.36;
+//  }
+//  
+//  salarioLiquido = (salarioComInss - irAliquota);
+//  salarioLiquido.toFixed(2);
+//  alert(`Seu salário líquido é de R$ ${salarioLiquido}`);
