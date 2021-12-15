@@ -45,5 +45,3 @@
 //  for (let nomes of names) {
 //    console.log(nomes);
 //  }
-//
-//
