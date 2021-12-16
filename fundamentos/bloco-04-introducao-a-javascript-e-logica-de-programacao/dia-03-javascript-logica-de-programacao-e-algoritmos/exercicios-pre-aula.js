@@ -95,7 +95,14 @@
 //
 //  6) Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
 //
-//    > Definimos primeiramente uma variável que será usada posteriomente para guardar 
+//    > Definimos primeiramente uma variável "oddNumbers" que será usada posteriomente para guardar posterioremente a contagem dos números ímpares;
+//    > Em seguida fazemos um laço "for" para percorrer todo o array "numbers", indicando que a contagem estabelecida pela variável "i" começará com "0", pegando o primeiro índice do array, continuando a repetição enquanto "i" for menor que o comprimento de "numbers", e enquanto isso acontecer, a cada repetição "i" será acrescido de "1";
+//    > Então implementamos o laço de decisão "if" para determinar o quê fazer com o índice de "numbers" caso o valor seja ímpar;
+//    > Se o módulo resultante da divisão do valor do índice do array por 2 for diferente de zero, temos que o valor do índice é ímpar;
+//    > Assim, escrevemos a condição da seguinte forma: se o valor do módulo de "numbers[i]" dividido por 2 for diferente (!==), a variável "oddNumbers" manterá o próprio valor e acrescentará "+1" ao seu valor;
+//    > Ao sair do laço "for" a repetição terá guardado na variável "oddNumbers" terá contabilizado o número de vezes que um número ímpar apareceu no array "numbers".
+//    > Com a contabilidade dos números ímpares concluída, criamos um laço condicional "if" depois do laço "for" para definirmos o que será feito com a informação sobre a ocorrência de números ímpares no array "numbers";
+//    > E finalizamos o código escrevendo as condições de "if", estabelecendo que se "oddNumbers" for igual a zero (oddNumbers === 0), a mensagem 'nenhum valor ímpar encontrado' será exibida por meio de "console.log". Caso contrário, exibiremos o número de vezes que um número ímpar aparece no array citando "oddNumbers" usando "console.log".
 //
 //  let oddNumbers = 0;
 //  for (let i = 0; i < numbers.length; i += 1) {
@@ -112,6 +119,12 @@
 //
 //  7) Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 //
+//    > Primeiramente criamos a variável "lowerNumber", que receberá o menor valor dos índices do array "numbers", com valor "numbers[0]" para estabelecer o primeiro elemento do array como comparação dos outros índices do array.
+//    > Em seguida fazemos um laço "for" para fazer a contagem dos elementos de "numbers", iniciando a contagem com a variável "i" a partir de "0", para pegar o primeiro índice do array, definimos que o laço deverá continuar a repetir enquanto "i" for menor que o comprimento do array e fazer um incremento à "i" de "1" a cada repetição;
+//    > Logo depois fazemos um laço condicional "if" definindo que se o valor do índice de "numbers" (numbers[i]) for menor que o menor valor já encontrado, guardado em "lowerNumber", a variável "lowerNumber" será atribuída com esse valor;
+//    > Assim, após cada repetição do laço for, a será verificado pelo laço "if" se o número do array é menor que o menor número encontrado, e se a afirmação for positiva, "lowerNumber" guardará o novo valor.
+//    > Para finalizar, definimos que o valor contido em "lowerNumber" será exibido por "console.log" como o menor valor de "numbers".
+//
 //  let lowerNumber = numbers[0];
 //  for (let i = 0; i < numbers.length; i += 1) {
 //    if (numbers[i] < lowerNumber) {
@@ -122,6 +135,12 @@
 //
 //
 //  8) Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+//
+//    > Primeiramente criamos a variável "newArray" como um array vazio ([]) para guardar o novo array que será criado ao mesmo tempo que a variável de contagem do laço for sofrerá acréscimo;
+//    > Em seguida fazemos um laço "for" para iniciar a contagem da repetição do laço e estabelecemos que ele vai começar do "1", pois "i" será também o valor que será acrescido dentro do novo array (newArray). Assim, precisamos ignorar o valor "0", que seria acrescido ao array se iniciássemos a contagem com "0";
+//    > Como a contagem do laço terá os mesmos valores que o array deverá ter, determinamos que a repetição do laço "for" acontecerá até que "i" seja menor do que 25, e que "i" será acrescido de "1" a cada repetição, aumentando seu valor até atingir o valor de 25;
+//    > Após determinarmos o comportamento de "for", adicionamos os elementos ao array por usando o método ".push()", que pega o valor contido dentro dos parenteses e insere dentro de um array anteriormente citado. Assim a escrita do código de inserção dos elementos fica: newArray.push(i);
+//    > Para finalizar, depois do laço "for" usamos o método "console.log" para imprimimos na tela o array "newArray" formado com números de "i" do laço "for".
 //
 //  let newArray = [];
 //  for (let i = 1; newArray.length < 25; i += 1) {
