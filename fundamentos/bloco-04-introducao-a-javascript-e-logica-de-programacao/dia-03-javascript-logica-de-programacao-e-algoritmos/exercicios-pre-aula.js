@@ -1,49 +1,169 @@
-//  EXERCÍCIO 1 | ARRAYS (LISTAS)
+//  APROFUNDE SEUS CONHECIMENTOS
+// 
+//  Vamos colocar mão na massa?
 //
-//  Exercício 1
-//  Obtenha o valor "Serviços" do array menu:
+//  Preparamos estes exercícios para você fixar seus conhecimentos em JavaScript - Array e loop For. Vamos lá?
 //
-//  let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-//  let menuServices = menu[1];
+//  Aprofunde seus conhecimentos
 //
-//  console.log(menuServices);
+//  Leia atentamente os enunciados e faça o que se pede! Iremos utilizar esse array para realizar os exercícios do 1 ao 7:
 //
-//
-//  Exercício 2
-//  Procure o índice do valor "Portfólio" do array menu :
-//  
-//  let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-//  let indexOfPortfolio = menu.indexOf('Portfólio');
-//  
-//  console.log(indexOfPortfolio);
-//  
-//  
-//  Exercício 3
-//  Adicione o valor "Contato" no final do array menu :
-//
-//  let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-//  menu.push('Contato')
-//  console.log(menu);
+//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //
 //
-//  EXERCÍCIOS | FOR
+//  1) Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
 //
-//  Exercício 1
-//  Utilize o for para imprimir os elementos da lista groceryList com o console.log() :
+//    > Primeiro usamos o laço "for/of" para determinar a forma pela qual vamos acessar os elementos do array "numbers";
+//    > Em seguida definimos com a variável "values" que queremos pegar os valores do elemento iterável, no caso valores atribuídos aos índices do (of) array "numbers".
+//    > Por fim imprimimos os valores na tela por meio da função "console.log".
 //
-//  let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
-//  for (let i = 0; i < groceryList.length; i += 1) {
-//    console.log(groceryList[i]);
-//  }
-//
-//  EXERCÍCIOS | FOR OF
-//
-//  Exercício 1
-//  Utilize o for/of para imprimir os elementos da lista names com o console.log() :
-//
-//  let names = ['João', 'Maria', 'Antônio', 'Margarida'];
-//  for (let nomes of names) {
-//    console.log(nomes);
+//  for (let values of numbers) {
+//    console.log(values);
 //  }
 //
 //
+//  2) Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
+//
+//    > Primeiro definimos a variável "sum" para armazenamento da soma que acontecerá futuramente;
+//    > Em seguida estabelecemos um laço de repetição "for" cuja contagem de repetições é definida pela variável "i" se iniciando em "0", indicando que a leitura do array "numbers" vai começar pelo primeiro índice do array.
+//    > Estabelecemos a condição de repetição do laço para que a ação ocorra enquanto o valor de "i" for menor que o comprimento do array (numbers.length);
+//    > Finalizamos os parâmetros de funcionamento do laço "for" estabelecendo que a cada repetição a variável de contagem "i" será incrementada em "1" até que a condição de repetição seja satisfeita;
+//    > O código continua com a implementação da soma dos valores contidos no array que serão armazenados na variável "sum". A cada repetição do laço "sum" será o valor dela mesma mais o valor do índice do array "numbers";
+//    > Ao final das repetições do laço, a variável "sum" terá armazenada o valor de todos o números do array "numbers", sendo necessário apenas o uso da função "console.log" para imprimir o valor de "sum".
+//
+//  let sum =  0;
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    sum += numbers[i];
+//  }
+//  console.log(sum);
+//
+//
+//  3) Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+//
+//    > A média aritmética é o resultado da soma de todos os elementos divido pelo número total de elementos.
+//
+//  let sum = 0;
+//  let arithmeticMean;
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    sum += numbers[i];
+//    arithmeticMean = sum / numbers.length
+//  }
+//  console.log(arithmeticMean);
+//
+// 
+//  4) Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+//
+//  let sum = 0;
+//  let arithmeticMean;
+//  let result;
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    sum += numbers[i];
+//    arithmeticMean = sum / numbers.length
+//  }
+//  if (arithmeticMean > 20) {
+//    result = 'valor maior que 20';
+//  } else {
+//    result = 'valor menor ou igual a 20';
+//  }
+//  console.log(result);
+//
+//
+//  5) Utilizando for , descubra qual o maior valor contido no array e imprima-o;
+//
+//  let highest = 0;
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    if (numbers[i] > highest) {
+//      highest = numbers[i];
+//    }
+//  }
+//  console.log(highest);
+//
+//
+//  6) Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+//
+//  let oddNumbers = 0;
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    if(numbers[i] % 2 !== 0) {
+//      oddNumbers += 1;
+//    }
+//  }
+//  if (oddNumbers === 0) {
+//    console.log('nenhum valor ímpar encontrado')
+//  } else {
+//    console.log(oddNumbers);
+//  }
+//
+//
+//  7) Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+//
+//  let lowerNumber = numbers[0];
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    if (numbers[i] < lowerNumber) {
+//      lowerNumber = numbers[i];
+//    }
+//  }
+//  console.log(lowerNumber);
+//
+//
+//  8) Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
+//
+//  let newArray = [];
+//  for (let i = 1; newArray.length < 25; i += 1) {
+//    newArray.push(i);
+//  }
+//  console.log(newArray);
+//
+//
+//  9) Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+//
+//  let result;
+//  for (let i = 0; i < newArray.length; i += 1) {
+//    result = newArray[i] / 2;
+//    console.log(result);
+//  }
+//
+//
+//  BÔNUS
+//
+//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//
+//  1) Ordene o array numbers em ordem crescente e imprima seus valores;
+//
+//  for (let i = 1; i < numbers.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (numbers[c] > numbers[i]) {
+//        let orderedNumbers = numbers[i];
+//        numbers[i] = numbers[c];
+//        numbers[c] = orderedNumbers;
+//      }
+//    }
+//  }
+//  console.log(numbers);
+//
+//
+//  2) Ordene o array numbers em ordem decrescente e imprima seus valores;
+//
+//  for (let i = 1; i < numbers.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (numbers[i] > numbers[c]) {
+//        let orderedNumber = numbers[c];
+//        numbers[c] = numbers[i];
+//        numbers[i] = orderedNumber;
+//      }
+//    }
+//  }
+//  console.log(numbers);
+//
+//
+//  3) Agora crie um novo array a partir do array numbers , sem perdê-lo. Cada valor do novo array deverá ser igual ao valor correspondente no array numbers multiplicado pelo seguinte. Por exemplo: o primeiro valor do novo array deverá ser 45, pois é a multiplicação de 5 (primeiro valor) e 9 (valor seguinte). Já o segundo valor do novo array deverá ser 27, pois é a multiplicação de 9 (segundo valor) e 3 (valor seguinte), e assim por diante. Caso não haja próximo valor, a multiplicação deverá ser feita por 2. Faça isso utilizando o for e o método push . O resultado deve ser o array abaixo:
+//
+//  [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
+//
+//  let newNumbers = [];
+//  for (let i = 1; i < numbers.length; i += 1) {
+//    newNumbers.push(numbers[i-1]*numbers[i]);
+//  }
+//  newNumbers.push(numbers[numbers.length-1]*2)
+//  console.log(newNumbers);
+
+  
