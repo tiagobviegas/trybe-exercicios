@@ -10,6 +10,7 @@
 //
 //  Recomendamos que você utilize o debugger ou o console.log() durante a realização dos exercícios, desse modo será mais fácil acompanhar o comportamento do código e entender o que ocorre em cada uma das linhas. Para saber mais sobre como utilizar o debugger , acesse nosso conteúdo sobre isso.
 //
+//
 //  1- O fatorial é a multiplicação de um número natural pelos seus antecessores, exceto o zero. Por exemplo:
 //
 //  O fatorial é representado pelo sinal !
@@ -18,11 +19,11 @@
 //
 //  Com base nessas informações, crie um algoritmo que retorne o fatorial de 10.
 //
-//  let numero = 1;
+//  let number = 1;
 //  for (let i = 10; i > 1; i -= 1) {
-//    numero *= i;
+//    number *= i;
 //  }
-//  console.log(numero);
+//  console.log(number);
 //
 //
 //  2- Agora, desenvolva um algoritmo que é capaz de inverter uma palavra. Por exemplo, a palavra "banana" seria invertida para "ananab". Utilize a string abaixo como exemplo, depois troque por outras para verificar se seu algoritmo está funcionando corretamente.
