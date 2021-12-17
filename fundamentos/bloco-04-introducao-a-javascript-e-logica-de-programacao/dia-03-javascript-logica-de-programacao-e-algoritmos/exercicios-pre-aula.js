@@ -165,7 +165,7 @@
 //
 //  EXERCÍCIOS BÔNUS
 //
-  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //
 //    > Começamos o código criando um laço de repetição que terá como contador a variável "i" que iniciará a contage a partir do segundo índice do array "numbers", continuando a repetir enquanto "i" for menor que o comprimento do array, sendo acrescido de 1 a cada repetição.
 //    > Em seguida criamos um segundo laço "for" dentro do primeiro laço for, porém mudamos a variável de contagem para "c" e indicamos o contador para iniciar no primeiro índice de "numbers" e se repetir enquanto a contagem de "c" for menor que a de "i".
@@ -179,17 +179,17 @@
 //
 //  1) Ordene o array numbers em ordem crescente e imprima seus valores;
 //
-  for (let i = 1; i < numbers.length; i += 1) {
-    for (let c = 0; c < i; c += 1) {
-      if (numbers[i] < numbers[c]) {
-        let orderedNumbers = numbers[i];
-        numbers[i] = numbers[c];
-        numbers[c] = orderedNumbers;
-      }
-    }
-  }
-  console.log(numbers);
-
+//  for (let i = 1; i < numbers.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (numbers[i] < numbers[c]) {
+//        let orderedNumbers = numbers[i];
+//        numbers[i] = numbers[c];
+//        numbers[c] = orderedNumbers;
+//      }
+//    }
+//  }
+//  console.log(numbers);
+//
 //
 //  2) Ordene o array numbers em ordem decrescente e imprima seus valores;
 //
@@ -216,4 +216,10 @@
 //  newNumbers.push(numbers[numbers.length-1]*2)
 //  console.log(newNumbers);
 
+let string = '';
+let espaco = '*';
+for (let i = ''; string.length < 4; i += espaco) {
+  string += espaco;
+}
+console.log(string);
   
