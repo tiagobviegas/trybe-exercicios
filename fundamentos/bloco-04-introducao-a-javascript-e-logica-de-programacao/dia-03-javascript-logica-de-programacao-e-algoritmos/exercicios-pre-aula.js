@@ -8,7 +8,7 @@
 //
 //  Leia atentamente os enunciados e faça o que se pede! Iremos utilizar esse array para realizar os exercícios do 1 ao 7:
 //
-  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //
 //
 //  1) Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
@@ -151,6 +151,11 @@
 //
 //  9) Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
 //
+//    > Começamos criando a variável "result" que receberá o resultado das divisões dos elementos de "newArray";
+//    > Então criamos um laço "for" para ler e percorrer todo o "newArray", com a contagem determinada pela variável "i" começando em "0" no primeiro índice de "newArray", com a repetição da leitura de "newArray" ocorrendo enquanto "i" for menor que o comprimento de "newArray" (newArray.length), sendo "i" acrescido de "1" a cada repetição;
+//    > Com o laço criado definimos que "result" receberá o resultado de cada elemento de "newArray" (newArray[i]) dividido por 2;
+//    > E finalizamos o código com a impressão do conteúdo de "result" por meio de "console.log()."
+//
 //  let result;
 //  for (let i = 0; i < newArray.length; i += 1) {
 //    result = newArray[i] / 2;
@@ -158,23 +163,33 @@
 //  }
 //
 //
-//  BÔNUS
+//  EXERCÍCIOS BÔNUS
 //
-//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//
+//    > Começamos o código criando um laço de repetição que terá como contador a variável "i" que iniciará a contage a partir do segundo índice do array "numbers", continuando a repetir enquanto "i" for menor que o comprimento do array, sendo acrescido de 1 a cada repetição.
+//    > Em seguida criamos um segundo laço "for" dentro do primeiro laço for, porém mudamos a variável de contagem para "c" e indicamos o contador para iniciar no primeiro índice de "numbers" e se repetir enquanto a contagem de "c" for menor que a de "i".
+//    > O segundo laço sempre será realizado por completo antes de voltar para continuar fazendo o primeiro laço. Dessa o primeiro laço vai pegar um índice do array numbers para ser comparado com todos os seus elementos. Este índice também servirá como limite de repetição para o segundo laço. Já o segundo laço pegará cada índice que vem antes do índice do primeiro laço e vai comparar com o elemento definido pelo primeiro laço até que o índice de "c" se iguale ao índice de "i".
+//    > Assim, dentro do segundo laço definimos as condições para que verificar se a ordem deverá ser revertida.
+//    > Criamos um laço de condição "if" que define que se o valor seguinte (numbers[i]) for menor que o valor anterior (numbers[c]), faremos a troca dos valores atribuídos.
+//    > Caso a condição ocorra, definimos uma variável (orderedNumbers) para armazenar provisoriamente o valor de "numbers[i]", pois este receberá o valor de "numbers[c]".
+//    > Para concretizar a troca de valores, "numbers[c]" receberá o valor de "numbers[i]" que estava armazenado provisoriamente em "orderedNumbers";
+//    > Dessa forma, executamos a troca de posição dos elementos ordenando todos dentro do array "numbers";
+//    > E finalizamos com o uso de console.log após os laços para exibir "numbers" ordenado/
 //
 //  1) Ordene o array numbers em ordem crescente e imprima seus valores;
 //
-//  for (let i = 1; i < numbers.length; i += 1) {
-//    for (let c = 0; c < i; c += 1) {
-//      if (numbers[c] > numbers[i]) {
-//        let orderedNumbers = numbers[i];
-//        numbers[i] = numbers[c];
-//        numbers[c] = orderedNumbers;
-//      }
-//    }
-//  }
-//  console.log(numbers);
-//
+  for (let i = 1; i < numbers.length; i += 1) {
+    for (let c = 0; c < i; c += 1) {
+      if (numbers[i] < numbers[c]) {
+        let orderedNumbers = numbers[i];
+        numbers[i] = numbers[c];
+        numbers[c] = orderedNumbers;
+      }
+    }
+  }
+  console.log(numbers);
+
 //
 //  2) Ordene o array numbers em ordem decrescente e imprima seus valores;
 //
