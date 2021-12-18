@@ -226,10 +226,4 @@
 //  newNumbers.push(numbers[numbers.length - 1]*2)
 //  console.log(newNumbers);
 
-let string = '';
-let espaco = '*';
-for (let i = ''; string.length < 4; i += espaco) {
-  string += espaco;
-}
-console.log(string);
   
