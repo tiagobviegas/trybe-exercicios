@@ -69,4 +69,23 @@
 //  console.log(major);
 //
 //
+//  4- Um número primo é aquele divisível apenas por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 0 e 50.
+//
+  let numbers = [];
+  let prime = [];
+  let checkPrime = [];
+  for (let i = 2; i < 50; i += 1) {
+    numbers.push[i];
+    for (let c = 1; c < i; c += 1) {
+      if(numbers[i] % c === 0) {
+        checkPrime.push(numbers[i]);
+      }
+      console.log(checkPrime);
+    }
+  }
+  
+  
+//
+//
+//
 //
