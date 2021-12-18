@@ -165,11 +165,11 @@
 //
 //  EXERCÍCIOS BÔNUS
 //
-  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//  let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //
-//    > Começamos o código criando um laço de repetição que terá como contador a variável "i" que iniciará a contage a partir do segundo índice do array "numbers", continuando a repetir enquanto "i" for menor que o comprimento do array, sendo acrescido de 1 a cada repetição.
-//    > Em seguida criamos um segundo laço "for" dentro do primeiro laço for, porém mudamos a variável de contagem para "c" e indicamos o contador para iniciar no primeiro índice de "numbers" e se repetir enquanto a contagem de "c" for menor que a de "i".
-//    > O segundo laço sempre será realizado por completo antes de voltar para continuar fazendo o primeiro laço. Dessa o primeiro laço vai pegar um índice do array numbers para ser comparado com todos os seus elementos. Este índice também servirá como limite de repetição para o segundo laço. Já o segundo laço pegará cada índice que vem antes do índice do primeiro laço e vai comparar com o elemento definido pelo primeiro laço até que o índice de "c" se iguale ao índice de "i".
+//    > Começamos o código criando um laço de repetição que terá como contador a variável "i" que iniciará a contage a partir do segundo índice do array "numbers", continuando a repetir enquanto "i" for menor que o comprimento do array, sendo acrescido de 1 a cada repetição;
+//    > Em seguida criamos um segundo laço "for" dentro do primeiro laço for, porém mudamos a variável de contagem para "c" e indicamos o contador para iniciar no primeiro índice de "numbers" e se repetir enquanto a contagem de "c" for menor que a de "i". Dessa forma implementamos o método "bubble sort" para realizar o rearranjo do array;
+//    > No método "bubble sort" o segundo laço sempre será realizado por completo antes de voltar para continuar fazendo o primeiro laço. Dessa o primeiro laço vai pegar um índice do array numbers para ser comparado com todos os seus elementos. Este índice também servirá como limite de repetição para o segundo laço. Já o segundo laço pegará cada índice que vem antes do índice do primeiro laço e vai comparar com o elemento definido pelo primeiro laço até que o índice de "c" se iguale ao índice de "i".
 //    > Assim, dentro do segundo laço definimos as condições para que verificar se a ordem deverá ser revertida.
 //    > Criamos um laço de condição "if" que define que se o valor seguinte (numbers[i]) for menor que o valor anterior (numbers[c]), faremos a troca dos valores atribuídos.
 //    > Caso a condição ocorra, definimos uma variável (orderedNumbers) para armazenar provisoriamente o valor de "numbers[i]", pois este receberá o valor de "numbers[c]".
@@ -179,19 +179,23 @@
 //
 //  1) Ordene o array numbers em ordem crescente e imprima seus valores;
 //
-  for (let i = 1; i < numbers.length; i += 1) {
-    for (let c = 0; c < i; c += 1) {
-      if (numbers[i] < numbers[c]) {
-        let orderedNumbers = numbers[i];
-        numbers[i] = numbers[c];
-        numbers[c] = orderedNumbers;
-      }
-    }
-  }
-  console.log(numbers);
-
+//  for (let i = 1; i < numbers.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (numbers[i] < numbers[c]) {
+//        let orderedNumbers = numbers[i];
+//        numbers[i] = numbers[c];
+//        numbers[c] = orderedNumbers;
+//      }
+//    }
+//  }
+//  console.log(numbers);
+//
 //
 //  2) Ordene o array numbers em ordem decrescente e imprima seus valores;
+//
+//    > Reaproveitamos a mesma estrutura "bubble sort" do exercício anterior, porém fazemos alterações no laço condicional "if";
+//    > Assim, defimos que se "numbers[i]" for maior que "numbers[c]", a variável de armazenamento provisório "orderedNumbers" receberá o valor de "numbers[c]", em seguida "numbers[c]" receberá numbers[i] e por fim "numbers[i]" receberá o valor original de "numbers[c]" que está armazenado em "orderedNumbers";
+//    > Após todos os laços, trazemos o resultado do reordenamento decrescente imprimindo "numbers" por meio de "console.log".
 //
 //  for (let i = 1; i < numbers.length; i += 1) {
 //    for (let c = 0; c < i; c += 1) {
@@ -209,11 +213,17 @@
 //
 //  [45, 27, 57, 1330, 560, 800, 200, 70, 945, 54]
 //
+//    > Começamos criando um array vazio "newNumbers" que receberá os valores finais do valor de cada índice de "numbers" multiplicado pelo valor do índice subsequente;
+//    > Criamos o laço de repetição "for" para percorrer todo o array "numbers" fazendo a leitura de cada índice com início no segundo elemento. Sendo assim, o contador definido pela variável "i" terá valor "1". O laço continuará repetindo enquanto "i" for menor que o comprimento do array e "i" será incrementado em "1" a cada repetição;
+//    > Então definimos que o array "newNumbers" receberá um elemento que será a multiplicação do elemento subsequente de "numbers" (numbers[i - 1]) multiplicado pelo elemento apontado pelo contador (numbers[i]);
+//    > Após sair do laço, faltará ainda a multiplicação do elemento final de "numbers" por um próximo valor. Por essa sequência não existir, conforme orienta o cabeçalho da questão, multiplicamos o último elemento do array "numbers" (numbers.length - 1) por 2 e o adicionamos a "newNumbers" por meio do comando ".push";
+//    > Terminamos então o código imprimindo "newNumbers" usando "console.log".
+//
 //  let newNumbers = [];
 //  for (let i = 1; i < numbers.length; i += 1) {
-//    newNumbers.push(numbers[i-1]*numbers[i]);
+//    newNumbers.push(numbers[i - 1]*numbers[i]);
 //  }
-//  newNumbers.push(numbers[numbers.length-1]*2)
+//  newNumbers.push(numbers[numbers.length - 1]*2)
 //  console.log(newNumbers);
 
   
