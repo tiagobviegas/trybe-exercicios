@@ -27,18 +27,46 @@
 //
 //
 //  2- Agora, desenvolva um algoritmo que é capaz de inverter uma palavra. Por exemplo, a palavra "banana" seria invertida para "ananab". Utilize a string abaixo como exemplo, depois troque por outras para verificar se seu algoritmo está funcionando corretamente.
+//  
+//  RESOLUÇÃO CONVENCIONAL
 //
 //  let word = 'tryber';
 //  let reversed = '';
 //  for (let i = word.length -1; i >= 0; i -= 1) {
-//  reversed += word[i];
+//    reversed += word[i];
 //  }
 //  console.log(reversed);
 //
-//
-//  Forma alternativa:
+//  RESOLUÇÃO ALTERNATIVA:
+//  let word = 'tryber';
 //  console.log(word.split('').reverse().join(''));
 //
+//
+//  3- Considere o array de strings abaixo:
+//
+//  let array = ['java', 'javascript', 'python', 'html', 'css'];
+//
+//  Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
+//
+//  let minor;
+//  for (let i = 1; i < array.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (array[i].length <= array[c].length) {
+//        minor = array[i];
+//      }
+//    }
+//  }
+//  console.log(minor);
+//
+//  let major = '';
+//  for (let i = 1; i < array.length; i += 1) {
+//    for (let c = 0; c < i; c += 1) {
+//      if (major < array[c].length) {
+//        major = array[i];
+//      }
+//    }
+//  }
+//  console.log(major);
 //
 //
 //
