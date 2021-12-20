@@ -140,15 +140,17 @@
 //  
 //  Atenção! Note que esse exercício é bem mais complexo que o anterior! Não basta, aqui, imprimir somente asteriscos. Você precisará de uma lógica para imprimir espaços também.
 //
-//  let asterisk = '*';
-//  let space = '     ';
-//  space -= ' ';
-//  console.log(space);
-//  for(let i = 0; i < n; i += 1) {
-//    for(let c = 0; c < n; c += 1) {
-//      
-//    }
-//  }
+  let number = 9;
+  let asterisk = '';
+  let space = '';
+  for(let i = number; i > 0; i -= 1) {
+    asterisk += '*';
+    for(let c = i - 1; c > 0; c -= 1) {
+      space += ' ';
+    }
+    console.log(space + asterisk);
+    space = '';
+  }
 //  
 //  
 //  4- Depois, faça uma pirâmide com n asteriscos de base:
