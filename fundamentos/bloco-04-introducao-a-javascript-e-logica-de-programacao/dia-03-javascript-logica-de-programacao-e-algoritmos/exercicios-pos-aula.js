@@ -214,4 +214,20 @@
 //      > Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
 //  
 //
-
+//  let number = 7;
+//  
+//  let result;
+//  let checkPrime = 1;
+//  for (let i = 1; i < number; i += 1) {
+//    if(number % i === 0) {
+//      checkPrime += 1;
+//    }
+//  }
+//  if(checkPrime === 2) {
+//    result = `${number} é primo`;
+//  } else {
+//    result = `${number} não é primo`;
+//  }
+//  console.log(result);
+//  
+//  
