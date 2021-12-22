@@ -185,7 +185,28 @@
 //    * *
 //   *   *
 //  *******
-//  
+//
+//  let number = (n / 2);
+//  let asterisk = '*';
+//  let asteriskLine = '*';
+//  let space = '';
+//  let outterSpace = '';
+//  let innerSpace = ' ';
+//  for(let index = 1; index < number; index += 1) {
+//    space += ' ';
+//  }
+//  console.log(space + asterisk);
+//  for (let i = number; i > 0; i -= 2) {
+//    for (let c = i; c > 0; c -= 2) {
+//      outterSpace += ' ';
+//    }
+//    console.log(outterSpace + asterisk + innerSpace + asterisk);
+//    outterSpace = '';
+//    innerSpace += '  ';
+//    asteriskLine += '***'
+//  }
+//  console.log(asteriskLine);
+//
 //  
 //  6- Faça um programa que diz se um número definido numa variável é primo ou não.
 //
@@ -193,3 +214,4 @@
 //      > Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
 //  
 //
+
