@@ -98,10 +98,9 @@
 //  *****
 //  *****
 //
-//
+//  let asterisk = '';
 //  let number = 5;
-//  for (let i = 0; i < number; i += 1) {
-//    let asterisk = '';
+//  for (let i = 0; i < number; i += 1) {    
 //    for (let c = 0; c < number; c += 1) {
 //      asterisk += '*';
 //    }
@@ -160,6 +159,21 @@
 //    *
 //   ***
 //  *****
+//
+//  let number = (n - 2);
+//  let asterisk = '';
+//  let space = '';
+//
+//  for(let i = number; i > 0; i -= 1) {
+//    asterisk += '*';
+//    for (let c = i - 1; c > 0; c -= 1) {
+//      space += ' ';
+//    }
+//    console.log(space + asterisk);
+//    space = '';
+//    asterisk += '*';
+//  }
+//
 //  
 //  
 //  5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
@@ -174,7 +188,8 @@
 //  
 //  
 //  6- Faça um programa que diz se um número definido numa variável é primo ou não.
+//
 //      > Um número primo é um número que só é divisível por 1 e por ele mesmo, ou seja, a divisão dele com quaisquer outros números dá resto diferente de zero;
 //      > Dica: você vai precisar de fazer um loop que vá de 0 ao número definido; Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar os resultados em algum lugar.
 //  
-//  
+//
