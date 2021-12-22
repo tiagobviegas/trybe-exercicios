@@ -46,12 +46,34 @@
 //
 //  1 - Usando o objeto abaixo, utilize For/in e imprima no console a mensagem 'Olá xxxxx' para cada nome, substituindo o xxxxx pelo nome em questão.
 //
-let names = {
-  person1: 'João',
-  person2: 'Maria',
-  person3: 'Jorge' 
-};
-
-for(let nomes in names) {
-  console.log('')
-}
+//  let names = {
+//    person1: 'João',
+//    person2: 'Maria',
+//    person3: 'Jorge' 
+//  };
+//  
+//  for(let nomes in names) {
+//    console.log('Olá', names[nomes])
+//  }
+//
+//
+//  2 - Usando o objeto abaixo, utilize For/in e imprima um console.log com as chaves e valores desse objeto.
+//
+//  let car = {
+//    model: 'A3 Sedan',
+//    manufacturer: 'Audi',
+//    year: 2020
+//  };
+//  
+//  for(let models in car) {
+//    console.log(models, car[models])
+//  }
+//
+//
+//  Para fixar | FUNÇÕES
+//
+//  Pegue cada um dos exercícios de 1 a 5 do final do dia 4.1 e faça com que todos eles sejam funções de um mesmo arquivo.
+//
+//  As variáveis que você define no começo de cada arquivo devem ser removidas e transformadas em parâmetros das funções.
+//
+//  Após refatorar o seu código , verifique se ele ainda está funcionando conforme especificado. Teste cada função com algumas entradas diferentes.
