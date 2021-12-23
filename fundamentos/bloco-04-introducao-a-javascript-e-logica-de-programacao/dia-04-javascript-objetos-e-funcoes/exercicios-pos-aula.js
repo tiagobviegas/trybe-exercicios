@@ -206,6 +206,26 @@
 //  
 //  Valor esperado no retorno da função: 2 .
 //
+//  function mostRepeated(numbers){
+//    let higherNumber;
+//    let counter = 0;
+//    let occurency = 0;
+//    for(let i = 0; i < numbers.length; i += 1) {
+//      for(let c = 0; c < 9; c += 1) {
+//        if(numbers[c] === numbers[i]) {
+//          counter += 1;
+//        }
+//      }  
+//      if(counter > occurency) {
+//        higherNumber = numbers[i];
+//        occurency = counter;
+//      }
+//      counter = 0;
+//    }
+//    return console.log(higherNumber);
+//  }
+//  mostRepeated([2, 3, 2, 5, 8, 2, 3]);
+//
 //
 //  6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
 //  
@@ -226,3 +246,5 @@
 //  verificaFimPalavra('joaofernando', 'fernan') ;
 //
 //  Retorno esperado: false
+//
+//
