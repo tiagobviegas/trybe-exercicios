@@ -175,7 +175,7 @@
 //        minorIndex = i;
 //      }
 //    }
-//    console.log(minorIndex);
+//    return console.log(minorIndex);
 //  }
 //  lowerIndex([2, 4, 6, 7, 10, 0, -3]);
 //
