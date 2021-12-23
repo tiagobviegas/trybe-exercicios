@@ -85,63 +85,66 @@
 //
 //  1) Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b , definidas no começo com os valores que serão operados. Faça programas para:
 //
-//  > Adição (a + b)
-//  > Subtração (a - b)
-//  > Multiplicação (a * b)
-//  > Divisão (a / b)
-//  > Módulo (a % b)
+//    > Adição (a + b)
+//    > Subtração (a - b)
+//    > Multiplicação (a * b)
+//    > Divisão (a / b)
+//    > Módulo (a % b)
 //
-//  *Dica: Neste link você encontra mais detalhes sobre operadores matemáticos 
+//    *Dica: Neste link você encontra mais detalhes sobre operadores matemáticos 
 //
-//  const a = 5;
-//  const b = 3;
-//
-//  console.log(a + b);
-//  console.log(a - b);
-//  console.log(a * b);
-//  console.log(a / b);
-//  console.log(a % b);
+//  function operation(a, b) {
+//    console.log(a + b);
+//    console.log(a - b);
+//    console.log(a * b);
+//    console.log(a / b);
+//    console.log(a % b);
+//  }
+//  operation(5, 3);
 //
 //    
 //  2) Faça um programa que retorne o maior de dois números. Defina no começo do programa duas constantes com os valores que serão comparados.
 //
-//  const a = 6;
-//  const b = 5;
-//  if (a > b) {
-//    console.log(a);
-//  } else if (b > a) {
-//    console.log(b);
-//  } else {
-//    console.log('os números são iguais');
+//  function majorNumber(a, b) {
+//    if (a > b) {
+//      console.log(a);
+//    } else if (b > a) {
+//      console.log(b);
+//    } else {
+//      console.log('os números são iguais');
+//    }
 //  }
+//  majorNumber(7, 7);
 //
 //
 //  3) Faça um programa que retorne o maior de três números. Defina no começo do programa três constantes com os valores que serão comparados.
 //
-//  const a = 9;
-//  const b = 6;
-//  const c = 3;
-//  if (a > b && a > c) {
-//    console.log(a);
-//  } else if (b > a && b > c) {
-//    console.log(b);
-//  } else if (c > a && c > b) {
-//    console.log(c);
-//  } else {
-//    console.log('os números são iguais')
+//  function bestOfThree(a, b, c) {
+//    if (a > b && a > c) {
+//      console.log(a);
+//    } else if (b > a && b > c) {
+//      console.log(b);
+//    } else if (c > a && c > b) {
+//      console.log(c);
+//    } else {
+//      console.log('os números são iguais')
+//    }
 //  }
+//  bestOfThree(3, 3, 3);
 //
 //
 //  4) Faça um programa que, dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
 //
-//  const a = 10;
-//  if (a > 0) {
-//    console.log('positive');
-//  } else if (a < 0) {
-//    console.log('negative');
-//  } else {
-//    console.log('zero');
+//  function positiveNegative(a) {
+//    if (a > 0) {
+//      console.log('positive');
+//    } else if (a < 0) {
+//      console.log('negative');
+//    } else {
+//      console.log('zero');
+//    }
 //  }
+//  positiveNegative(0);
 //
 //
 //  5) Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
@@ -149,15 +152,14 @@
 //  > Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
 //  > Um ângulo será considerado inválido se não tiver um valor positivo.
 //
-//  const a = 60;
-//  const b = 60;
-//  const c = 60;
-//  const soma = (a + b + c);
-//  const triangulo = true;
-//  if (soma == 180) {
-//    console.log(triangulo);
-//  } else {
-//    console.log(!triangulo);
+//  function validTriangle(a, b, c) {
+//    const soma = (a + b + c);
+//    const triangulo = true;
+//    if (a < 1 || b < 1 || c < 1 || soma !== 180) {
+//      console.log(!triangulo);
+//    } else {
+//      console.log(triangulo);
+//    }
 //  }
-//
+//  validTriangle(30, 60, 90);
 //
