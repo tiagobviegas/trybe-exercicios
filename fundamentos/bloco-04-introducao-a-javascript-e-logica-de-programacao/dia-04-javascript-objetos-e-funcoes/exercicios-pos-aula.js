@@ -146,17 +146,44 @@
 //  
 //  Valor esperado no retorno da função: 4 .
 //
-  function higherIndex(array) {
-    for(let index in array) {
-      let check = array[0];
-      for(let i = 0; i < array.length; i += 1) {
-        if(array[i] > check) {
-          check = array[i];
-        }
-      }
-    }      
-  }
-  higherIndex([2, 3, 6, 7, 10, 1])
+//  function higherIndex(array) {
+//    let check = array[0];
+//    let majorIndex;
+//    for(let i = 0; i < array.length; i += 1) {
+//      if (array[i] >= check) {
+//        check = array[i];
+//        majorIndex = i;
+//      }
+//    }
+//    return console.log(majorIndex);
+//  }
+//  higherIndex([2, 3, 6, 7, 10, 1]);
 //  
 //
+//  3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 //  
+//  Array de teste: [2, 4, 6, 7, 10, 0, -3]; .
+//  
+//  Valor esperado no retorno da função: 6 .
+//
+//  function lowerIndex(array) {
+//    let check = array[0];
+//    let minorIndex;
+//    for(let i = 0; i < array.length; i += 1) {
+//      if(array[i] < check) {
+//        check = array[i]
+//        minorIndex = i;
+//      }
+//    }
+//    console.log(minorIndex);
+//  }
+//  lowerIndex([2, 4, 6, 7, 10, 0, -3]);
+//
+//
+//  4 - Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+//
+//  Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
+//
+//  Valor esperado no retorno da função: Fernanda .
+//
+  
