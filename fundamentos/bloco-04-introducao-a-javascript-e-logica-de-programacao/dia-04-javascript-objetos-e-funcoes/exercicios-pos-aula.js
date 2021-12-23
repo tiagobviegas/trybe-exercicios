@@ -119,10 +119,46 @@
 //
 //  Spoiler-alert : para os exercícios do dia, os métodos "split" , "join" e "reverse" podem ser muito úteis.
 //
+//
 //  1 - Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
+//
 //  > Exemplo de palíndromo: arara .
 //  > verificaPalindrome('arara') ;
 //  > Retorno esperado: true
 //  > verificaPalindrome('desenvolvimento') ;
 //  > Retorno esperado: false
 //
+//  function palindrome(word) {
+//    let check = word.split('').reverse().join('');
+//    if (word === check) {
+//      return true;
+//    } else {
+//      return false;
+//    }
+//  }
+//  console.log(palindrome('arara'));
+//  console.log(palindrome('desenvolvimento'));
+//
+//
+//  2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+//  
+//  Array de teste: [2, 3, 6, 7, 10, 1]; .
+//  
+//  Valor esperado no retorno da função: 4 .
+//
+  function higherIndex(array) {
+    for(let index in array) {
+      let check = array[0];
+      for(let i = 0; i < array.length; i += 1) {
+        if(array[i] > check) {
+          check = array[i];
+        }
+      }
+    }
+      
+    }
+  }
+  higherIndex([2, 3, 6, 7, 10, 1])
+//  
+//
+//  
