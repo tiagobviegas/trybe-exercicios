@@ -16,12 +16,10 @@ Parte II - Seletores de elementos
       <p id="second-paragraph">Segundo parágrafo!</p>
     </header>
     <script>
-      const paragraph = document.getElementById("paragraph");
-      paragraph.style.color = "red";
-      document.getElementById("page-title").innerText = "A Origem";
-      document.getElementById("paragraph").innerText = paragraph.style.color = "blue";
-      document.getElementById("subtitle").innerText = "Novo subtítulo";
-    </script>
+      document.getElementById("page-title").innerText = 'A Origem';
+      document.getElementById("second-paragraph").innerText = 'O mundo do subconsciente sob uma perspectiva inédita'
+      document.getElementById("subtitle").innerText = 'Um filme de Christopher Nolan';   
+      </script>
   </body>
 </html>
 -->
@@ -45,19 +43,16 @@ Utilizando o mesmo template de exercício anterior:
       <p id="second-paragraph">Segundo parágrafo!</p>
     </header>
     <script>
-      const paragraph = document.getElementById("paragraph");
-      paragraph.style.color = "red";
-      
-      document.getElementsByTagName("p");
-      paragraph.className="paragrafos";
-      
-      document.getElementsByClassName("paragrafos").innerHTML;
-
-      document.querySelector("p").style.border = "2px solid blue";
-      
-      document.getElementsByTagName("h4");
-      paragraph.style.color = "blue";
+      const t1 = document.getElementById("page-title");
+        t1.innerText = "A Origem";
+        t1.style.color = "red";
+      const p1 = document.getElementById("paragraph");
+        p1.className = "paragrafo";
+        p1.style.fontSize = 39;
+      const p2 = document.getElementById("second-paragraph");
+        p2.className = "paragrafo";
+      const sub1 = document.getElementByTagName("header");
+        sub1.style.color = "blue";      
     </script>
   </body>
 </html>
-
