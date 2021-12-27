@@ -32,7 +32,7 @@ Utilizando o mesmo template de exercício anterior:
   3) Altere algum estilo do primeiro deles.
   4) Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName .
 -->
-
+<!--
 <!DOCTYPE html>
 <html>
   <body>
@@ -43,16 +43,19 @@ Utilizando o mesmo template de exercício anterior:
       <p id="second-paragraph">Segundo parágrafo!</p>
     </header>
     <script>
-      const t1 = document.getElementById("page-title");
+      let t1 = document.getElementById("page-title");
         t1.innerText = "A Origem";
         t1.style.color = "red";
-      const p1 = document.getElementById("paragraph");
+      let p1 = document.getElementById("paragraph");
         p1.className = "paragrafo";
         p1.style.fontSize = 39;
-      const p2 = document.getElementById("second-paragraph");
+        p1.style.color = "blue";
+      let p2 = document.getElementById("second-paragraph");
         p2.className = "paragrafo";
-      const sub1 = document.getElementByTagName("header");
-        sub1.style.color = "blue";      
+        p2.style.backgroundColor = "green";
+      let sub = document.getElementsByTagName("p")[0];
+        sub.style.color = "pink";
     </script>
   </body>
 </html>
+-->
