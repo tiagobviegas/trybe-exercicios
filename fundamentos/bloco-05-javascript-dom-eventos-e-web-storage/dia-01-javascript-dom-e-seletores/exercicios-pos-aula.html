@@ -80,7 +80,15 @@
           let newColor = document.getElementsByClassName("center-content")[0];
           newColor.style.backgroundColor = "#FFFFFF";
         }
-        colorChange2();
+        colorChange2(); // não há necessidade de retornar valores pois a mudança é interna
+
+        function chanceText(text) {
+          let h1 = document.getElementsByTagName("h1")[0];
+          h1.innerText = text;
+        }
+        chanceText("Exercício 5.1 - JavaScript");
+
+        
     </script>
   </body>
 </html>
