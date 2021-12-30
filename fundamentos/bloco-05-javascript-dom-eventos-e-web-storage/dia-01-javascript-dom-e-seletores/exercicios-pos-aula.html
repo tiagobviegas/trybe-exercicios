@@ -68,26 +68,33 @@
             description.innerText = descricao;
           }
         }
-        changeParagraph("trabalhando e terminando os estudos para ir para o Canadá!");
+        changeParagraph('trabalhando e terminando os estudos para ir para o Canadá!');
 
         function colorChange() {
-          let newColor = document.getElementsByClassName("main-content")[0];
-          newColor.style.backgroundColor = "rgb(76,164,109)";
+          let newColor = document.getElementsByClassName('main-content')[0];
+          newColor.style.backgroundColor = 'rgb(76,164,109)';
         }
         colorChange();  // não há necessidade de retornar valores pois a mudança é interna
 
         function colorChange2() {
-          let newColor = document.getElementsByClassName("center-content")[0];
-          newColor.style.backgroundColor = "#FFFFFF";
+          let newColor = document.getElementsByClassName('center-content')[0];
+          newColor.style.backgroundColor = '#FFFFFF';
         }
         colorChange2(); // não há necessidade de retornar valores pois a mudança é interna
 
-        function chanceText(text) {
-          let h1 = document.getElementsByTagName("h1")[0];
+        function changeText(text) {
+          let h1 = document.getElementsByTagName('h1')[0];
           h1.innerText = text;
         }
-        chanceText("Exercício 5.1 - JavaScript");
-
+        changeText('Exercício 5.1 - JavaScript');
+        
+        function upperCase(content) {
+          for(let i = 0; i <= 2; i += 1) {
+            let caption = document.getElementsByTagName('p')[i];
+            caption.innerText = content.toUpperCase()
+          }
+        }
+        upperCase('trabalhando e terminando os estudos para ir para o Canadá!');
         
     </script>
   </body>
