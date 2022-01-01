@@ -45,8 +45,8 @@
 //
     let paiDoPai = document.querySelector('#paiDoPai');
     let pai = document.querySelector('#pai');
-    let primeiroFilho = document.querySelector('#primeiroFilho');
-      pai.removeChild(primeiroFilho);
-      primeiroFilhoDoFilho.removeChild(novoFilhoPrimeiroFilhoDoFilho);
-    
+    let removeElementoDePai = pai.children;
+    pai.removeChild(removeElementoDePai[0]);
+    let removeElementosChildren = elementoBase.children;
+    elementoBase.removeChild(removeElementosChildren[1]);
 //
