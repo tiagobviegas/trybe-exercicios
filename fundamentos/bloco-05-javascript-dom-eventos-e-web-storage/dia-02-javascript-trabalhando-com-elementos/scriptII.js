@@ -23,9 +23,9 @@
     let novoElemento = document.createElement('section');
       novoElemento.innerText = 'Novo irmão de Elemento Onde Você Está'
     elementoPai.appendChild(novoElemento);
-//      
+//
 //  2. Crie um filho para elementoOndeVoceEsta;
-    let novoFilhoElementoOndeVoceEsta = document.createElement('div');
+    let novoFilhoElementoOndeVoceEsta = document.createElement('section');
       novoFilhoElementoOndeVoceEsta.innerHTML = 'Novo filho de Elemento Onde Você Está';
     elementoBase.appendChild(novoFilhoElementoOndeVoceEsta);
 //
