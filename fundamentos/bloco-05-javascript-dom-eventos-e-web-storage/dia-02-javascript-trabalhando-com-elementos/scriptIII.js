@@ -18,20 +18,20 @@
 */
 //
 //  1. Crie um irmão para elementoOndeVoceEsta;
-    let elementoBase = document.querySelector('#elementoOndeVoceEsta');
-    let elementoPai = elementoBase.parentElement;
-    let novoElemento = document.createElement('section');
+    const elementoBase = document.querySelector('#elementoOndeVoceEsta');
+    const elementoPai = elementoBase.parentElement;
+    const novoElemento = document.createElement('section');
       novoElemento.innerText = 'Novo irmão de Elemento Onde Você Está'
     elementoPai.appendChild(novoElemento);
 //
 //  2. Crie um filho para elementoOndeVoceEsta;
-    let novoFilhoElementoOndeVoceEsta = document.createElement('section');
+    const novoFilhoElementoOndeVoceEsta = document.createElement('section');
       novoFilhoElementoOndeVoceEsta.innerHTML = 'Novo filho de Elemento Onde Você Está';
     elementoBase.appendChild(novoFilhoElementoOndeVoceEsta);
 //
 //  3. Crie um filho para primeiroFilhoDoFilho;
-    let primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
-    let novoFilhoPrimeiroFilhoDoFilho = document.createElement('p');
+    const primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+    const novoFilhoPrimeiroFilhoDoFilho = document.createElement('p');
       novoFilhoPrimeiroFilhoDoFilho.innerText = 'Filho do Primeiro Filho do Filho';
       primeiroFilhoDoFilho.appendChild(novoFilhoPrimeiroFilhoDoFilho);
 //
@@ -43,10 +43,10 @@
 //
 //  Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 //
-    let paiDoPai = document.querySelector('#paiDoPai');
-    let pai = document.querySelector('#pai');
-    let removeElementoDePai = pai.children;
+    const paiDoPai = document.querySelector('#paiDoPai');
+    const pai = document.querySelector('#pai');
+    const removeElementoDePai = pai.children;
     pai.removeChild(removeElementoDePai[0]);
-    let removeElementosChildren = elementoBase.children;
+    const removeElementosChildren = elementoBase.children;
     elementoBase.removeChild(removeElementosChildren[1]);
 //
