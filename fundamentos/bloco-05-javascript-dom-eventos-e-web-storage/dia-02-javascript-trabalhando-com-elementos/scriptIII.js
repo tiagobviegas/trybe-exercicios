@@ -43,11 +43,11 @@
 //
 //  Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 //
-//  const paiDoPai = document.querySelector('#paiDoPai');
-//  const pai = document.querySelector('#pai');
-//  const removeElementoDePai = pai.children;
-//  pai.removeChild(removeElementoDePai[0]);
-//  const removeElementosChildren = elementoBase.children;
-//  elementoBase.removeChild(removeElementosChildren[1]);
+  const paiDoPai = document.querySelector('#paiDoPai');
+  const pai = document.querySelector('#pai');
+  const removeElementoDePai = pai.children;
+  pai.removeChild(removeElementoDePai[0]);
+  const removeElementosChildren = elementoBase.children;
+  elementoBase.removeChild(removeElementosChildren[1]);
 //
 //
