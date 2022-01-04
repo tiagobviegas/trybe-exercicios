@@ -23,7 +23,9 @@
     <!-- FORM dá inicio a um formulário, neste caso o do campo de envio de dados por meio do comando INPUT-->
     <!-- ACTION define para onde (servidor, máquina, etc) os dados serão enviados-->
     <!-- METHOD é a forma como os dados do formulário serão enviados-->
-    <!-- o verbo POST ou GET definem como do METHOD será feito-->
+    <!-- O verbo POST ou GET definem como do METHOD será feito-->
+    <!-- O GET envias os dados mostrando-os na url-->
+    <!-- O POST envia os dados de forma oculta para proteger o acesso aos dados-->
     <label for="input-text">Seu nome</label>
     <!-- FOR é para criar um vínculo entre a label e o campo em si. Para criar um vínculo entre a label e o, neste caso, input criamos uma ID no nosso INPUT e preenchemos o atributo FOR com o valor da ID, no caso "input-text" -->
     <input type="text" placeholder="Digite seu nome" name="texto" required value="TIAGO" class="" id="input-text" name="texto">
@@ -95,7 +97,9 @@
     ATENÇÃO: para utilizar esse recursos como INPUT type FILE corretamente o método POST é necessário definir na tag FORM o atributo ENCTYPE com o valor MULTPART/FORM-DATA-->
     <br><br>
     <button type="submit">CADASTRAR</button>
-    <!-- BUTTON define um botão que, por meio do comando "SUBMIT" envia os dados inseridos no campo INPUT-->
+    <!-- BUTTON "SUBMIT" define um botão que envia os dados inseridos no campo INPUT-->
+    <button type="reset">LIMPAR</button>
+    <!-- BUTTON "RESET" define um botão que apaga os dados inseridos no formulário INPUT-->
   </form>
 </body>
 </html>
