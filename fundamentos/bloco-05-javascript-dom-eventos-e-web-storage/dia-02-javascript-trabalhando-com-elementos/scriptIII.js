@@ -1,14 +1,19 @@
 
 let ingredientsList = ['500g de feijão carioquinha cozido', '200g de toucinho', '1 concha de óleo', '1 cebola média picada', '4 dentes de alho', '5 ovos', '1 colher de sopa de sal com alho', 'Cheiro verde a gosto', '200g de farinha de mandioca'];
 
+let ingredientsSection = document.querySelector('.ingredients-section');
+let ingredientsUl = document.createElement('ul');
+ingredientsUl.className = 'ingredients-list';
+ingredientsSection.appendChild(ingredientsUl);
+
 let list = document.querySelector('.ingredients-list');
 
-for(let i = 0; i < ingredientsList.length; i += 1) {
-  let ingredients = ingredientsList[i];
-  let listItems = document.createElement('li');
-  listItems.className = 'ingredients';
-  listItems.innerText = ingredients;
-  list.appendChild(listItems); 
+for (let i = 0; i < ingredientsList.length; i += 1) {
+  let ingredient = ingredientsList[i];
+  let ingredientItem = document.createElement('li');
+  ingredientItem.className = 'ingredients';
+  ingredientItem.innerText = ingredient;
+  list.appendChild(ingredientItem);
 }
 
 /*
@@ -88,4 +93,13 @@ for(let i = 0; i < ingredientsListItems.length; i += 1) {
     ingredientsList.removeChild(element);
   }
 }
+
+
+1 - Eu já fui piloto de corrida
+2 - Eu já fui para a Disney
+3 - Eu já pulei de para-quedas
+
+Jackson Silva
+  Entrou na padaria
+
 */
