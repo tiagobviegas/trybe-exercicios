@@ -1,3 +1,21 @@
+
+let ingredientsList = ['500g de feijão carioquinha cozido', '200g de toucinho', '1 concha de óleo', '1 cebola média picada', '4 dentes de alho', '5 ovos', '1 colher de sopa de sal com alho', 'Cheiro verde a gosto', '200g de farinha de mandioca'];
+
+let ingredientsSection = document.querySelector('.ingredients-section');
+let ingredientsUl = document.createElement('ul');
+ingredientsUl.className = 'ingredients-list';
+ingredientsSection.appendChild(ingredientsUl);
+
+let list = document.querySelector('.ingredients-list');
+
+for (let i = 0; i < ingredientsList.length; i += 1) {
+  let ingredient = ingredientsList[i];
+  let ingredientItem = document.createElement('li');
+  ingredientItem.className = 'ingredients';
+  ingredientItem.innerText = ingredient;
+  list.appendChild(ingredientItem);
+}
+
 /*
 <body>
   <main id="paiDoPai">
@@ -15,7 +33,7 @@
   <script src="scriptII.js"></script>
 </body>
 </html>
-*/
+
 //
 //  1. Crie um irmão para elementoOndeVoceEsta;
     const elementoBase = document.querySelector('#elementoOndeVoceEsta');
@@ -49,5 +67,39 @@
   pai.removeChild(removeElementoDePai[0]);
   const removeElementosChildren = elementoBase.children;
   elementoBase.removeChild(removeElementosChildren[1]);
+*/
 //
 //
+/*
+
+let ingredientsList = document.querySelector('.ingredients-list')
+
+for (let i = 0; i < ingredientsItems.length; i += 1) {
+  let ingredient = ingredientsItems[i];
+
+  let ingredientsListItems = document.createElement('li');
+  ingredientsListItems.innerText = ingredient;
+  
+  ingredientsListItems.className = 'ingredients-list-item';
+
+  ingredientsList.appendChild(ingredientsListItems);
+}
+
+let ingredientsListItems = document.querySelectorAll('.ingredients-list-item');
+
+for(let i = 0; i < ingredientsListItems.length; i += 1) {
+  let element = ingredientsListItems[i];
+  if (element.innerText.includes('toucinho')) {
+    ingredientsList.removeChild(element);
+  }
+}
+
+
+1 - Eu já fui piloto de corrida
+2 - Eu já fui para a Disney
+3 - Eu já pulei de para-quedas
+
+Jackson Silva
+  Entrou na padaria
+
+*/
