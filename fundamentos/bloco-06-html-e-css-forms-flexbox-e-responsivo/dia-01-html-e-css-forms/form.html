@@ -71,3 +71,55 @@ FAÇA AS VALIDAÇÕES INICIALMENTE PELO HTML
 
 4.Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Currículo</h1>
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+      <div>Nome:</div>
+      <input type="text" maxlength="40" name="campo-nome" required>
+      <div>E-mail</div>
+      <input type="email" maxlength="50" name="campo-email" required>
+      <div>CPF</div>
+      <input type="text" maxlength="11" name="campo-cpf" required>
+      <div>Endereço</div>
+      <input type="text" maxlength="200" name="campo-endereco" required>
+      <div>Cidade</div>
+      <input type="text" maxlength="28" name="cidade" required>
+      <div>Estado
+      <select name="estados" id="select-estados">
+        
+
+      </select>
+    </div>
+    <div>
+      <input type="radio" name="residencia" id="casa" required>
+      <label for="casa">Casa</label>
+      <input type="radio" name="residencia" id="aparamento" required>
+      <label for="aparamento">Apartamento</label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Dados do seu último emprego</legend>
+      <div>Resumo do currículo</div>
+      <textarea maxlength="1000" required></textarea>
+      <div>Cargo</div>
+      <input type="text" maxlength="40" required>
+      <div>Descrição do Cargo</div>
+      <input type="text" maxlength="500" required>
+      <div>Data de início</div>
+      <input type="text">
+  </fieldset>
+
+  <script src="script.js"></script>
+</body>
+</html>
