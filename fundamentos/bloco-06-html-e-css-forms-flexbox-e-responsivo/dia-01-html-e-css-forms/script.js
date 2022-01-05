@@ -12,3 +12,5 @@ for (let i = 0; i < listaEstados.length; i += 1) {
   itemEstado.innerText = estado;
   estados.appendChild(itemEstado);
 }
+
+// corrigido
