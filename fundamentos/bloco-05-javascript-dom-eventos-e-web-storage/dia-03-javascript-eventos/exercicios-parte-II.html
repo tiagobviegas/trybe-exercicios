@@ -1,7 +1,16 @@
 <!--
+VIDEOAULA | PARTE II
+-->
+<!--
+  ADDEVENTLISTENER é formado por "addEventListener(tipoEvento, função)" onde ele define-se no primeiro parâmetro o tipo de evento a ser "escutado/esperado" e a função que deverá ser executada quando esse evento ocorrer.
 
-VIDEOAULA
+  Alguns tipos de evento que podem ser utilizados são:
+   'click', 'dbclick', 'change', 'scroll', 'mouseover', 'mouseleave', etc. 
 
+  Ele também proporciona a criação de eventos dinâmicos apenas com o uso do javascript, ou seja, torna desnecessário adicionar ao código HTML comandos como "onclick", "onmouseover" e afins, fazendo essa associação diretamente pelo script por meio de seletores.
+
+  ADDEVENTLISTENER permite adicionar esses recursos de forma mais flexível conforme a necessidade, sem limitações como é no caso do uso de "WINDOW.ONLOAD" para carregar o script da página.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,39 +32,53 @@ VIDEOAULA
   </div>
   <script>
     // Exemplo 1 - Click
-    let clickP = document.getElementById('clicar');
+    let clickP = document.getElementById('clicar'); //seleciona o elemento para sofrer o evento "click"
 
     // Adiciona o evento de click
-    clickP.addEventListener('click', recebeClick);
+    clickP.addEventListener('click', recebeClick); //adiciona ao elemento selecionado o evento que será executado quando for "escutado" e a função que deverá conter a ação a ser realizada
 
-    function recebeClick(eventoDeOrigem) {
-      // Objeto evento
-      // As duas principais propriedades:
-      // Target: O elemento que originou esse mesmo evento
-      // Type: O tipo de evento que originou o click - Mouse, Keyboard, Screen...
+    function recebeClick(clickParagrafo) {
+      // TRATANDO INFORMAÇÔES DA FUNÇÃO DE AddEventListener:
+      //
+      // Quando adicionamos um parâmetro à função estamos falando que queremos pegar as informações obtidas no evento e tratá-las, ou seja, pegar cada uma delas para outras para aplicar outras ações.
+
+      // o parâmetro "clickParagrafo" recebe tanto o evento (no caso "click") quanto o objeto que sofre a ação (o parágrafo que está atribuído à variável "clickP"). Eles são identificados respectivamente da seguinte forma:
+      
+      // .target: O elemento que originou esse mesmo evento
+      // .type: O tipo de evento que originou o click - Mouse, Keyboard, Screen...
+      
+      // ou seja, é como se os dois fossem argumentos de um mesmo parâmetro (clickParagrafo) e a partir deles fossem criadas novas variáveis, sendo elas:
+
+      // clickParagrafo.target = clickP
+      // clickParagrafo.type = 'click'
+      
+      console.log(clickParagrafo.target); // target traz o "alvo", o objeto de origem que sofreu a ação do evento, no caso o parágrafo, pois é ele quem está recebendo as ações definidas pelo "ADDEVENTLISTENER". O retorno será como se tivéssemos recebendo o resultado após escolher o elemento usando um código similar a "document.getElementById('clicar')"
+      console.log(clickParagrafo.type); // traz o tipo de evento que o elemento sofreu, no caso o parágrafo ao ser clicado foi submetido ao evento "click". Por isso após exibir "document.getElementById('clicar')" será exibido "click"
     }
 
-    // Exemplo 2 - Mouse over, mouse leave
-    let mouseOverLeaveButton = document.getElementById('mouse-over-leave');
-
-    // Adiciona o evento de mouse over
-    mouseOverLeaveButton.addEventListener('mouseover', mouseEmCima);
-
-    // Adiciona o evento de mouse leave
-    mouseOverLeaveButton.addEventListener('mouseleave', mouseSaiudDoElemento);
-
-    function mouseEmCima() {
-      console.log('Mouse passou por cima');
-    }
-
-    function mouseSaiudDoElemento() {
+    //Exemplo 2 - Mouse over, mouse leave
+      let mouseOverLeaveButton = document.getElementById('mouse-over-leave');
+    
+    // Podemos adicionar múltiplos eventos para o mesmo elemento, como baixo.
+    
+    //Adiciona o evento de mouse over
+      mouseOverLeaveButton.addEventListener('mouseover', mouseEmCima);
+    
+    //Adiciona o evento de mouse leave
+      mouseOverLeaveButton.addEventListener('mouseleave', mouseSaiudDoElemento);
+    
+      function mouseEmCima() {
+        console.log('Mouse passou por cima');
+      }
+    
+      function mouseSaiudDoElemento() {
       console.log('Mouse saiu do elemento')
-    }
+      }
 
-  </script>  
+  </script>
 </body>
 </html>
--->
+
 
 <!--
 
@@ -65,7 +88,7 @@ VIDEOAULA
   
   Faça o que se pede no arquivo main.js . Você não precisará alterar os arquivos HTML e CSS. Para facilitar, os seletores já foram dados no início do arquivo main.js .
 
--->
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -93,3 +116,4 @@ VIDEOAULA
   </body>
 </html>
 
+-->
