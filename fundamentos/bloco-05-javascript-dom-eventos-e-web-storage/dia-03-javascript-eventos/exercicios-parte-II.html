@@ -30,7 +30,41 @@ VIDEOAULA | PARTE II
   <div>
     <button id="mouse-over-leave">Botão para ter o mouse passado em cima e removido</button>
   </div>
+
   <script>
+    let body = document.getElementsByTagName('body')[0];
+    
+    // Cria container 'div'
+    let criaDiv = document.createElement('div');
+      criaDiv.setAttribute('id', 'btn-color-change');
+      criaDiv.style.width = '422px';
+      criaDiv.style.height = '26px';
+      criaDiv.style.border = 'solid black'
+    
+      // Cria button dentro do container 'btn-color-change'
+    let criaBtn1 = document.createElement('button');
+      criaBtn1.setAttribute('id', 'btn-set-color');
+      criaBtn1.innerText = 'Clique para alterar a cor'
+    
+    body.appendChild(criaDiv)
+    criaDiv.appendChild(criaBtn1)
+    
+    // Cria button para limpar a cor do container 'btn-set-color'
+    let criaBtn2 = document.createElement('button');
+      criaBtn2.setAttribute('id', 'btn-clear-color');
+      criaBtn2.innerText = 'Limpa cor'
+    body.appendChild(criaBtn2)
+    
+    // Cria evento para atribuir cor vermelha
+    let clickBtn = document.querySelector('#btn-set-color');
+    clickBtn.addEventListener('click', setRedColor);
+
+    // Cria evento para limpar cor
+    let clickBtn2 = document.getElementById('btn-clear-color');
+    clickBtn2.addEventListener('click', clearColor)
+    
+
+    
     // Exemplo 1 - Click
     let clickP = document.getElementById('clicar'); //seleciona o elemento para sofrer o evento "click"
 
@@ -75,6 +109,13 @@ VIDEOAULA | PARTE II
         console.log('Mouse saiu do elemento')
       }
 
+      function setRedColor() {
+        criaDiv.style.backgroundColor = 'red';
+      }
+      
+      function clearColor() {
+        criaDiv.style.backgroundColor = 'white';
+      }
   </script>
 </body>
 </html>
