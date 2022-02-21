@@ -21,9 +21,13 @@
     const paiOndeEstou = ondeEstou.parentElement;
       paiOndeEstou.style.color = 'red';
 
-//  3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos 
+//  3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    const primeiroNeto = document.getElementById('primeiroFilhoDoFilho');
+      primeiroNeto.innerText = 'Este é o texto inserido para o Primeiro Filho do Filho.';
 
 //  4. Acesse o primeiroFilho a partir de pai;
+    const pai = document.getElementById('pai');
+      let primeiroFilho = pai.firstElementChild;
 
 //  5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta;
 
