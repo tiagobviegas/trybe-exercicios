@@ -1,0 +1,1 @@
+const emergencias = document.getElementsByClassName('emergency-tasks')
