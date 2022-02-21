@@ -1,105 +1,34 @@
-
-let ingredientsList = ['500g de feijão carioquinha cozido', '200g de toucinho', '1 concha de óleo', '1 cebola média picada', '4 dentes de alho', '5 ovos', '1 colher de sopa de sal com alho', 'Cheiro verde a gosto', '200g de farinha de mandioca'];
-
-let ingredientsSection = document.querySelector('.ingredients-section');
-let ingredientsUl = document.createElement('ul');
-ingredientsUl.className = 'ingredients-list';
-ingredientsSection.appendChild(ingredientsUl);
-
-let list = document.querySelector('.ingredients-list');
-
-for (let i = 0; i < ingredientsList.length; i += 1) {
-  let ingredient = ingredientsList[i];
-  let ingredientItem = document.createElement('li');
-  ingredientItem.className = 'ingredients';
-  ingredientItem.innerText = ingredient;
-  list.appendChild(ingredientItem);
-}
-
-/*
-<body>
-  <main id="paiDoPai">
-    <section id="pai">  <<<<<<<<<<<<<<<<<<
-      <section id="primeiroFilho"></section>
-      <section id="elementoOndeVoceEsta">     <<<<<<<<<<<<<<<<<<
-        <section id="primeiroFilhoDoFilho"></section>     <<<<<<<<<<<<<<<<<<
-        <section id="segundoEUltimoFilhoDoFilho"></section>
-      </section>
-      Atenção!
-      <section id="terceiroFilho"></section>
-      <section id="quartoEUltimoFilho"></section>
-    </section>
-  </main>
-  <script src="scriptII.js"></script>
-</body>
-</html>
-
-//
-//  1. Crie um irmão para elementoOndeVoceEsta;
-    const elementoBase = document.querySelector('#elementoOndeVoceEsta');
-    const elementoPai = elementoBase.parentElement;
-    const novoElemento = document.createElement('section');
-      novoElemento.innerText = 'Novo irmão de Elemento Onde Você Está'
-    elementoPai.appendChild(novoElemento);
-//
-//  2. Crie um filho para elementoOndeVoceEsta;
-    const novoFilhoElementoOndeVoceEsta = document.createElement('section');
-      novoFilhoElementoOndeVoceEsta.innerHTML = 'Novo filho de Elemento Onde Você Está';
-    elementoBase.appendChild(novoFilhoElementoOndeVoceEsta);
-//
-//  3. Crie um filho para primeiroFilhoDoFilho;
-    const primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
-    const novoFilhoPrimeiroFilhoDoFilho = document.createElement('p');
-      novoFilhoPrimeiroFilhoDoFilho.innerText = 'Filho do Primeiro Filho do Filho';
-      primeiroFilhoDoFilho.appendChild(novoFilhoPrimeiroFilhoDoFilho);
-//
-//  4. A partir desse filho criado, acesse terceiroFilho.
-    novoFilhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+// <body>
+//   <main id="paiDoPai">
+//     <section id="pai">
+//       <section id="primeiroFilho"></section>
+//       <section id="elementoOndeVoceEsta">
+//         <section id="primeiroFilhoDoFilho"></section>
+//         <section id="segundoEUltimoFilhoDoFilho"></section>
+//       </section>
+//       Atenção!
+//       <section id="terceiroFilho"></section>
+//       <section id="quartoEUltimoFilho"></section>
+//     </section>
+//   </main>
+//   <script src="scriptII.js"></script>
+// </body>
 //
 //
-//  PARTE III
-//
-//  Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
-//
-  const paiDoPai = document.querySelector('#paiDoPai');
-  const pai = document.querySelector('#pai');
-  const removeElementoDePai = pai.children;
-  pai.removeChild(removeElementoDePai[0]);
-  const removeElementosChildren = elementoBase.children;
-  elementoBase.removeChild(removeElementosChildren[1]);
-*/
-//
-//
-/*
+// Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 
-let ingredientsList = document.querySelector('.ingredients-list')
-
-for (let i = 0; i < ingredientsItems.length; i += 1) {
-  let ingredient = ingredientsItems[i];
-
-  let ingredientsListItems = document.createElement('li');
-  ingredientsListItems.innerText = ingredient;
-  
-  ingredientsListItems.className = 'ingredients-list-item';
-
-  ingredientsList.appendChild(ingredientsListItems);
-}
-
-let ingredientsListItems = document.querySelectorAll('.ingredients-list-item');
-
-for(let i = 0; i < ingredientsListItems.length; i += 1) {
-  let element = ingredientsListItems[i];
-  if (element.innerText.includes('toucinho')) {
-    ingredientsList.removeChild(element);
+  const mainElement = document.getElementById('pai');
+  const children = mainElement.childNodes;
+  for(let i = children.length -1; i >= 0; i -= 1) {
+    if(children[i].id !== 'elementoOndeVoceEsta'){
+    mainElement.removeChild(children[i]);
+    }
   }
-}
 
-
-1 - Eu já fui piloto de corrida
-2 - Eu já fui para a Disney
-3 - Eu já pulei de para-quedas
-
-Jackson Silva
-  Entrou na padaria
-
-*/
+  const mainElement2 = document.getElementById('elementoOndeVoceEsta');
+  const children2 = mainElement2.childNodes;
+  for(let i = children2.length -1; i >= 0; i -= 1) {
+    if(children2[i].id !== 'primeiroFilhoDoFilho'){
+    mainElement2.removeChild(children2[i]);
+    }
+  }
