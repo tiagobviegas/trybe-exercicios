@@ -1,7 +1,6 @@
 <!--
 VIDEOAULA | PARTE II
--->
-<!--
+
   ADDEVENTLISTENER é formado por "addEventListener(tipoEvento, função)" onde ele define-se no primeiro parâmetro o tipo de evento a ser "escutado/esperado" e a função que deverá ser executada quando esse evento ocorrer.
 
   Alguns tipos de evento que podem ser utilizados são:
@@ -30,7 +29,41 @@ VIDEOAULA | PARTE II
   <div>
     <button id="mouse-over-leave">Botão para ter o mouse passado em cima e removido</button>
   </div>
+
   <script>
+    let body = document.getElementsByTagName('body')[0];
+    
+    // Cria container 'div'
+    let criaDiv = document.createElement('div');
+      criaDiv.setAttribute('id', 'btn-color-change');
+      criaDiv.style.width = '422px';
+      criaDiv.style.height = '26px';
+      criaDiv.style.border = 'solid black'
+    
+      // Cria button dentro do container 'btn-color-change'
+    let criaBtn1 = document.createElement('button');
+      criaBtn1.setAttribute('id', 'btn-set-color');
+      criaBtn1.innerText = 'Clique para alterar a cor'
+    
+    body.appendChild(criaDiv)
+    criaDiv.appendChild(criaBtn1)
+    
+    // Cria button para limpar a cor do container 'btn-set-color'
+    let criaBtn2 = document.createElement('button');
+      criaBtn2.setAttribute('id', 'btn-clear-color');
+      criaBtn2.innerText = 'Limpa cor'
+    body.appendChild(criaBtn2)
+    
+    // Cria evento para atribuir cor vermelha
+    let clickBtn = document.querySelector('#btn-set-color');
+    clickBtn.addEventListener('click', setRedColor);
+
+    // Cria evento para limpar cor
+    let clickBtn2 = document.getElementById('btn-clear-color');
+    clickBtn2.addEventListener('click', clearColor)
+    
+
+    
     // Exemplo 1 - Click
     let clickP = document.getElementById('clicar'); //seleciona o elemento para sofrer o evento "click"
 
@@ -40,7 +73,7 @@ VIDEOAULA | PARTE II
     function recebeClick(clickParagrafo) {
       // TRATANDO INFORMAÇÔES DA FUNÇÃO DE AddEventListener:
       //
-      // Quando adicionamos um parâmetro à função estamos falando que queremos pegar as informações obtidas no evento e tratá-las, ou seja, pegar cada uma delas para outras para aplicar outras ações.
+      // Quando adicionamos um parâmetro à função que executará a função que queremos ao receber o evento estamos falando que queremos pegar as informações obtidas no evento e tratá-las, ou seja, pegar as duas informações ('click' e "clickP") que entram como atributo do parâmetro para outras para aplicar outras ações.
 
       // o parâmetro "clickParagrafo" recebe tanto o evento (no caso "click") quanto o objeto que sofre a ação (o parágrafo que está atribuído à variável "clickP"). Eles são identificados respectivamente da seguinte forma:
       
@@ -72,12 +105,20 @@ VIDEOAULA | PARTE II
       }
     
       function mouseSaiudDoElemento() {
-      console.log('Mouse saiu do elemento')
+        console.log('Mouse saiu do elemento')
       }
 
+      function setRedColor() {
+        criaDiv.style.backgroundColor = 'red';
+      }
+      
+      function clearColor() {
+        criaDiv.style.backgroundColor = 'white';
+      }
   </script>
 </body>
 </html>
+<<<<<<< HEAD:fundamentos/bloco-05-javascript-dom-eventos-e-web-storage/dia-03-javascript-eventos/exercicios-parte-II/index.html
 -->
 
 <!--
@@ -115,3 +156,5 @@ VIDEOAULA | PARTE II
     <script src="main.js"></script>
   </body>
 </html>
+=======
+>>>>>>> 978969e892687de84b87dcdcc9c57b72ed69d159:fundamentos/bloco-05-javascript-dom-eventos-e-web-storage/dia-03-javascript-eventos/exercicios-parte-II.html
