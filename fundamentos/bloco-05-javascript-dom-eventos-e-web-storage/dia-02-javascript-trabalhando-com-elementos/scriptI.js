@@ -17,7 +17,7 @@
 //  1. Acesse o elemento elementoOndeVoceEsta;
     const ondeEstou = document.getElementById('elementoOndeVoceEsta');
 
-    //  2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele;
+//  2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele;
     const paiOndeEstou = ondeEstou.parentElement;
       paiOndeEstou.style.color = 'red';
 
@@ -30,9 +30,13 @@
       let primeiroFilho = pai.firstElementChild;
 
 //  5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta;
+    const firstSibling = ondeEstou.previousElementSibling;
 
 //  6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta;
+    const text = ondeEstou.nextSibling;
 
 //  7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta;
+    const terceiroFilho1 = ondeEstou.nextElementSibling;
 
 //  8. Agora acesse o terceiroFilho a partir de pai.
+    const terceiroFilho2 = pai.children[2];
