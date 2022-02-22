@@ -68,16 +68,16 @@
       //
       // 2 - Adicione a tag main com a classe main-content como filho da tag body ;
       //
-          const main = document.createElement('main');
-            main.className = 'main-content';
-          body.appendChild(main);
+          const createMain = document.createElement('main');
+            createMain.className = 'main-content';
+          body.appendChild(createMain);
       //
       // 3 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
       //
           const section = document.createElement('section');
             section.className = 'center-content';
-          const mainChildren = document.getElementsByClassName('main-content');
-          mainChildren[0].appendChild(section);
+          const main = document.getElementsByClassName('main-content')[0];
+          main.appendChild(section);
       //
       // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       //
@@ -90,13 +90,13 @@
       //
           const secondSection = document.createElement('section');
             secondSection.className = 'left-content';
-          mainChildren[0].appendChild(secondSection);
+          main.appendChild(secondSection);
       //
       // 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
       //
           const thirdSection = document.createElement('section');
             thirdSection.className = 'right-content';
-          mainChildren[0].appendChild(thirdSection);
+          main.appendChild(thirdSection);
       //
       // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
       //
@@ -120,8 +120,8 @@
       // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
       //
           for(let i = 0; i < 3; i += 1) {
-            const h3 = document.createElement('h3');
-            mainChildren[0].appendChild(h3);
+            const createH3 = document.createElement('h3');
+            main.appendChild(createH3);
           }
       //
       //
@@ -129,7 +129,10 @@
       //
       // 1 - Adicione a classe title na tag h1 criada;
       //
+          h1.className = 'title';
+      //
       // 2 - Adicione a classe description nas 3 tags h3 criadas;
+      //
       //
       // 3 - Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
       //
