@@ -107,6 +107,16 @@
       //
       // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
       //
+          const ul = document.createElement('ul');
+          const ulElement = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+          for(let i = 0; i < ulElement.length; i += 1) {
+            let li = document.createElement('li');
+              li.innerText = ulElement[i];
+            ul.appendChild(li);  
+          }
+          const rightContent = document.getElementsByClassName('right-content');
+          rightContent[0].appendChild(ul);
+
       // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
       //
       //
