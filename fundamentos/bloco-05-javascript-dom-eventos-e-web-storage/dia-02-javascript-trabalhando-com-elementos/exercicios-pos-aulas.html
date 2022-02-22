@@ -82,7 +82,7 @@
       // 4 - Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
       //
           const paragraph = document.createElement('p');
-            paragraph.innerText = 'Este é um oparágrafo criado dinamicamente';
+            paragraph.innerText = 'Este é um parágrafo criado dinamicamente';
           const sectionChildren = document.getElementsByTagName('section');
           sectionChildren[0].appendChild(paragraph);
       //
@@ -118,6 +118,11 @@
           rightContent[0].appendChild(ul);
 
       // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+      //
+          for(let i = 0; i < 3; i += 1) {
+            const h3 = document.createElement('h3');
+            mainChildren[0].appendChild(h3);
+          }
       //
       //
       // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
