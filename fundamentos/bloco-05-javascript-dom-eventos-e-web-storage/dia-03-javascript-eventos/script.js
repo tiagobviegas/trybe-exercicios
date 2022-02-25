@@ -59,8 +59,6 @@ createDaysOfTheWeek();
 //  > Adicione a este botão a ID "btn-holiday" .
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
-  
-
   function setHoliday(feriado) {
     const createButton = document.createElement('button');
     createButton.innerText = feriado;
