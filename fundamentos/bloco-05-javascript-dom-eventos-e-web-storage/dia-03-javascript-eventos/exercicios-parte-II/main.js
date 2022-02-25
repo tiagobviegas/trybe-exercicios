@@ -3,7 +3,8 @@ const secondLi = document.getElementById('second-li');
 const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
-
+//secondLi.className = 'tech'
+//thirdLi.className = 'tech';
 
 // 1. Copie esse arquivo e edite apenas ele;
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
@@ -14,12 +15,18 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
-function setClassTech(li) {
-  li.target.className = 'tech';
-}
+  const listItens = document.querySelectorAll('li');
 
-secondLi.addEventListener('click', setClassTech);
-thirdLi.addEventListener('click', setClassTech);
+  firstLi.addEventListener('click', setClass);
+  secondLi.addEventListener('click', setClass);
+  thirdLi.addEventListener('click', setClass);
+
+  function setClass (item){
+    for(let i = 0; i < listItens.length; i += 1) {
+      listItens[i].className = 'null';
+    }
+    item.target.className = 'tech';
+  }
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
@@ -43,7 +50,7 @@ function resetText(event) {
   // que retorna o objeto que disparou o evento.
 }
 
-firstLi.addEventListener('dblclick', resetText);
+firstLi.innerText = input.innerText;
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
