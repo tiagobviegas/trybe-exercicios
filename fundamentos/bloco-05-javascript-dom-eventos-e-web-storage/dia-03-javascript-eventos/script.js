@@ -59,9 +59,10 @@ createDaysOfTheWeek();
 //  > Adicione a este botão a ID "btn-holiday" .
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
-  const createButton = document.createElement('button');
+  
 
   function setHoliday(feriado) {
+    const createButton = document.createElement('button');
     createButton.innerText = feriado;
     createButton.id = 'btn-holiday';
     let divButtons = document.querySelector('.buttons-container');
@@ -77,24 +78,21 @@ createDaysOfTheWeek();
 //  
 //   > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 
+// >>>>>>>>> consultei o gabarito para entender a dinâmica do exercício <<<<<<<<<
 
-const holidayBtn = document.querySelector('#btn-holiday');
-holidayBtn.addEventListener('click', setColor);
-
-function setColor(){  
-  const setRed = document.querySelectorAll('.holiday');
-  for(let i = 0; i < setRed.length; i += 1) {
-    setRed[i].style.background = "red";
-  }
-
-  function setDefaultColor() {
-    const setDefault = document.querySelectorAll('.holiday');
-    for(let i = 0; i < setDefault.length; i += 1) {
-      setDefault[i].style.background = "rgb(238,238,238)";
+  const holidayBtn = document.querySelector('#btn-holiday');
+  const selectHolidays = document.querySelectorAll('.holiday');
+  const defaultBgColor = "rgb(238,238,238)";
+  const newBgColor = 'lightblue';
+  holidayBtn.addEventListener('click', function (){
+    for(let i = 0; i < selectHolidays.length; i += 1) {
+      if(selectHolidays[i].style.backgroundColor === newBgColor) {
+        selectHolidays[i].style.backgroundColor = defaultBgColor;
+      } else {
+        selectHolidays[i].style.backgroundColor = newBgColor;
+      }
     }
-  }
-}
-holidayBtn.addEventListener('click', setColor);
+  });
 
 
 // Exercício 4:
