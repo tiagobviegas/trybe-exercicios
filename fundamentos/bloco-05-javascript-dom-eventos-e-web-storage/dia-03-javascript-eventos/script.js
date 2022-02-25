@@ -78,20 +78,22 @@ createDaysOfTheWeek();
 
 // >>>>>>>>> consultei o gabarito para entender a dinâmica do exercício <<<<<<<<<
 
-  const holidayBtn = document.querySelector('#btn-holiday');
-  const selectHolidays = document.querySelectorAll('.holiday');
-  const defaultBgColor = "rgb(238,238,238)";
-  const newBgColor = 'lightblue';
-  holidayBtn.addEventListener('click', function (){
-    for(let i = 0; i < selectHolidays.length; i += 1) {
-      if(selectHolidays[i].style.backgroundColor === newBgColor) {
-        selectHolidays[i].style.backgroundColor = defaultBgColor;
-      } else {
-        selectHolidays[i].style.backgroundColor = newBgColor;
+  function addHolidayBtn() {
+    const holidayBtn = document.querySelector('#btn-holiday');
+    const selectHolidays = document.querySelectorAll('.holiday');
+    const defaultBgColor = "rgb(238,238,238)";
+    const newBgColor = 'lightblue';
+    holidayBtn.addEventListener('click', function() {
+      for(let i = 0; i < selectHolidays.length; i += 1) {
+        if(selectHolidays[i].style.backgroundColor === newBgColor) {
+          selectHolidays[i].style.backgroundColor = defaultBgColor;
+        } else {
+          selectHolidays[i].style.backgroundColor = newBgColor;
+        }
       }
-    }
-  });
-
+    })
+  };
+  addHolidayBtn()
 
 // Exercício 4:
 //
@@ -100,6 +102,14 @@ createDaysOfTheWeek();
 //   > Adicione a este botão o ID "btn-friday" .
 //   > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
+  function createFridayBtn(friday){
+    const createFriday = document.createElement('button');
+    createFriday.innerText = friday;
+    createFriday.id = 'btn-friday';
+    document.querySelector('.buttons-container').appendChild(createFriday);
+  }
+  createFridayBtn('Sexta-Feira');
+  
 
 // Exercício 5:
 //
