@@ -40,23 +40,13 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
   myWebpage.addEventListener('dblclick', function() {
     window.open("https://tiagobviegas.github.io/project-lessons-learned/index.html");
-  })
+  });
   
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
-// Segue abaixo um exemplo do uso de event.target:
-
-
-function resetText(event) {
-  // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
-}
-
-firstLi.innerText = input.innerText;
-
-// Não precisa passar o parâmetro dentro da callback resetText. O próprio
-// navegador fará esse trabalho por você, não é legal? Desse jeito, o
-// event.target na nossa função retornará o objeto 'firstLi'.
+  myWebpage.addEventListener('mouseover', changeColor);
+  
+  function changeColor(mySpotrybefy) {
+    mySpotrybefy.target.style.color = 'lightBlue';
+  }
