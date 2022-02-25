@@ -49,7 +49,6 @@ createDaysOfTheWeek();
       getUl.appendChild(createLi);
     }
   }
-
   insertDays();
 
 
@@ -77,6 +76,25 @@ createDaysOfTheWeek();
 //   Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 //  
 //   > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+
+
+const holidayBtn = document.querySelector('#btn-holiday');
+holidayBtn.addEventListener('click', setColor);
+
+function setColor(){  
+  const setRed = document.querySelectorAll('.holiday');
+  for(let i = 0; i < setRed.length; i += 1) {
+    setRed[i].style.background = "red";
+  }
+
+  function setDefaultColor() {
+    const setDefault = document.querySelectorAll('.holiday');
+    for(let i = 0; i < setDefault.length; i += 1) {
+      setDefault[i].style.background = "rgb(238,238,238)";
+    }
+  }
+}
+holidayBtn.addEventListener('click', setColor);
 
 
 // Exercício 4:
