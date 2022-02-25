@@ -49,8 +49,9 @@ createDaysOfTheWeek();
       getUl.appendChild(createLi);
     }
   }
+
   insertDays();
-  
+
 
 // Exercício 2:
 // 
@@ -58,6 +59,17 @@ createDaysOfTheWeek();
 //
 //  > Adicione a este botão a ID "btn-holiday" .
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+
+  const createButton = document.createElement('button');
+
+  function setHoliday(feriado) {
+    createButton.innerText = feriado;
+    createButton.id = 'btn-holiday';
+    let divButtons = document.querySelector('.buttons-container');
+    divButtons.appendChild(createButton);
+  }
+
+  setHoliday('Feriados');
 
 
 // Exercício 3:
