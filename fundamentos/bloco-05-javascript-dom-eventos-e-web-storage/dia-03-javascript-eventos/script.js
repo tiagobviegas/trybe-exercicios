@@ -26,8 +26,31 @@ createDaysOfTheWeek();
 //         Ex: <li class="day holiday">24</li>
 //     > Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday .
 //         Ex: <li class="day friday">4</li>
-//     const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
+  const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
+  function insertDays() {
+    for(let i = 0; i < dezDaysList.length; i += 1) {
+      const createLi = document.createElement('li');
+        if(dezDaysList[i] === 25) {
+          createLi.className = 'day holiday friday';
+          createLi.innerHTML = dezDaysList[i];
+        } else if(dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18) {
+          createLi.className = 'day friday';
+          createLi.innerHTML = dezDaysList[i];
+        } else if(dezDaysList[i] === 24 || dezDaysList[i] === 31) {
+          createLi.className = 'day holiday';
+          createLi.innerHTML = dezDaysList[i];
+        } else {
+          createLi.className = 'day';
+          createLi.innerHTML = dezDaysList[i];
+        }
+      const getUl = document.querySelector('#days');
+      getUl.appendChild(createLi);
+    }
+  }
+  insertDays();
+  
 
 // Exercício 2:
 // 
