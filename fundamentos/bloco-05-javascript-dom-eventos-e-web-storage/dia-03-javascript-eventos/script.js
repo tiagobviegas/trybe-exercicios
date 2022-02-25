@@ -82,7 +82,7 @@ createDaysOfTheWeek();
     const holidayBtn = document.querySelector('#btn-holiday');
     const selectHolidays = document.querySelectorAll('.holiday');
     const defaultBgColor = "rgb(238,238,238)";
-    const newBgColor = 'lightblue';
+    const newBgColor = 'lightgreen';
 
     holidayBtn.addEventListener('click', function() {
       for(let i = 0; i < selectHolidays.length; i += 1) {
@@ -134,7 +134,7 @@ createDaysOfTheWeek();
       }
     });
   }
-  changeFridays()
+  changeFridays();
 
 
 // Exercício 6:
@@ -142,6 +142,19 @@ createDaysOfTheWeek();
 //   Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 //  
 //   > Dica - Propriedade: event.target .
+
+  function caseChange(){
+    const selectDay = document.querySelectorAll('.day');
+    for(let i = 0; i < selectDay.length; i += 1){
+      selectDay[i].onmouseover = function() {
+        selectDay[i].style.fontSize = '25px';
+      }
+      selectDay[i].onmouseleave = function() {
+        selectDay[i].style.fontSize = '20px';
+      }
+    }    
+  }  
+  caseChange()
 
 
 // Exercício 7:
