@@ -83,6 +83,7 @@ createDaysOfTheWeek();
     const selectHolidays = document.querySelectorAll('.holiday');
     const defaultBgColor = "rgb(238,238,238)";
     const newBgColor = 'lightblue';
+
     holidayBtn.addEventListener('click', function() {
       for(let i = 0; i < selectHolidays.length; i += 1) {
         if(selectHolidays[i].style.backgroundColor === newBgColor) {
@@ -116,6 +117,24 @@ createDaysOfTheWeek();
 //   Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 //
 //   > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+
+  function changeFridays(){
+    const fridayBtn = document.querySelector('#btn-friday');
+    const fridays = document.querySelectorAll('.friday');
+    const fridayLabel = "SEXTOU!";
+    const fridaysArray = [4, 11, 18, 25];
+  
+    fridayBtn.addEventListener('click', function () {
+      for(let i = 0; i < fridays.length; i += 1) {
+        if(fridays[i].innerText !== fridayLabel) {
+          fridays[i].innerText = fridayLabel; 
+        } else {
+          fridays[i].innerText = fridaysArray[i];
+        }
+      }
+    });
+  }
+  changeFridays()
 
 
 // Exercício 6:
