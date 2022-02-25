@@ -94,10 +94,6 @@ createDaysOfTheWeek();
     }
   });
 
-  
-
-
-
 
 // Exercício 4:
 //
