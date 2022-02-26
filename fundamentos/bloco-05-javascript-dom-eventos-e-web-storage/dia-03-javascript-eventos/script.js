@@ -31,7 +31,7 @@ createDaysOfTheWeek();
 
   function insertDays() {
     for(let i = 0; i < dezDaysList.length; i += 1) {
-      const createLi = document.createElement('li');
+      let createLi = document.createElement('li');
         if(dezDaysList[i] === 25) {
           createLi.className = 'day holiday friday';
           createLi.innerHTML = dezDaysList[i];
@@ -60,7 +60,7 @@ createDaysOfTheWeek();
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
   function setHoliday(feriado) {
-    const createButton = document.createElement('button');
+    let createButton = document.createElement('button');
     createButton.innerText = feriado;
     createButton.id = 'btn-holiday';
     let divButtons = document.querySelector('.buttons-container');
@@ -79,10 +79,10 @@ createDaysOfTheWeek();
 // >>>>>>>>> consultei o gabarito para entender a dinâmica do exercício <<<<<<<<<
 
   function addHolidayBtn() {
-    const holidayBtn = document.querySelector('#btn-holiday');
-    const selectHolidays = document.querySelectorAll('.holiday');
-    const defaultBgColor = "rgb(238,238,238)";
-    const newBgColor = 'lightgreen';
+    let holidayBtn = document.querySelector('#btn-holiday');
+    let selectHolidays = document.querySelectorAll('.holiday');
+    let defaultBgColor = "rgb(238,238,238)";
+    let newBgColor = 'lightgreen';
 
     holidayBtn.addEventListener('click', function() {
       for(let i = 0; i < selectHolidays.length; i += 1) {
@@ -104,7 +104,7 @@ createDaysOfTheWeek();
 //   > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 
   function createFridayBtn(friday){
-    const createFriday = document.createElement('button');
+    let createFriday = document.createElement('button');
     createFriday.innerText = friday;
     createFriday.id = 'btn-friday';
     document.querySelector('.buttons-container').appendChild(createFriday);
@@ -119,10 +119,10 @@ createDaysOfTheWeek();
 //   > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
   function changeFridays(){
-    const fridayBtn = document.querySelector('#btn-friday');
-    const fridays = document.querySelectorAll('.friday');
-    const fridayLabel = "SEXTOU!";
-    const fridaysArray = [4, 11, 18, 25];
+    let fridayBtn = document.querySelector('#btn-friday');
+    let fridays = document.querySelectorAll('.friday');
+    let fridayLabel = "SEXTOU!";
+    let fridaysArray = [4, 11, 18, 25];
   
     fridayBtn.addEventListener('click', function () {
       for(let i = 0; i < fridays.length; i += 1) {
@@ -143,9 +143,8 @@ createDaysOfTheWeek();
 //  
 //   > Dica - Propriedade: event.target .
 
-  const selectDay = document.querySelectorAll('.day');
-
   function caseChange(){
+    let selectDay = document.querySelectorAll('.day');
     for(let i = 0; i < selectDay.length; i += 1){
       selectDay[i].onmouseover = function() {
         selectDay[i].style.fontSize = '25px';
@@ -164,10 +163,9 @@ createDaysOfTheWeek();
 //
 //   > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
-  const selectMyTasksDiv = document.querySelector('.my-tasks');
-
   function addTask(task) {
-    const newTask = document.createElement('span');
+    let selectMyTasksDiv = document.querySelector('.my-tasks');
+    let newTask = document.createElement('span');
       newTask.innerHTML = task;
       selectMyTasksDiv.appendChild(newTask);
   }
@@ -182,10 +180,11 @@ createDaysOfTheWeek();
 //   > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
   function addLegend(color) {
-    const newLegend = document.createElement('div');
-      newLegend.className = 'task';
-      newLegend.style.backgroundColor = color;
-    selectMyTasksDiv.appendChild(newLegend);
+    let selectMyTasksDiv = document.querySelector('.my-tasks');
+    let legend = document.createElement('div');
+      legend.className = 'task';
+      legend.style.backgroundColor = color;
+    selectMyTasksDiv.appendChild(legend);
   }
   addLegend('#AD0B0B');
 
@@ -195,6 +194,18 @@ createDaysOfTheWeek();
 //   Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 //  
 //   > Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+  function newEvent() {
+    let selectTask = document.querySelector('.task');
+      selectTask.addEventListener('click', function() {
+        if(selectTask.className === 'task'){
+          selectTask.className = 'task-selected';          
+        } else {
+          selectTask.className = 'task';
+        }
+      })
+  }
+  newEvent();
 
 
 // Exercício 10:
