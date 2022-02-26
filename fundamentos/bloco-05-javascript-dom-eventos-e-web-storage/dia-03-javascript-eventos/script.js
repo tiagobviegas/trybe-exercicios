@@ -143,8 +143,9 @@ createDaysOfTheWeek();
 //  
 //   > Dica - Propriedade: event.target .
 
+  const selectDay = document.querySelectorAll('.day');
+
   function caseChange(){
-    const selectDay = document.querySelectorAll('.day');
     for(let i = 0; i < selectDay.length; i += 1){
       selectDay[i].onmouseover = function() {
         selectDay[i].style.fontSize = '25px';
@@ -163,10 +164,11 @@ createDaysOfTheWeek();
 //
 //   > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
+  const selectMyTasksDiv = document.querySelector('.my-tasks');
+
   function addTask(task) {
     const newTask = document.createElement('span');
       newTask.innerHTML = task;
-    const selectMyTasksDiv = document.querySelector('.my-tasks');
       selectMyTasksDiv.appendChild(newTask);
   }
   addTask('cozinhar');
@@ -178,6 +180,14 @@ createDaysOfTheWeek();
 //
 //   > O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 //   > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+
+  function addLegend(color) {
+    const newLegend = document.createElement('div');
+      newLegend.className = 'task';
+      newLegend.style.backgroundColor = color;
+    selectMyTasksDiv.appendChild(newLegend);
+  }
+  addLegend('#AD0B0B');
 
 
 // Exercício 9:
