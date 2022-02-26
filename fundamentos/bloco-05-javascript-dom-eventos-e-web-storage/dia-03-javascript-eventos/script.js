@@ -186,7 +186,7 @@ createDaysOfTheWeek();
       legend.style.backgroundColor = color;
     selectMyTasksDiv.appendChild(legend);
   }
-  addLegend('#AD0B0B');
+  addLegend('#FF9F9F');
 
 
 // Exercício 9:
@@ -195,7 +195,7 @@ createDaysOfTheWeek();
 //  
 //   > Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 
-  function newEvent() {
+  function changeTaskClass() {
     let selectTask = document.querySelector('.task');
       selectTask.addEventListener('click', function() {
         if(selectTask.className === 'task'){
@@ -205,14 +205,30 @@ createDaysOfTheWeek();
         }
       })
   }
-  newEvent();
+  changeTaskClass();
 
 
 // Exercício 10:
 //
 //   Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
     
-//   > Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+//   > Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
+
+  function setDayTask() {
+    let allDays = document.querySelectorAll('.day');
+    for(let i = 0; i < allDays.length; i += 1){
+      let selectDay = document.querySelector('.day');
+      let selectLegend = document.querySelector('.task');
+      selectDay.addEventListener('click', function() {
+        if(selectDay.style.color === 'rgb(119,119,119)') {
+          selectDay.style.color = selectLegend.style.backgroundColor;
+        } else {
+          selectDay.style.color = 'rgb(119,119,119)';
+        }
+      })
+    }
+  }
+  setDayTask()
 
 
 // Bônus:
