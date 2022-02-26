@@ -163,6 +163,14 @@ createDaysOfTheWeek();
 //
 //   > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
+  function addTask(task) {
+    const newTask = document.createElement('span');
+      newTask.innerHTML = task;
+    const selectMyTasksDiv = document.querySelector('.my-tasks');
+      selectMyTasksDiv.appendChild(newTask);
+  }
+  addTask('cozinhar');
+
 
 // Exercício 8:
 //
