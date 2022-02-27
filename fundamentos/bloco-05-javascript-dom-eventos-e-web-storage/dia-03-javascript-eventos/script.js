@@ -228,7 +228,7 @@ createDaysOfTheWeek();
       })
     }
   }
-  setDayTask()
+  setDayTask();
 
 
 // Bônus:
