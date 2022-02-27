@@ -214,43 +214,21 @@ changeTaskClass();
   
 //   > Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
 
-//  WORKING CODE:
-//
-
-//  function setDayTask() {
-//    const getDay = document.querySelectorAll('.day');
-//    const taskSelected = document.querySelector('.task');
-//      taskSelected.addEventListener('click', function() {
-//    for(let i = 0; i < getDay.length; i += 1) {
-//      getDay[i].addEventListener('click', function() {
-//        getDay[i].style.color = taskSelected.style.backgroundColor;
-//        getDay[i].addEventListener('click', function() {
-//          getDay[i].style.color = 'rgb(119,119,119)';
-//          taskSelected.className = 'task';
-//        })
-//      })
-//    }
-//    })
-//  }
-//  setDayTask();
-
 function setDayTask() {
   const getDay = document.querySelectorAll('.day');
   const taskSelected = document.querySelector('.task');
-    taskSelected.addEventListener('click', function() {
-  for(let i = 0; i < getDay.length; i += 1) {
-    getDay[i].addEventListener('click', function() {
-      getDay[i].style.color = taskSelected.style.backgroundColor;
+  taskSelected.addEventListener('click', function() {
+    for(let i = 0; i < getDay.length; i += 1) {
       getDay[i].addEventListener('click', function() {
-        getDay[i].style.color = 'rgb(119,119,119)';
-        taskSelected.className = 'task';
+        getDay[i].style.color = taskSelected.style.backgroundColor;
+        getDay[i].addEventListener('click', function() {
+          getDay[i].style.color = 'rgb(119,119,119)';
+        })
       })
-    })
-  }
+    }
   })
 }
 setDayTask();
-
 
 
 // Bônus:
