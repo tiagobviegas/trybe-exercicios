@@ -238,3 +238,41 @@ setDayTask();
 //   > Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
 //   > Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 //   > Dica - Propriedade: key .
+
+  function addTask() {
+    // seleciona a caixa de texto COMPROMISSOS
+    const inputTask = document.querySelector('#task-input');
+
+    // seleciona o CONTEÚDO de dentro da caixa de texto COMPROMISSOS
+    const inputContent = inputTask.innerText;
+
+    // seleciona o BOTÃO ADICIONAR em COMPROMISSOS
+    const addNewTaskButton = document.querySelector('#btn-add');
+//    const pressEnter = 
+//      pressEnter.onkeydown.key('Enter');
+
+      // adiciona o evento de click ao BOTÃO de ADICIONAR COMPROMISSOS
+      addNewTaskButton.addEventListener('click', addNewTaskKey);
+      inputTask.addEventListener('keydown', addNewTaskKey);
+
+
+      function addNewTaskKey(onclick) {
+        
+        // verifica o CONTEÚDO da caixa de textos COMPROMISSOS
+        const pressEnterKey = onclick.key;
+        if(inputContent == '') {
+          alert('Erro! Por favor, digite um nome para a nova tarefa.');
+          
+        } else if(pressEnterKey == 'Enter' && inputContent == '') {
+          alert('Erro! Por favor, digite um nome para a nova tarefa.');
+        
+        // adiciona o CONTEÚDO da caixa de textos aos COMPROMISSOS
+        } else {
+          const tasksList = document.querySelector('.my-tasks');
+          tasksList.appendChild(inputContent);
+
+        }
+        
+      }
+  }
+  addTask();
