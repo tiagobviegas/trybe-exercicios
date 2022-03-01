@@ -19,83 +19,54 @@
 </head>
 <body>
   <h1>FORMULÁRIO</h1>
-  <form action="" method="POST">
-    <!-- FORM dá inicio a um formulário, neste caso o do campo de envio de dados por meio do comando INPUT-->
-    <!-- ACTION define para onde (servidor, máquina, etc) os dados serão enviados-->
-    <!-- METHOD é a forma como os dados do formulário serão enviados-->
-    <!-- o verbo POST ou GET definem como do METHOD será feito-->
-    <label for="input-text">Seu nome</label>
-    <!-- FOR é para criar um vínculo entre a label e o campo em si. Para criar um vínculo entre a label e o, neste caso, input criamos uma ID no nosso INPUT e preenchemos o atributo FOR com o valor da ID, no caso "input-text" -->
-    <input type="text" placeholder="Digite seu nome" name="texto" required value="TIAGO" class="" id="input-text" name="texto">
-    <!-- INPUT define uma caixa para digitar texto -->
-    <!-- PLACEHOLDER mostra um texto com uma informação no campo para o usuário-->
-    <!-- REQUIRED define que o campo deverá obrigatoriamente ser preenchido-->
-    <!-- VALUE deixa o campo previamente preenchido-->
-    <!-- CLASS permite definir estilos CSS para o campo-->
-    <!-- ID permite a identificação para manibulação via código-->
-    <!-- NAME permite definirmos um nome para identificar o campo do form quando colocarmos um valor nele-->
-    <br><br>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <!-- TEXTEAREA permite criar um campo para digitação de texto-->
-    <!-- COLS define a largura do campo com base em colunas-->
-    <!-- ROWS define a altura do campo com base em linhas de texto-->
-    <!-- Para definir um texto já estabelecido para o campo basta digitá-lo entre as tags-->
+  <form action="" method="GET" enctype="multipart/form-data">
+    <label for="nome-completo">Nome Completo:
+      <input type="text" name="nome" id="nome-completo" placeholder="Digite seu nome" required>
+    </label>
     <br>
+    <label for="input-email">E-mail:
+      <input type="email" name="email" id="input-email" placeholder="Digite seu email" required>
+    </label>
     <br>
-    <input type="checkbox" value="fut" name="esporte" id="esporte1" checked>FUTEBOL<br>
-    <input type="checkbox" value="vol" name="esporte" id="esporte2">VÔLEI<br>
-    <input type="checkbox" value="bas" name="esporte" id="esporte3">BASQUETE<br>
-    <input type="checkbox" value="f1" name="esporte" id="esporte4">FÓRMULA 1<br>
-    <!-- CHECKBOX cria uma caixa de seleção de marcação-->
-    <!-- CHECKED define que a opção começará marcada automaticamente-->
-    <!-- NAME deve ser igual para que todos os elementos estejam no mesmo contexto-->
-    <!-- Para diferenciar cada item basta atribuir uma ID-->
-    <!-- Para dar conteúdo a cada item basta escrever após a tag-->
-    <br>
-    <!-- Podemos usar LABEL para criar uma zona de click para cada uma das opções de input do estilo de seleçao como RADIO ou CHECKBOX. Basta encapsular o input e definir o for com o ID de cada input. Dessa forma, toda a área de texto que após o elemento poderá ser clicado para selecionar a opção, não sendo necessário clicar exatamente no elemento para isso. -->
-    <input type="radio" id="hub1" name="hub" value="sp">
-    <label for="hub1">São Paulo</label><br>
-    <input type="radio" id="hub2" name="hub" value="rj">
-    <label for="hub2">Rio de Janeiro</label><br>
-    <input type="radio" id="hub3" name="hub" value="pr">  
-    <label for="hub3">Curitiba</label><br>
-    <input type="radio" id="hub4" name="hubs" value="pb">
-    <label for="hub4">João Pessoa</label><br>
-
-    <label for="hub5"><input type="radio" id="hub5" name="hub" value="df">Brasília</label><br>
-    <!-- RADIO permite que apenas uma opção seja selecionada no mesmo contexto. Neste caso temos o  contexto "hub" definido por NAME. Para permitir que mais opções sejam escolhidas basta mudar o nome atribuído a NAME criando um novo contexto, como acontece em "João Pessoa" com o valor "hubs"-->
-    <br>
-    <fieldset>
-      <legend>Escolha o Estado</legend>
-      <select name="estados" id="dropdown-estados">
-        <option value="AL">AL</option>
-        <option value="AM">AM</option>
-        <option value="BA">BA</option>
-        <option value="CE">CE</option>
-        <option value="DF">DF</option>
-        <option value="ES">ES</option>
-        <option value="GO">GO</option>
-        <option value="MA">MA</option>
+    <label for="">Estado onde você mora:
+      <select name="estado" id="input-estado">
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="DF" selected>Distrito Federal</option>
+        <option value="RS">Rio Grande do Sul</option>
       </select>
-    </fieldset>
-    <!-- FIELDSET cria uma borda para o conjunto de dados que estiver englobado pelas tags-->
-    <!-- LEGEND dentro de FIELDSET adiciona uma descrição como título de FIELDSET usando o texto entre as tags-->
-    <!-- SELECT cria um dropdown, ou seja, uma caxa de seleções que possui um botão que ao ser clicado mostra uma lista de opções que permite apenas uma esolha.-->
+    </label>
     <br>
-    <p>Usuário</p>
-    <input type="text" name="user" required>
+    <p>Selecione sua foto:</p>
+    <input type="file" name="foto" id="foto-perfil">
     <br>
-    <p>Senha</p>
-    <input type="password" name="senha" required>
-    <!-- O input do tipo PASSWORD permite criar um campo dedicado para digitar "senha", onde os caracteres são omitidos
-    ATENÇÃO: o método GET exibe as informações de senha na URL no momento do envio dos dados-->
-    <br><br>
-    <input type="file" name="foto" id="insere-foto">
-    <!-- O input do tipo FILE permite criar um botão que permite escolher um arquivo de imagem para ser enviado--
-    ATENÇÃO: para utilizar esse recursos como INPUT type FILE corretamente o método POST é necessário definir na tag FORM o atributo ENCTYPE com o valor MULTPART/FORM-DATA-->
-    <br><br>
-    <button type="submit">CADASTRAR</button>
-    <!-- BUTTON define um botão que, por meio do comando "SUBMIT" envia os dados inseridos no campo INPUT-->
-  </form>
+    <p>Comidas favoritas:</p>
+    <label for="comida-1">
+      <input type="radio" id="comida-1" name="comida-favorita" value="pizza" checked>Pizza
+    </label>
+    <label for="comida-2">
+      <input type="radio" id="comida-2" name="comida-favorita" value="Sorvete">Sorvete
+    </label>
+    <label for="comida-3">
+      <input type="radio" id="comida-3" name="comida-favorita" value="Pão de Queijo">Pão de Queijo
+    </label>
+    <label for="comida-4">
+      <input type="radio" id="comida-4" name="comida-favorita" value="Outro">Pizza
+    </label>
+    <br>
+    <p>Escreva algo sobre você:</p>
+    <textarea name="sobre-mim" id="text-area=1" cols="30" rows="5"></textarea>
+    <br>
+    <p>Digite sua senha:</p>
+    <label for="input-senha">
+      <input type="password" name="senha" id="input-senha" required>
+    </label>
+    <br>
+    <label for="checkbox-noticias">
+      <input type="checkbox" name="promocoes" id="checkbox-noticias">Deseja receber notícias e promoções incríveis?
+    </label>
+    <br>
+    <button type="submit">Enviar Formulário</button>
+</form>
 </body>
 </html>
