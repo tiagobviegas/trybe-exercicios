@@ -7,8 +7,55 @@
   <title>Document</title>
 </head>
 <body>
-  
-  <script src="script.js"></script>
+<fieldset id="border">
+  <header>
+    <h1 id="titulo">Faça sua viagem dos sonhos com a Trybe</h1>
+  </header>
+  <main>
+    <form action="" method="GET" enctype="multipart/form-data">
+      <label for="nome-completo">Nome Completo:</label>
+        <input type="text" name="nome" id="nome-completo" minlength="10" maxlength="40">
+      <br>
+      <label for="e-mail">Email</label>
+        <input type="email" name="email" id="e-mail" minlength="10" maxlength="50">
+      <br>
+      <p>Destino Preferido:</p>
+      <label for="cidade">
+        <input type="radio" name="destino" id="cidade" value="city">Cidade
+      </label>
+      <label for="campo">
+        <input type="radio" name="destino" id="campo" value="countryside" >Campo
+      </label>
+      <label for="praia">
+        <input type="radio" name="destino" id="praia" value="beaches">Praia
+      </label>
+      <label for="montanha">
+        <input type="radio" name="destino" id="montanha" value="moutains">Montanhas
+      </label>
+      <br>
+      <label for="texto">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label><br>
+        <textarea type="text" id="texto" rows="10" cols="50"></textarea>
+      
+      <br>
+      <label for="data">Qual a melhor data para realizar sua viagem?<br>
+        <input type="date" id="data" value="">
+      </label>
+      <br>
+      <label for="receber-oportunidades">
+        <input type="checkbox" id="receber-oportunidades" name="opcoes">
+        Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+      </label>
+      <br>
+      <label for="direito-de-imagem">
+        <input type="checkbox" id="direito-de-imagem" name="opcoes" required>
+        Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. 
+      </label>
+      <br>
+      <button id="enviar" type="submit">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+  </main>
+</fieldset>
 </body>
 </html>
 
