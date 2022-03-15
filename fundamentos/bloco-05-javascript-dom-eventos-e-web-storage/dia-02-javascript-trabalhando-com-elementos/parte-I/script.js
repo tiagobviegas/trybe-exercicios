@@ -18,3 +18,6 @@ const texto = ondeEsta.nextSibling;
 
 // 7 - Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
 const terceiroFilho1 = ondeEsta.nextElementSibling;
+
+// 8 - Agora acesse o terceiroFilho a partir de pai .
+const terceiroFilho2 = pai.childNodes[5];
