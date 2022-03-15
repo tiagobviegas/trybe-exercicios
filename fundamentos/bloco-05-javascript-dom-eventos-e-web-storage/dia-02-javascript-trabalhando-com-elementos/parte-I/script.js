@@ -9,3 +9,6 @@
   
 // 4 - Acesse o primeiroFilho a partir de pai .
   const primeiroFilho = pai.firstChild;
+
+// 5 - Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+const primeiroIrmao = ondeEsta.previousElementSibling;
