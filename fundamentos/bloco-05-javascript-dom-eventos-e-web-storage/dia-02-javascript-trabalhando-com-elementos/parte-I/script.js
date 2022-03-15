@@ -12,3 +12,6 @@
 
 // 5 - Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
 const primeiroIrmao = ondeEsta.previousElementSibling;
+
+// 6 - Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+const texto = ondeEsta.nextSibling;
