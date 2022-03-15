@@ -59,7 +59,7 @@
       
       function descricao() {
         const paragraph2 = document.getElementsByTagName('p');
-        paragraph2[1].innerText = 'Se tudo der certo, ano que vem eu e Ianny estaremos empregados planejando nosso futuro juntos!';
+        paragraph2[1].innerText = 'Se tudo der certo, ano que vem eu e Ianny estaremos empregados e planejando nosso futuro juntos!';
       }
       descricao();
 
@@ -85,9 +85,20 @@
         const h1 = document.getElementsByTagName('h1');
         h1[0].innerText = 'Exercício 5.1 - JavaScript';
       }
-      correctH1Text()
+      correctH1Text();
 
       // 5 - Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      
+      function caps() {
+        let paragraphs = document.getElementsByTagName('p');
+        for(let i = 0; i < paragraphs.length; i += 1){
+          let innerText = paragraphs[i].innerText;
+          let caps = innerText.toUpperCase();
+          paragraphs[i].innerText = caps;
+        }
+      }
+      caps();
+      
       // 6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
     </script>
   </body>
