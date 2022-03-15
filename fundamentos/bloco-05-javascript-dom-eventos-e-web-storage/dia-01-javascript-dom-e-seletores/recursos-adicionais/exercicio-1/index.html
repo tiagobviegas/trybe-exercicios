@@ -7,9 +7,18 @@
 <body>
   <p id ='text'>JavaScript Exercises - w3resource</p> 
   <div>
-  <button id="jsstyle"
-  onclick="js_style()">Style</button>
+    <button id="jsstyle"
+    onclick="js_style()">Style</button>
   </div>
-  <script src="script.js"></script>
+  <script>
+    const text = document.getElementById('text');
+    function js_style() {  
+      text.style.fontFamily = 'arial';
+      text.style.fontSize = '35px';
+      text.style.backgroundColor = 'green';
+    }
+    </script>
 </body>
 </html>
+
+<!-- https://www.w3resource.com/javascript-exercises/javascript-dom-exercises.php -->
