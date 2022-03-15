@@ -5,8 +5,7 @@
   const pai = ondeEsta.parentElement;
 
 // 3 - Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+  const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
   
 // 4 - Acesse o primeiroFilho a partir de pai .
   const primeiroFilho = pai.firstChild;
-
