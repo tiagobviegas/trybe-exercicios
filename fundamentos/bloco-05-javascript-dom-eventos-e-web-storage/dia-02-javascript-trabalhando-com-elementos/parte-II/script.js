@@ -21,3 +21,5 @@
 
 // 4 - A partir desse filho criado, acesse terceiroFilho .
 
+  netoDoPai.parentElement.parentElement.nextElementSibling
+  
