@@ -14,5 +14,10 @@
 
 // 3 - Crie um filho para primeiroFilhoDoFilho .
 
+  const netoDoPai = document.createElement('div');
+  const filhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+  netoDoPai.id = 'netoDoPai';
+  filhoDoFilho.appendChild(netoDoPai);
+
 // 4 - A partir desse filho criado, acesse terceiroFilho .
 
