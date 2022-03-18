@@ -38,5 +38,9 @@ function inputText() {
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
 //
+myWebpage.addEventListener('dblclick', function goTo () {
+  location.replace('https://tiagobviegas.github.io/project-lessons-learned/index.html');
+})
+//
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
