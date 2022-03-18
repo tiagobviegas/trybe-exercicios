@@ -44,3 +44,10 @@ myWebpage.addEventListener('dblclick', function goTo () {
 //
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+//
+myWebpage.addEventListener('mouseover', function () {
+  myWebpage.style.color = 'gray';
+});
+myWebpage.addEventListener('mouseleave', function () {
+  myWebpage.style.color = '';
+});
