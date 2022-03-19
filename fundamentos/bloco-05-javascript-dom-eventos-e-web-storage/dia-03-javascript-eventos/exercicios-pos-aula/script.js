@@ -33,11 +33,11 @@ createDaysOfTheWeek();
       li.innerText = dezDaysList[i];
       ul.appendChild(li);
       if (dezDaysList[i] === 24 || dezDaysList[i] === 31) {
-        li.className = 'day hodezDaysList[i]day';
+        li.className = 'day holiday';
       } else if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18) {
         li.className = 'day friday';
       } else if (dezDaysList[i] === 25) {
-        li.className = 'day hodezDaysList[i]day friday';
+        li.className = 'day holiday friday';
       } else {
         li.className = 'day'; 
       }
@@ -53,11 +53,11 @@ createDaysOfTheWeek();
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 //
     function holiday(feriados) {
-      const holidayBtn = document.createElement('button');
-      holidayBtn.innerText = feriados;
-      holidayBtn.id = 'btn-holiday';
+      const createHolidayBtn = document.createElement('button');
+      createHolidayBtn.innerText = feriados;
+      createHolidayBtn.id = 'btn-holiday';
       const btnDiv = document.querySelector('.buttons-container');
-      btnDiv.appendChild(holidayBtn);
+      btnDiv.appendChild(createHolidayBtn);
     }
     holiday('Feriados');
 //
@@ -67,6 +67,18 @@ createDaysOfTheWeek();
 //  Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
 //
 //  > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+//
+    const holidayBtn = document.querySelector('#btn-holiday');
+    const getHolidays = document.querySelectorAll('.holiday');
+    holidayBtn.addEventListener('click', function changeHolidayColor() {
+      for(let i = 0; i < getHolidays.length; i += 1) {
+        if (getHolidays[i].style.backgroundColor !== 'black') {
+          getHolidays[i].style.backgroundColor = 'black';
+        } else {
+          getHolidays[i].style.backgroundColor = 'rgb(238,238,238)';
+        }
+      }
+    })
 //
 //
 //  EXERCÍCIOS 4:
