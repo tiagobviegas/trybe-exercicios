@@ -68,17 +68,20 @@ createDaysOfTheWeek();
 //
 //  > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 //
-    const holidayBtn = document.querySelector('#btn-holiday');
-    const getHolidays = document.querySelectorAll('.holiday');
-    holidayBtn.addEventListener('click', function changeHolidayColor() {
-      for(let i = 0; i < getHolidays.length; i += 1) {
-        if (getHolidays[i].style.backgroundColor !== 'black') {
-          getHolidays[i].style.backgroundColor = 'black';
-        } else {
-          getHolidays[i].style.backgroundColor = 'rgb(238,238,238)';
+    function highlightHolidays() {
+      const holidayBtn = document.querySelector('#btn-holiday');
+      const getHolidays = document.querySelectorAll('.holiday');
+      holidayBtn.addEventListener('click', function changeHolidayColor() {
+        for(let i = 0; i < getHolidays.length; i += 1) {
+          if (getHolidays[i].style.backgroundColor !== 'red') {
+            getHolidays[i].style.backgroundColor = 'red';
+          } else {
+            getHolidays[i].style.backgroundColor = 'rgb(238,238,238)';
+          }
         }
-      }
-    })
+      })
+    }
+    highlightHolidays();
 //
 //
 //  EXERCÍCIO 4:
@@ -104,6 +107,7 @@ createDaysOfTheWeek();
 //  > Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 //
 //  > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+//
 //
 //
 //  EXERCÍCIO 6:
