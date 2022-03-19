@@ -81,7 +81,7 @@ createDaysOfTheWeek();
     })
 //
 //
-//  EXERCÍCIOS 4:
+//  EXERCÍCIO 4:
 //
 //  Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
 //
@@ -89,19 +89,35 @@ createDaysOfTheWeek();
 //
 //  > Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 //
+    function friday(friday) {
+      const createFridayBtn = document.createElement('button');
+      createFridayBtn.innerText = friday;
+      createFridayBtn.id = 'btn-friday';
+      const divButtons = document.querySelector('.buttons-container');
+      divButtons.appendChild(createFridayBtn);
+    }
+    friday('Sexta-feira');
+//  
 //
-//  EXERCÍCIOS 6:
+//  EXERCÍCIO 5:
+//
+//  > Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+//
+//  > É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
+//
+//
+//  EXERCÍCIO 6:
 //
 //  Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 //
-//  > Dica - Propriedade: event.target .
+//  > Dica - Propriedade: event.target
 //
 //
-//  EXERCÍCIOS 7:
+//  EXERCÍCIO 7:
 //
 //  Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 //
-//  > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
+//  > O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
 //
 //
 //  EXERCÍCIO 8:
