@@ -8,18 +8,30 @@
 </head>
 <body>
   <form action="" method="GET" enctype="multipart/form-data">
-    <p>
-      <div>
+    <h1>TrybeTrip</h1>
+    <fieldset id="box">
+      <div id="full-name-div">
         <label for="full-name">Nome Completo:</label>
+        <input id="full-name" type="text" name="nome-completo" minlength="10" maxlength="40">
       </div>
-      <input id="full-name" type="text" minlength="10" maxlength="40">
-    </p>
-    <p>
-      <div>
+      <div id="email-div">
         <label for="email">E-mail:</label>
+        <input id="email" type="email" name="email" minlength="10" maxlength="50">
       </div>  
-        <input id="email" type="email" minlength="10" maxlength="50">
-    </p>
+      <div id="destinos-favoritos">
+        <label for="destino">Destino Preferido:</label>
+          <input id="destino" type="radio" name="destino" value="cidade">Cidade
+          <input id="destino" type="radio" name="destino" value="campo">Campo
+          <input id="destino" type="radio" name="destino" value="praia">Praia
+          <input id="destino" type="radio" name="destino" value="montanha">Montanha
+      </div>
+      <div id="reposta-titulo">
+        Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?  
+      </div>
+      <div id="resposta">
+        <textarea id="resposta-box">Digite sua resposta aqui</textarea>
+      </div>
+    </fieldset>
   </form>
   <script src="script.js"></script>
 </body>
