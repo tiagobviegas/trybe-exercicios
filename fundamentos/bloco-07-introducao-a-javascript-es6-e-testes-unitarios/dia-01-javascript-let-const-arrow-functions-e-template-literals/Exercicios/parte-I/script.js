@@ -18,3 +18,4 @@ const testingScope = escopo => {
 }
 
 testingScope(true);
+ 
