@@ -45,3 +45,6 @@ oddsAndEvens.sort((a, b) => {
 );
 
 console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente`);
+
+// em apenas uma linha:
+console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente`);
