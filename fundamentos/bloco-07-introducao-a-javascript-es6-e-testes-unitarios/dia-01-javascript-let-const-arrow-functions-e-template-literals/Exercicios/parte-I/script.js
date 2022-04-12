@@ -37,12 +37,11 @@ const orderedNumbers = orderedNumbers => {
   }
   return console.log(`Os números ${orderedNumbers} se encontram ordenados de forma crescente`);
 }
-orderedNumbers(oddsAndEvens);
-
+orderedNumbers(oddsAndEvens)
 //    > Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort() . Spoiler: É possível realizar uma função que ordene qualquer array de números.
 
 oddsAndEvens.sort((a, b) => {
-  return a -b}
+  return a - b }
 );
 
 console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente`);
