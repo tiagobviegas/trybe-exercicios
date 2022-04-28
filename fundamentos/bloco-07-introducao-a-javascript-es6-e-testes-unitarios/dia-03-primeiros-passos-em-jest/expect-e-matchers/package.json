@@ -1,7 +1,6 @@
 {
   "name": "expect-e-matchers",
   "version": "1.0.0",
-  "description": "",
   "main": "experimento.js",
   "scripts": {
     "test": "jest"
@@ -11,5 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^28.0.2"
-  }
+  },
+  "description": ""
 }
