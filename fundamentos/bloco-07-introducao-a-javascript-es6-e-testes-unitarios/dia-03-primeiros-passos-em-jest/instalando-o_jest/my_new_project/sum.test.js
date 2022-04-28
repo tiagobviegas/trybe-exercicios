@@ -1,3 +1,4 @@
+// sum.js
 const sum = (a, b) => a + b;
 
 test('sums two values', () => {
