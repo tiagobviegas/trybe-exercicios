@@ -7,10 +7,10 @@ describe('Remove sabor de bebida', () => {
   });
   it('Remover garapa', () => {
     const bebidas = ['garapa', 'tequila', 'água', 'vinho', 'groselha'];
-    expect(removeBebida(bebidas, "garapa")).toEqual(['tequila', 'água', 'vinho', 'groselha']);
+    expect(removeBebida(bebidas, "garapa")).not.toContain('garapa');
   });
   it('Remover groselha caso exista', () => {
     const bebidas = ['garapa', 'tequila', 'água', 'vinho', 'groselha'];
-    expect(removeBebida(bebidas, "groselha")).toEqual(['garapa', 'tequila', 'água', 'vinho']);
+    expect(removeBebida(bebidas, "groselha")).not.toContain('groselha');
   });
 });
