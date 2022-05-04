@@ -2,23 +2,18 @@
 
 // 1 - Crie uma função que retorne um objeto no formato { nomeCompleto, email } representando uma nova pessoa contratada. Passe sua função como parâmetro da HOF newEmployees para criar cada pessoa contratada em seu respectivo id. A sua função deve receber como parâmetro o nome completo da pessoa funcionária e a partir dele gerar automaticamente um email no formato nome_da_pessoa@trybe.com.
 
+const createEmail = (name) => {
+  console.log(`${name}, ${name.replaceAll(" ", "_").toLowerCase()}@trybe.com`);
+};
+// ao introduzir o sobrenome "Álvares" no primeiro registro e testar a funcionalidade descobri que a função "replace()" altera apenas o primeiro elemento encontrado. Dessa forma, experimentei usar "All" junto ao replace e assim consegui fazer com que os demais elementos também fossem substituídos. Posteriormente encontrei a documentação referente a função "replaceAll()" em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
 
-const names =  ['Pedro Guerra', 'Luiza Drumond', 'Carla Paiva'];
-
-
-const newEmployees = (callback) => {
+const newEmployees = (email) => {
   const employees = {
-    id1: callback, // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id2: callback, // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id3: callback, // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+    id1: email('Pedro Guerra Alvares de Alcantara'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+    id2: email('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+    id3: email('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
   }
   return employees;
 };
 
-// const createEmail = () => {
-//   for (let i = 0; i < names.length; i += 1) {
-//     console.log(`${names[i]}, ${names[i].replace(" ", "_").toLowerCase()}@trybe.com`);
-//   }
-// };
-
-newEmployees(createEmail());
+newEmployees(createEmail);
