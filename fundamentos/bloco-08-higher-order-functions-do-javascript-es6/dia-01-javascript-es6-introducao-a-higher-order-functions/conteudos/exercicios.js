@@ -15,5 +15,4 @@ const newEmployees = (newEntries) => {
   }
   return employees;
 };
-
 newEmployees(createEmail);
