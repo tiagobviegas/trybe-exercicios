@@ -20,17 +20,26 @@ newEmployees(createEmail);
 
 // 2 - Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
 
-const checkNumber = () => ((Math.random() * 4) + 1).toFixed();
+// const checkNumber = () => ((Math.random() * 4) + 1).toFixed();
+
+// const result = (bet, draw) => {
+//   let message
+//   if (bet === draw) {
+//     message = `Parabéns você ganhou! ${bet}:${draw}`;
+//   } else {
+//     message = `Tente novamente ${bet}:${draw}`;
+//   }
+//   return message;
+// };
+
+
+// console.log(result('1', checkNumber()));
+
+const checkNumber = (bet, draw) => bet === draw ? true : false;
 
 const result = (bet, draw) => {
-  let message
-  if (bet === draw) {
-    message = `Parabéns você ganhou! ${bet}:${draw}`;
-  } else {
-    message = `Tente novamente ${bet}:${draw}`;
-  }
-  return message;
+  const randomizer = Math.ceil(Math.random() * 5);
+  return draw(bet, randomizer) ? `Parabéns você ganhou! ${bet}:${randomizer}` : `Tente novamente ${bet}:${randomizer}`;
 };
 
-
-console.log(result('1', checkNumber()));
+console.log(result(3, checkNumber));
