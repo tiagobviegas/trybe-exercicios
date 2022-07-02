@@ -1,22 +1,19 @@
-//  MODELO DE FIRST CLASS FUNCTIONS USANDO CALLBACK
-//  
-//  const sayHello = () => {
-//    return ('hello trybers');
-//  }
-//  
-//  const printGreeting = (callback) => {
-//      console.log(callback());
-//  }
-//  
-//  printGreeting(sayHello);
+// ATRIBUINDO FUNÇÕES ÀS VARIÁVEIS
+
+// function sum (number1, number2) {
+//   return number1 + number2;
+// }
+
+// const sumVariable = sum;
+
+// console.log(sumVariable);
+//  [Function: sum]
 
 
-const sayHello = (name) => {
-  return (`Hello, ${name}`);
+// RETORNANDO FUNÇÃO DE OUTRA FUNÇÃO
+const sumFixAmount = (amount) => {
+  return (number) => amount + number;
 }
 
-const printGreeting = (greetings) => {
-    console.log(`${greetings}! Welcome to Canada!`);
-}
-
-printGreeting(sayHello('Tiago'));
+const initialSum = sumFixAmount(15)
+console.log(initialSum(5));
