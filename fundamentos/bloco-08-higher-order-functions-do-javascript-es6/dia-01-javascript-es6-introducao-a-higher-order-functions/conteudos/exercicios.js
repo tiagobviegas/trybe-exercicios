@@ -12,7 +12,7 @@ const newEmployees = () => {
 };
 
 const entry = (nome) => {
-  return `${nome}, ${nome.replaceAll(' ','_')}@trybe.com`;
+  return `${nome}, ${nome.toLowerCase().replaceAll(' ','_')}@trybe.com`;
 }
 
 console.log(entry('Pedro Guerra'));
