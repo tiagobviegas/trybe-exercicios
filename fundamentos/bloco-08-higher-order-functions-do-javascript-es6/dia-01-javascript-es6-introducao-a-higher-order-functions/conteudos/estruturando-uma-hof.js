@@ -89,8 +89,8 @@ const sleep = () => 'Partiu dormir!!';
 // Ela deve retornar o valor do respectivo parâmetro, neste caso:
 // Acordando!!
 
-const doingThings = (action) => console.log(action);
+const doingThings = (action) => console.log(action());
 
-doingThings(wakeUp());
-doingThings(breakfast());
-doingThings(sleep());
+doingThings(wakeUp);
+doingThings(breakfast);
+doingThings(sleep);
