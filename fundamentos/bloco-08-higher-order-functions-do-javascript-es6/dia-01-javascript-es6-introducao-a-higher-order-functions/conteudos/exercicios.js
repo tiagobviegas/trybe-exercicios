@@ -13,9 +13,8 @@ const newEmployees = (callback) => {
 };
 
 const entry = (nome) => {
-  const nomeCompleto = nome;
   const email = `${nome.toLowerCase().replaceAll(' ','_')}@trybe.com`;
-  return { nomeCompleto, email };
+  return { nome, email };
 };
 
 console.log(newEmployees(entry));
