@@ -4,13 +4,15 @@
 
 const newEmployees = () => {
   const employees = {
-    id1: 'teste 1', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id2: 'teste 2', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id3: 'teste 3', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+    id1: '', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+    id2: '', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+    id3: '', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
   }
   return employees;
 };
 
+const entry = (nome) => {
+  return `${nome}, ${nome.replaceAll(' ','_')}@trybe.com`;
+}
 
-// console.log(newEmployees.id1 = 'Tiago')
-// console.log(newEmployees.id1)
+console.log(entry('Pedro Guerra'));
