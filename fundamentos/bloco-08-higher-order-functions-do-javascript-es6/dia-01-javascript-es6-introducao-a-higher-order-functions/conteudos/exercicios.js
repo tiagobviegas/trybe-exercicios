@@ -61,3 +61,6 @@ const answerCheck = (rightAnswer, studentAnswer) => {
 }
 
 console.log(score(RIGHT_ANSWERS, STUDENT_ANSWERS, answerCheck));
+
+
+// BÔNUS
