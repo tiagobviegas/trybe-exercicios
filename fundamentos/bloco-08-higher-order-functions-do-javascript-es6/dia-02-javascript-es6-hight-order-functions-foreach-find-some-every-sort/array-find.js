@@ -28,19 +28,51 @@ console.log(findDivisibleBy3And5())
 const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
   // Construção tradicional:
-const findNameWithFiveLetters = () => {
-  // Adicione seu código aqui:
-  return names.find((name) => {
-    return name.split('').length === 5 ? name : null;
-  })
-}
+  const findNameWithFiveLetters = () => {
+    // Adicione seu código aqui:
+    return names.find((name) => {
+      return name.split('').length === 5 ? name : null;
+    })
+  }
 
   // Construção alternativa:
+
   // const findNameWithFiveLetters = () => {
   //  return names.find((name) => name.split('').length === 5 ? name : null);
   // }
 
   // Construção reduzida:
+
   // const findNameWithFiveLetters = () => names.find((name) => name.split('').length === 5 ? name : null);
 
 console.log(findNameWithFiveLetters());
+
+//------------------------------------------------------------------
+
+// 3 - Utilize o find para encontrar a música com id igual a 31031685, caso ela exista:
+
+const musicas = [
+  { id: '31031685', title: 'Partita in C moll BWV 997' },
+  { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
+  { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
+]
+
+// Construção tradicional:
+function findMusic(id) {
+  // Adicione seu código aqui
+  return musicas.find((musica) => {
+    return musica.id  === id ? musica : null;
+  });
+}
+
+// Construção alternativa:
+
+// function findMusic(id) {
+//   return musicas.find((musica) => musica.id === id ? musica.title: null);
+// }
+
+// Construção reduzida:
+// const findMusic = (id) => musicas.find((musica) => musica.id === id ? musica.title: null);
+
+
+console.log(findMusic('31031685'));
