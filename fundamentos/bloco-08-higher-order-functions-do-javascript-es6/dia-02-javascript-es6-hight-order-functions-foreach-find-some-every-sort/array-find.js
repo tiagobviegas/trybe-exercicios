@@ -61,18 +61,19 @@ const musicas = [
 function findMusic(id) {
   // Adicione seu código aqui
   return musicas.find((musica) => {
-    return musica.id  === id ? musica : null;
+  // return musica.id  === id ? musica : null;  ----> não é necessário operador ternário. Basta a condição
+    return musica.id  === id
   });
 }
 
 // Construção alternativa:
 
 // function findMusic(id) {
-//   return musicas.find((musica) => musica.id === id ? musica.title: null);
+//   return musicas.find((musica) => musica.id === id);
 // }
 
 // Construção reduzida:
-// const findMusic = (id) => musicas.find((musica) => musica.id === id ? musica.title: null);
+// const findMusic = (id) => musicas.find((musica) => musica.id === id);
 
 
 console.log(findMusic('31031685'));
