@@ -23,15 +23,15 @@ emailListInData.forEach(showEmailList);
 
 // TESTE:
 
-// const pilotos = ['Charles Leclerc', 'Max Verstappen', 'Lewis Hamilton', 'George Russel', 'Esteban Ocon', 'Mick Schumacher', 'Fernando Alonso', 'Kevin Magnussen', 'Lando Noris', 'Lance Stroll'];
+const pilotos = ['Charles Leclerc', 'Max Verstappen', 'Lewis Hamilton', 'George Russel', 'Esteban Ocon', 'Mick Schumacher', 'Lando Noris', 'Kevin Magnussen', 'Daniel Riccardo', 'Fernando Alonso'];
 
-// const constructors = ['Ferrari', 'RedBull', 'Mercedes', 'Mercedes', 'Alpine', 'Haas', 'Alpine', 'Haas', 'McLaren', 'Aston Martin'];
+const constructors = ['Ferrari', 'RedBull RBPT', 'Mercedes', 'Mercedes', 'Alpine', 'Haas', 'McLaren', 'Haas', 'McLaren', 'Alpine'];
 
-// const finishTable = (driver, index) => console.log(`${index + 1}º - ${driver}`);
+const finishTable = (driver, index) => console.log(`${index + 1}º - ${driver}`);
 
-// pilotos.forEach(finishTable);
-// console.log('-------------------------');
-// constructors.forEach(finishTable);
+pilotos.forEach(finishTable);
+console.log('-------------------------');
+constructors.forEach(finishTable);
 
 //___________________________________________________________________________________________
 
