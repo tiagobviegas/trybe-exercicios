@@ -31,16 +31,16 @@ const names = ['João', 'Irene', 'Fernando', 'Maria'];
 const findNameWithFiveLetters = () => {
   // Adicione seu código aqui:
   return names.find((name) => {
-    return name.split('').length === 5 ? name : ''
+    return name.split('').length === 5 ? name : null;
   })
 }
 
   // Construção alternativa:
   // const findNameWithFiveLetters = () => {
-  //  return names.find((name) => name.split('').length === 5 ? name : '')
+  //  return names.find((name) => name.split('').length === 5 ? name : null);
   // }
 
   // Construção reduzida:
-  // const findNameWithFiveLetters = () => names.find((name) => name.split('').length === 5 ? name : '')
+  // const findNameWithFiveLetters = () => names.find((name) => name.split('').length === 5 ? name : null);
 
 console.log(findNameWithFiveLetters());
