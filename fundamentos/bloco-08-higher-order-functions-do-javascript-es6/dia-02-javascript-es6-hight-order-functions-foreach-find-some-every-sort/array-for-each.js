@@ -1,9 +1,64 @@
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// ARRAY FOREACH();
 
-const multipliesFor2 = (element) => {
-  console.log(`${element} x 2 = ${element * 2}`);
+// PARA FIXAR:
+
+// 1 - Use o método forEach chamando a callback showEmailList para apresentar os emails
+
+const emailListInData = [
+  'roberta@email.com',
+  'paulo@email.com',
+  'anaroberta@email.com',
+  'fabiano@email.com',
+];
+
+const showEmailList = (email) => {
+  console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
 };
 
-numbers.forEach(multipliesFor2);
+// Adicione seu código aqui
+emailListInData.forEach(showEmailList);
 
-//  A cada elemento do array, chamado pela função "numbers.forEach", a função "multipliesFor2" é chamada como parâmetro de "forEach". Este por sua vez interpreta que este parâmetro (por ser o primeiro) recebe os valores do array numbers. Assim, "element" carrega as informações de cada valor do array "numbers" para ser utilizado na tabuada de 2, exercida por "multipliesFor2";
+
+//___________________________________________________________________________________________
+
+// TESTE:
+
+// const pilotos = ['Charles Leclerc', 'Max Verstappen', 'Lewis Hamilton', 'George Russel', 'Esteban Ocon', 'Mick Schumacher', 'Fernando Alonso', 'Kevin Magnussen', 'Lando Noris', 'Lance Stroll'];
+
+// const constructors = ['Ferrari', 'RedBull', 'Mercedes', 'Mercedes', 'Alpine', 'Haas', 'Alpine', 'Haas', 'McLaren', 'Aston Martin'];
+
+// const finishTable = (driver, index) => console.log(`${index + 1}º - ${driver}`);
+
+// pilotos.forEach(finishTable);
+// console.log('-------------------------');
+// constructors.forEach(finishTable);
+
+//___________________________________________________________________________________________
+
+// Multiplicar cada elemento do array por 3, retornando um novo array
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// RESOLUÇÃO
+
+const newArr = [];
+
+// Construção "tradicional":
+
+// const timesThree = (number) => {
+//   return newArr.push(number * 3)
+// };
+// numbers.forEach(timesThree);
+
+
+// Construção "alternativa":
+
+// const timesThree = (number) => newArr.push(number * 3);
+// numbers.forEach(timesThree);
+
+
+// Construção reduzida:
+
+numbers.forEach((number) => newArr.push(number * 3));
+
+
+console.log(newArr);
