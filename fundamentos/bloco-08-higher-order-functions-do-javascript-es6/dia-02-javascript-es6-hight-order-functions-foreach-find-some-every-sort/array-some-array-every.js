@@ -16,6 +16,7 @@ const verifyFirstLetter = (letter, names) => {
 console.log(verifyFirstLetter('J', listNames)); // true
 console.log(verifyFirstLetter('X', listNames)); // false
 
+//--------------------------------------------------------------------
 
 // EXEMPLO DE ARRAY.EVERY
 
@@ -40,8 +41,6 @@ console.log(Object.values(grades));
 
 const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
 
-const hasName = (arr, name) => {
-  return arr.some((nome) => nome === name)
-}
+const hasName = (arr, name) => arr.some((nome) => nome === name)
 
-console.log(hasName(names, 'Ana'))
+console.log(hasName(names, 'Tiago'));
