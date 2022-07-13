@@ -17,4 +17,31 @@ console.log(verifyFirstLetter('J', listNames)); // true
 console.log(verifyFirstLetter('X', listNames)); // false
 
 
-// EXEMPLO DE ARRAY EVERY
+// EXEMPLO DE ARRAY.EVERY
+
+const grades = {
+  portugues: 'Aprovado',
+  matematica: 'Reprovado',
+  ingles: 'Aprovado',
+};
+
+const verifyGrades = (studentGrades) => (
+  Object.values(studentGrades).every((grade) => grade === 'Aprovado')
+);
+
+console.log(verifyGrades(grades)); // retorna "false" pois houve reprovação em matemática
+console.log(Object.values(grades));
+
+//--------------------------------------------------------------------
+
+// PARA FIXAR:
+
+// 1 - Escreva uma função que dado um array de nomes e um nome retorne true se ele estiver contido e caso contrário, retorne false, use some;
+
+const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  return arr.some((nome) => nome === name)
+}
+
+console.log(hasName(names, 'Ana'))
