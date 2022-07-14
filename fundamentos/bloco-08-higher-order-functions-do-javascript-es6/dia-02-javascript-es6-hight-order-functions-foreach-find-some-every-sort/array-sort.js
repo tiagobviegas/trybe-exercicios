@@ -11,6 +11,7 @@ console.log(food);
 // food.sort().reverse();  ----> [ 'feijão', 'farofa', 'doce de leite', 'chocolate', 'arroz' ]
 // food.sort((a, b) => a < b ? 1 : -1);  ----> [ 'feijão', 'farofa', 'doce de leite', 'chocolate', 'arroz' ]
 
+// -------------------------------------------------------------------------------
 
 // Quando há elementos como números, a sort coloca de acordo com a ordem alfabética dos códigos desse elemento na tabela de caracteres unicode! Para ordenar de forma numérica crescente, é necessário passar a função a seguir:
 
@@ -23,6 +24,7 @@ console.log(points);
 
 // points.sort((a, b) => b - a);  ----> [ 100, 40, 25, 10, 5, 1 ]
 
+// -------------------------------------------------------------------------------
 
 // O método sort também é capaz de ordenar objetos, como demonstra o exemplo a seguir:
 
@@ -80,3 +82,26 @@ const gamers = [
   */
 
   // Essa operação será melhor codificada com uso da função reduce().
+
+
+// -------------------------------------------------------------------------------
+
+
+// PARA FIXAR
+
+// 1 - Utilize a sort para ordenar o array pela idade das pessoas em ordem crescente.
+
+const people = [
+  { name: 'Mateus', age: 18 },
+  { name: 'José', age: 16 },
+  { name: 'Ana', age: 23 },
+  { name: 'Cláudia', age: 20 },
+  { name: 'Bruna', age: 19 },
+];
+
+// Adicione se código aqui
+people.sort((a, b) => {
+  return a.age - b.age
+})
+
+console.log(people);
