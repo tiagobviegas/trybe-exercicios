@@ -104,7 +104,7 @@ const expectedResult = {
 
 function getNamedBook(arr) {
   // escreva seu código aqui
-  return arr.find((book) => book.name.split('').length === expectedResult.name.split('').length ? book.name : null)
+  return arr.find((book) => book.name.split('').length === 26)
 }
 
 console.log(getNamedBook(books))
