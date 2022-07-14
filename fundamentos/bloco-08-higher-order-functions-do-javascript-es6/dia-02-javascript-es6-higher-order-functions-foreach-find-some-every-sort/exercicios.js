@@ -102,6 +102,9 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-function getNamedBook() {
+function getNamedBook(arr) {
   // escreva seu código aqui
+  return arr.find((book) => book.name.split('').length === expectedResult.name.split('').length ? book.name : null)
 }
+
+console.log(getNamedBook(books))
