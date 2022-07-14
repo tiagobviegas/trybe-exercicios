@@ -191,3 +191,18 @@ function everyoneWasBornOnSecXX(arr) {
 }
 
 console.log(everyoneWasBornOnSecXX(books));
+
+console.log(`
+Questão 6 --------------------------------------------------------------
+`)
+
+//  6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+// const expectedResult = true;
+
+function someBookWasReleaseOnThe80s(arr) {
+  // escreva seu código aqui
+  return arr.some((book) => book.releaseYear >= 1980)
+}
+
+console.log(someBookWasReleaseOnThe80s(books));
