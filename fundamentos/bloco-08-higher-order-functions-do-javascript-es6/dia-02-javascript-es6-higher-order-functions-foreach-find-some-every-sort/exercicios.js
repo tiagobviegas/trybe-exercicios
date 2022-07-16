@@ -217,20 +217,6 @@ Questão 7 --------------------------------------------------------------
 
 const expectedResult = false;
 
-// function authorUnique() {
-//   // escreva seu código aqui
-// }
-
-// Recorri ao gabarito pois tive dificuldade de entender a lógica por trás do código.
-// source: https://app.betrybe.com/course/fundamentals/higher-order-functions-do-javascript-es6/javascript-es6-higher-order-functions-foreach-find-some-every-sort-gabarito/solutions/9d72cb46-f95e-41c5-8f6b-67dd39642f78/conteudo/d2f1d7c1-9abf-4878-bc94-c0ea31cc0cc7?use_case=calendar
-
 function authorUnique() {
-  return books.every((book) => {
-    return !books.some((bookSome) => {
-      return (bookSome.author.birthYear === book.author.birthYear)
-      && (bookSome.author.name !== book.author.name)
-    })
-  })
+  // escreva seu código aqui
 }
-
-console.log(authorUnique())
