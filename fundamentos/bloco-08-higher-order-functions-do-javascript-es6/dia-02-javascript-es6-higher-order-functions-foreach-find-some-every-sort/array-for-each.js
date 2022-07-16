@@ -29,36 +29,11 @@ const constructors = ['Ferrari', 'RedBull RBPT', 'Mercedes', 'Mercedes', 'Alpine
 
 const finishTable = (driver, index) => console.log(`${index + 1}º - ${driver}`);
 
+console.log(`
+British GP - Standings
+`)
 pilotos.forEach(finishTable);
 console.log('-------------------------');
 constructors.forEach(finishTable);
 
 //___________________________________________________________________________________________
-
-// Multiplicar cada elemento do array por 3, retornando um novo array
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// RESOLUÇÃO
-
-const newArr = [];
-
-// Construção "tradicional":
-
-// const timesThree = (number) => {
-//   return newArr.push(number * 3)
-// };
-// numbers.forEach(timesThree);
-
-
-// Construção "alternativa":
-
-// const timesThree = (number) => newArr.push(number * 3);
-// numbers.forEach(timesThree);
-
-
-// Construção reduzida:
-
-numbers.forEach((number) => newArr.push(number * 3));
-
-
-console.log(newArr);
