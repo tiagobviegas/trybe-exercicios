@@ -1,7 +1,8 @@
 // ARRAY.FILTER
 
-// O array.filter retorna outro array com todos os elementos que satisfaçam à condição verificada pela função. Recebe um parâmetro obrigatório que é uma função, e dois opcionais, sendo eles o index e o próprio array.
+// O array.filter retorna um novo array com os elementos relativos à condição estabelecida na função. O array.filter recebe três parâmetro, sendo um deles obrigatório, que é uma função. Os outros dois, opcionais, são o index do array e o próprio array.
 
 const arr = ['Tiago', 'Ianny', 'Lis', 'Lia', 'Noah', 'Alex', 'Aaron', 'Sheik'];
 
 console.log(arr.filter((name) => name.split('').length < 5));
+
