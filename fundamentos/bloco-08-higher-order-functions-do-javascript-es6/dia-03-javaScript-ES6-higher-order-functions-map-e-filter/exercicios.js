@@ -85,22 +85,19 @@ books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
 
 //    > Dica: use as funções map, sort
 
-// const arrangeAge = books.sort((a, b) => (a.author.birthYear) - (b.author.birthYear))
-
-// const newArray = books.map((book) => {
-//   const age = book.releaseYear - book.author.birthYear
-//   return { ['age']: age, ['name']: book.author.name}
-// });
-
-// newArray.sort((a, b) => a.age - b.age);
-
-// console.log(newArray);
-
-const newArray = books.map((book) => {
+const author = books.map((book) => {
   const age = book.releaseYear - book.author.birthYear;
   return { ['age']: age, ['name']: book.author.name }
 });
 
-newArray.sort((a, b) => a.age - b.age);
+console.log(author.sort((a, b) => a.age - b.age));
 
-console.log(newArray);
+// ------------------------------------------------------------------
+
+// 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
+//    > Dica: use a função filter;
+
+console.log(books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'));
+
+// ------------------------------------------------------------------
+
