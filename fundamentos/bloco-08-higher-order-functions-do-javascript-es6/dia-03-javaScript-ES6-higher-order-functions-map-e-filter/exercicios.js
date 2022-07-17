@@ -87,16 +87,20 @@ books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
 
 // const arrangeAge = books.sort((a, b) => (a.author.birthYear) - (b.author.birthYear))
 
-const age = books.map((book) => {
-  return book.releaseYear - book.author.birthYear
-})
+// const newArray = books.map((book) => {
+//   const age = book.releaseYear - book.author.birthYear
+//   return { ['age']: age, ['name']: book.author.name}
+// });
 
+// newArray.sort((a, b) => a.age - b.age);
 
-console.log(age)
-console.log(books)
+// console.log(newArray);
 
-// books.map((book) => 
-// console.log(arrangeAge)
-// const newObjects = (books) => {
-    
-// console.log(newObjects(books));
+const newArray = books.map((book) => {
+  const age = book.releaseYear - book.author.birthYear;
+  return { ['age']: age, ['name']: book.author.name }
+});
+
+newArray.sort((a, b) => a.age - b.age);
+
+console.log(newArray);
