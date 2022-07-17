@@ -32,7 +32,7 @@ const newNames = (name) => {
   return name.split('')[0] === 'L';
 };
 
-console.log(arr.map(newNames));
+arr.map(newNames);
 // [
 //   false, false,
 //   true,  true,
