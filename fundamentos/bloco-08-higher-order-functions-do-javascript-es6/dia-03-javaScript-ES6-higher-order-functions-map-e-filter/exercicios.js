@@ -176,3 +176,12 @@ Questão 7 ------------------------------------------------------------------
 // ------------------------------------------------------------------
 
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+
+function authorWith3DotsOnName() {
+  // escreva seu código aqui
+  const authorWithDotOnName = books.filter((book) => book.author.name.includes('.'))
+  const authors = authorWithDotOnName.map((author) => author)
+  return authors[0].author.name
+}
+
+console.log(authorWith3DotsOnName());
