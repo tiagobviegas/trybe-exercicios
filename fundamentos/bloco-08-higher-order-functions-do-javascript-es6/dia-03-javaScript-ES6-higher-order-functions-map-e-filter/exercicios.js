@@ -67,6 +67,9 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+console.log(`
+Questão 1 ------------------------------------------------------------------
+`)
 // 1 - Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 
 //    > Dica: Use a função map
@@ -77,7 +80,10 @@ books.map(bookData);
 
 // ou
 
-books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
+console.log(books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`));
+console.log(`
+Questão 2 ------------------------------------------------------------------
+`)
 
 // ------------------------------------------------------------------
 
@@ -91,6 +97,9 @@ const author = books.map((book) => {
 });
 
 console.log(author.sort((a, b) => a.age - b.age));
+console.log(`
+Questão 3 ------------------------------------------------------------------
+`)
 
 // ------------------------------------------------------------------
 
@@ -98,6 +107,14 @@ console.log(author.sort((a, b) => a.age - b.age));
 //    > Dica: use a função filter;
 
 console.log(books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'));
+console.log(`
+Questão 4 ------------------------------------------------------------------
+`)
 
 // ------------------------------------------------------------------
 
+// 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+//    > Dica: use as funções filter e sort
+
+const oldestBooks = books.filter((book) => 2022 - book.releaseYear > 60);
+console.log(oldestBooks.sort((a, b) => a.releaseYear - b.releaseYear));
