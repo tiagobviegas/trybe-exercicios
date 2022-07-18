@@ -74,13 +74,13 @@ Questão 1 ------------------------------------------------------------------
 
 //    > Dica: Use a função map
 
-const bookData = (book) => `${book.name} - ${book.genre} - ${book.author.name}`;
+function formatedBookNames(book) {
+  // escreva seu código aqui
+  return `${book.name} - ${book.genre} - ${book.author.name}`;
+}
 
-books.map(bookData);
+console.log(books.map(formatedBookNames));
 
-// ou
-
-console.log(books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`));
 console.log(`
 Questão 2 ------------------------------------------------------------------
 `)
@@ -91,12 +91,18 @@ Questão 2 ------------------------------------------------------------------
 
 //    > Dica: use as funções map, sort
 
-const author = books.map((book) => {
-  const age = book.releaseYear - book.author.birthYear;
-  return { ['age']: age, ['name']: book.author.name }
-});
+function nameAndAge() {
+  // escreva seu código aqui
+  const author = books.map((book) => {
+    const age = book.releaseYear - book.author.birthYear;
+    return { ['age']: age, ['name']: book.author.name }
+  });
+  return (author.sort((a, b) => a.age - b.age));
+}
+// 
+console.log(nameAndAge())
 
-console.log(author.sort((a, b) => a.age - b.age));
+
 console.log(`
 Questão 3 ------------------------------------------------------------------
 `)
@@ -106,7 +112,12 @@ Questão 3 ------------------------------------------------------------------
 // 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 //    > Dica: use a função filter;
 
-console.log(books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'));
+function fantasyOrScienceFiction() {
+  // escreva seu código aqui
+  return (books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'));
+}
+console.log(fantasyOrScienceFiction())
+
 console.log(`
 Questão 4 ------------------------------------------------------------------
 `)
@@ -116,5 +127,41 @@ Questão 4 ------------------------------------------------------------------
 // 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
 //    > Dica: use as funções filter e sort
 
-const oldestBooks = books.filter((book) => 2022 - book.releaseYear > 60);
-console.log(oldestBooks.sort((a, b) => a.releaseYear - b.releaseYear));
+
+function oldBooksOrdered() {
+  // escreva seu código aqui
+  const oldestBooks = books.filter((book) => 2022 - book.releaseYear > 60);
+  return oldestBooks.sort((a, b) => a.releaseYear - b.releaseYear);
+}
+
+console.log(oldBooksOrdered())
+
+console.log(`
+Questão 5 ------------------------------------------------------------------
+`)
+
+// ------------------------------------------------------------------
+
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+
+function fantasyOrScienceFictionAuthors() {
+  // escreva seu código aqui
+  const genreArr = books.filter((book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
+  const arrange = genreArr.map((book) => book.author.name);
+  arrange.sort();
+  return arrange
+};
+
+console.log(fantasyOrScienceFictionAuthors());
+console.log(`
+Questão 6 ------------------------------------------------------------------
+`)
+
+// ------------------------------------------------------------------
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+function oldBooks() {
+  // escreva seu código aqui
+}
