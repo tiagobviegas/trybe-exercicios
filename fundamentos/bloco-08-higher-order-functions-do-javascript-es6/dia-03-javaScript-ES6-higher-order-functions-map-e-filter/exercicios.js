@@ -164,4 +164,15 @@ Questão 6 ------------------------------------------------------------------
 
 function oldBooks() {
   // escreva seu código aqui
-}
+  const oldestBooks = books.filter((book) => 2022 - book.releaseYear > 60)
+  return oldestBooks.map((book) => book.name)
+};
+
+console.log(oldBooks())
+console.log(`
+Questão 7 ------------------------------------------------------------------
+`)
+
+// ------------------------------------------------------------------
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
