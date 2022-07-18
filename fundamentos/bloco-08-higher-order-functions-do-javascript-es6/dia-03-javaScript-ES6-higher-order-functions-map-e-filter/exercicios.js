@@ -179,9 +179,12 @@ Questão 7 ------------------------------------------------------------------
 
 function authorWith3DotsOnName() {
   // escreva seu código aqui
-  const authorWithDotOnName = books.filter((book) => book.author.name.includes('.'))
-  const authors = authorWithDotOnName.map((author) => author)
-  return authors[0].author.name
+  const authors = books.filter((book) => book.author.name.includes('.'))
+  // const namesArr = authors.filter((author, i) => {
+  //  if(author[i].lenght < 3 && author[i][1].length < 3 && author[i][2].length < 2)
+      // return namesArr
+  // })
+
 }
 
 console.log(authorWith3DotsOnName());
