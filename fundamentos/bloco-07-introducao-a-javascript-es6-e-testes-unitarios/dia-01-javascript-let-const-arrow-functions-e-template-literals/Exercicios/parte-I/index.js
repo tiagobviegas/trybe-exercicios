@@ -18,3 +18,29 @@ function testingScope(escopo) {
 
 testingScope(true);
 
+// __________________________________________________________________
+
+// 2. Crie uma função que retorne um array em ordem crescente.
+//  > Crie uma função que faça com que o array oddsAndEvens fique em ordem crescente;
+//  > Utilize template literals para que a chamada console.log(<seu código>oddsAndEvens<seu código>); retorne a frase "Os números 2,3,4,7,10,13 se encontram ordenados de forma crescente!".
+//  > Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort(). Spoiler: É possível realizar uma função que ordene qualquer array de números.
+
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+const sortOddsAndEvens = () => {
+
+// Seu código aqui.
+  let change;
+  for (let i = 0; i < oddsAndEvens.length - 1; i += 1) {
+    if (oddsAndEvens[i] < oddsAndEvens[i+1]) {
+      change = oddsAndEvens[i];
+      oddsAndEvens[i] = oddsAndEvens[i+1];
+      oddsAndEvens[i+1] = change;
+      i = 0
+    }
+  }
+  return `Os números ${oddsAndEvens.reverse()} se encontram ordenados de forma crescente!`;
+};
+
+console.log(sortOddsAndEvens()); 
