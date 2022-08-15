@@ -34,7 +34,18 @@ console.log(`Este é o fatorial resultado da função: ${number(5)}`);
 //  Dica: Nesse exercício será necessário utilizar os conhecimentos sobre array, método split e loop for/of.
 //    > Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort().
 
+const longestWord = string => {
+  const words = string.split(' ');
+  let longest = ' ';
+  for (let letters of words) {
+    if (letters.length >= longest.length) {
+      longest = letters
+    };
+  }
+  return console.log(longest)
+}
 
+longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')
 
 //___________________________________________________________________________________
 
