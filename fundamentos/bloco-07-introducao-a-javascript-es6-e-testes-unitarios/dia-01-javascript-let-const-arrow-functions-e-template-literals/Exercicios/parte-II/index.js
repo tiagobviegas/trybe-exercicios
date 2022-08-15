@@ -13,15 +13,17 @@
 //  Dica: Armazene a chamada da função em uma varíavel para imprimir no terminal seu resultado.
 //    > Bônus: tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
 
-const number = (num) => {
+const fatorial = (num) => {
   let result = num;
   for (let i = num; i > 1; i -= 1) {
     result *= (i - 1)
   }
-  return `Este é o fatorial resultado da função number(${num}): ${result}`
+  return result
 };
 
-console.log(number(4));
+const number = (num) => num < 2 ? 1 : fatorial(num);
+
+console.log(`Este é o fatorial resultado da função: ${number(5)}`);
 
 //___________________________________________________________________________________
 
