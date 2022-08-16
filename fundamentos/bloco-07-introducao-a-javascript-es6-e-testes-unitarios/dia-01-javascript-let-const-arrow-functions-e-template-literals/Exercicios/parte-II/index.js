@@ -48,7 +48,7 @@ console.log(`Este é o fatorial resultado da função: ${number(5)}`);
 const longestWord = string => {
   const words = string.split(' ');
   const longest = words.sort((a, b) => b.length - a.length); 
-  return console.log(longest)
+  return console.log(longest[0]);
 }
 
 longestWord('Antônio foi no banheiro e não sabemos o que aconteceu')
