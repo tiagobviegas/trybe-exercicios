@@ -15,6 +15,10 @@ function sum(a, b) {
 
 function summationOf(number) {
   let summation = 0;
+  if (number === undefined) {
+    throw new Error('summationOf deve receber um valor')
+  }
+  
   for (let i = 1; i <= number; i += 1) {
     summation += i;
   }
