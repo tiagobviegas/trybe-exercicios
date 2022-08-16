@@ -1,4 +1,6 @@
-const sum = require('./script')
+const { sum, summationOf } = require('./script')
+
+// EXEMPLO 1
 
 //  test ou it('texto descritivo do que faz o teste', () => {})
 test('adiciona 1 + 2 igual a 3', () => {
@@ -19,4 +21,23 @@ test('adiciona 0 + (-10) igual a (-10)', () => {
 
 test('adiciona 5.1 + 6.55 igual a 11.65', () => {
   expect(sum(5.1, 6.55)).toBeCloseTo(11.65);
+});
+
+
+// EXEMPLO 2
+
+test('espera que a função exista', () => {
+  expect(typeof summationOf).toBe('function');
+});
+
+test('espera que o valor passado 1 retorne 1', () => {
+  expect(summationOf(1)).toBe(1);
+});
+
+test('espera que o valor passado 3 retorne 6', () => {
+  expect(summationOf(3)).toBe(6);
+});
+
+test('espera que o valor passado 5 retorne 15', () => {
+  expect(summationOf(5)).toBe(15);
 });
