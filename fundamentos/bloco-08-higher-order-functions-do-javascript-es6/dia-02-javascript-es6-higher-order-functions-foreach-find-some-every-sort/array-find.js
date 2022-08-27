@@ -9,6 +9,9 @@ const findDivisibleBy3And5 = () => {
   return numbers.find((number) => number % 3 === 0 && number % 5 === 0);
 }
 
+// forma reduzida:
+// const findDivisibleBy3And5 = () => numbers.find((number) => number % 3 === 0 && number % 5 === 0);
+
 console.log(findDivisibleBy3And5());
 
 //_________________________________________________________
@@ -25,6 +28,9 @@ const findNameWithFiveLetters = () => {
 
 console.log(findNameWithFiveLetters());
 
+// forma reduzida:
+// const findNameWithFiveLetters = () => names.find((name) => name.length === 5);
+
 //_________________________________________________________
 
 
@@ -40,5 +46,8 @@ function findMusic(id) {
   // Adicione seu código aqui
   return musicas.find((musica) => musica.id === id)
 }
+
+// forma reduzida:
+// const findMusic = (id) => musicas.find((musica) => musica.id === id)
 
 console.log(findMusic('31031685'));
