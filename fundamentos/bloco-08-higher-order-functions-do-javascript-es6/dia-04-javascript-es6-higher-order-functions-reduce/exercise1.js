@@ -12,7 +12,7 @@ const arrays = [
 
 function flatten() {
   // escreva seu código aqui
-  const elements = (acc, curr) => (acc.concat(curr));
+  const elements = (acc, curr) => acc.concat(curr);
   return arrays.reduce(elements)
 }
 
