@@ -6,9 +6,7 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-function containsA() {
-  // escreva seu código aqui
-  return (names.toString().split('')).reduce((acc, curr) => curr.match(/a/gi) ? acc += 1 : acc += 0, 0);
-}
+const containsA = () => (names.toString().split(''))
+.reduce((acc, curr) => curr.match(/a/gi) ? acc += 1 : acc += 0, 0);
 
 console.log(containsA());
