@@ -12,11 +12,8 @@ const arrays = [
 
 function flatten() {
   // escreva seu código aqui
-  const newArray = arrays[0].concat(arrays[1]).concat(arrays[2])
-  const elements = (acc, curr) => (acc += curr)
-  // return arrays.reduce(elements, []);
-  return newArray
-  
+  const elements = (acc, curr) => (acc.concat(curr));
+  return arrays.reduce(elements)
 }
 
 console.log(flatten())
