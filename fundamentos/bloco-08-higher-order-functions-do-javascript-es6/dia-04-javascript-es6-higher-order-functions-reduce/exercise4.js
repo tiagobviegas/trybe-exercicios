@@ -69,7 +69,6 @@ const books = [
 
 // 4 - Encontre o livro com o maior nome.
 
-
 const expectedResult = {
   id: 1,
   name: 'As Crônicas de Gelo e Fogo',
@@ -81,9 +80,6 @@ const expectedResult = {
   releaseYear: 1991,
 };
 
-function longestNamedBook() {
-  // escreva seu código aqui
-  return books.reduce((acc, curr) => acc.name.length > curr.name.length ? acc : curr)
-}
+const longestNamedBook = () => books.reduce((acc, curr) => acc.name.length > curr.name.length ? acc : curr);
 
-console.log(longestNamedBook())
+console.log(longestNamedBook());
