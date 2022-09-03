@@ -2,7 +2,7 @@
 
 // O operador ternário (bigger > number ? bigger : number) fará uma comparação entre o valor do último número vinculado ao accumulator (bigger) e ao current number (number) e, de acordo com a lógica, vai retorna o maior valor para number ou para bigger de acordo com o que foi estabelecido como "true" ou "false" no operador ternário após cada iteração. Este maior valor será o parâmetro ou de "bigger" ou de "number" para a comparação da próxima iteração.
 
-// Rode o código abaixo para a descrição sobre como funciona o acumulador quando usado juntamente com o current number para fazer uma condicional usando operador ternário:
+// Rode o código abaixo para visualizar a descrição sobre como funciona o acumulador quando usado juntamente com o current number para fazer uma condicional usando operador ternário:
 
 const numbers = [24, 93, -3, 3, 18];
 
