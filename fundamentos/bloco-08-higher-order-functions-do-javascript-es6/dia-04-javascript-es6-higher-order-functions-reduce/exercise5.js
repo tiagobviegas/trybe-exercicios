@@ -8,8 +8,7 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
-  let counter = 0;
-  return (names.toString().split('')).reduce((acc, curr) => curr === 'a' || curr === 'A' ? counter += 1 : counter + 0, 0);
+  return (names.toString().split('')).reduce((acc, curr) => curr.match(/a/gi) ? acc += 1 : acc += 0, 0);
 }
 
 console.log(containsA());
