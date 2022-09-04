@@ -5,12 +5,10 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
   // escreva seu código aqui
-  const studentsAverage = grades.map((grade) => (grade.reduce((acc, curr) => acc + curr)) / grade.length);
-  return studentsAverage.map((rank) => students.map((student) => ({ name: student, average: rank })))
-}
-
-console.log(studentAverage())
-
+  return grades.map((grade, index) => ({ 
+    name: students[index],
+    average: grade.reduce((acc, curr) => curr + acc) / grade.length }));
+};
 
 const expected = [
   { name: 'Pedro Henrique', average: 7.8 },
@@ -18,3 +16,4 @@ const expected = [
   { name: 'Maria Clara', average: 8.8 },
 ];
 
+console.log(studentAverage())
