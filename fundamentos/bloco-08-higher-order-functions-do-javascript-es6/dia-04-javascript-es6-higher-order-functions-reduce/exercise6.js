@@ -5,11 +5,8 @@ const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 function studentAverage() {
   // escreva seu código aqui
-  // const sumOfGrades = (acc, curr) => acc + curr
-  
-  const average = grades.map((grade) => (grade.reduce((acc, curr) => acc + curr)) / grade.length)
-  // students.
-  return { name: students, average: average }
+  const studentsAverage = grades.map((grade) => (grade.reduce((acc, curr) => acc + curr)) / grade.length);
+  return studentsAverage.map((rank) => students.map((student) => ({ name: student, average: rank })))
 }
 
 console.log(studentAverage())
