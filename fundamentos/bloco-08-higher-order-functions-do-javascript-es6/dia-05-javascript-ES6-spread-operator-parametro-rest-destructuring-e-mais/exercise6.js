@@ -8,6 +8,8 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 // escreva toObject abaixo
 
-const toObject = (...arrays) => ({ palio, shelbyCobra, chiron })
+const toObject = ([model, brand, year]) => ({ model, brand, year });
 
-console.log(toObject([palio, shelbyCobra, chiron]))
+console.log(toObject(palio));
+console.log(toObject(shelbyCobra));
+console.log(toObject(chiron));
