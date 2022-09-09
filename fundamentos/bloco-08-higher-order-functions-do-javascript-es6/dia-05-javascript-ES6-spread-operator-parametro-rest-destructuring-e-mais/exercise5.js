@@ -5,3 +5,7 @@
 const myList = [5, 2, 3];
 
 // escreva swap abaixo
+
+const swap = (array) => array = [3, 2, 5]
+
+console.log(swap(myList))
