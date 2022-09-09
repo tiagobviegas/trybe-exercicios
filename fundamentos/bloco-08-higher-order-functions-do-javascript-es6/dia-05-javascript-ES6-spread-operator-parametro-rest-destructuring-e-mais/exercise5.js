@@ -6,6 +6,6 @@ const myList = [5, 2, 3];
 
 // escreva swap abaixo
 
-const swap = (array) => array = [3, 2, 5]
+const swap = ([a, b, c]) => [c, b, a]
 
 console.log(swap(myList))
