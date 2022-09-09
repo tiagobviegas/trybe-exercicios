@@ -12,6 +12,7 @@ const yearSeasons = {
   winter: ['December', 'January', 'February'],
 };
 
-const monthsOfTheYear = ({ spring, summer, autumn, winter }) => [...winter, ...spring, ...summer, ...autumn];
+const { spring, summer, autumn, winter } = yearSeasons
+const monthsOfTheYear = [...winter, ...spring, ...summer, ...autumn];
 
-console.log(monthsOfTheYear(yearSeasons));
+console.log(monthsOfTheYear);
