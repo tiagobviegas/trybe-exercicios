@@ -1,52 +1,35 @@
-const numeros = [4, 6, 1, 3, -5, 8];
+// COMPREENDENDO O FUNCIONAMENTO DO REDUCE PARA ENCONTRAR O MAIOR NÚMERO DE UM ARRAY.
 
-const comparaNumeros = (acc, curr) => acc < curr ? acc : curr
+// O operador ternário (bigger > number ? bigger : number) fará uma comparação entre o valor do último número vinculado ao accumulator (bigger) e ao current number (number) e, de acordo com a lógica, vai retorna o maior valor para number ou para bigger de acordo com o que foi estabelecido como "true" ou "false" no operador ternário após cada iteração. Este maior valor será o parâmetro ou de "bigger" ou de "number" para a comparação da próxima iteração.
 
-const menorDeTodos = numeros.reduce(comparaNumeros, 0);
+// Rode o código abaixo para visualizar a descrição sobre como funciona o acumulador quando usado juntamente com o current number para fazer uma condicional usando operador ternário:
 
-console.log(menorDeTodos);
+const numbers = [24, 93, -3, 3, 18];
 
+const getBigger = (bigger, number, index) => {
 
+console.log(`
+${index + 1}ª iteração
 
-// ---------------------------------------------------------------------------
+"bigger" = ${bigger}
+"number" = ${number}
 
-const nomes = ['Tiago', 'Ianny', 'Veralene', 'Ivanilde', 'Miguel', 'Maria'];
+bigger > number ? bigger : number
 
-const comparaNomes = (nomeAnterior, nomeAtual) => nomeAnterior.length > nomeAtual.length ? nomeAnterior : nomeAtual;
+retorno: ${(bigger > number) ? `bigger = ${bigger}` : `number = ${number}`}
+__________________________`);
 
-const maiorNome = nomes.reduce(comparaNomes, 0);
+  return ((bigger > number) ? bigger : number);
+};
 
-console.log(maiorNome);
+const bigger = numbers.reduce(getBigger, 0);
 
+console.log(`
+"bigger" (o acumulador) apresentou 
+o maior número na 3ª iteração da HOF Reduce 
+e por isso o operador ternário retornou 
+seu valor como o maior número do array: 
 
+Resultado:
 
-// ---------------------------------------------------------------------------
-
-const numbers = [5, 34, 50, 54, 9, 20];
-
-const numerosPares = numbers.filter((number) => number % 2 === 0);
-
-// ----------------------------
-
-const somatorio = (numeroAnterior, numeroAtual) => numeroAnterior + numeroAtual; 
-
-const soma = numerosPares.reduce(somatorio, 0);
-
-console.log(soma);
-
-
-
-// ---------------------------------------------------------------------------
-
-const numbers2 = [8, 98, 3, 34, 40];
-
-const sumPair = (accumulator, number) => (
-  (number % 2 === 0) ? accumulator + number : accumulator
-);
-
-const sumNumbers = (array) => array.reduce(sumPair, 0);
-
-console.log(sumNumbers(numbers2)); // 152
-
-
-// -------------------------------------------------------
+const bigger = numbers.reduce(getBigger, 0) é igual a = ${bigger}`); // 93

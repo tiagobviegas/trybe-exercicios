@@ -17,23 +17,3 @@ const showEmailList = (email) => {
 
 // Adicione seu código aqui
 emailListInData.forEach(showEmailList);
-
-
-//___________________________________________________________________________________________
-
-// TESTE:
-
-const pilotos = ['Charles Leclerc', 'Max Verstappen', 'Lewis Hamilton', 'George Russel', 'Esteban Ocon', 'Mick Schumacher', 'Lando Noris', 'Kevin Magnussen', 'Daniel Riccardo', 'Fernando Alonso'];
-
-const constructors = ['Ferrari', 'RedBull RBPT', 'Mercedes', 'Mercedes', 'Alpine', 'Haas', 'McLaren', 'Haas', 'McLaren', 'Alpine'];
-
-const finishTable = (driver, index) => console.log(`${index + 1}º - ${driver}`);
-
-console.log(`
-British GP - Standings
-`)
-pilotos.forEach(finishTable);
-console.log('-------------------------');
-constructors.forEach(finishTable);
-
-//___________________________________________________________________________________________
