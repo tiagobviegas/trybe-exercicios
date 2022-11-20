@@ -2,7 +2,7 @@
 
 **(PT-BR)** Este é o portfólio de Tiago Viegas contendo os exercícios e projetos propostos pelo curso de formação em Desenvolvimento Web Full Stack da Trybe. A Trybe é uma escola de tecnologia voltada para formação técnica de pessoas desenvolvedoras para o mercado de trabalho de TI. O curso passa por módulos de aprendizado que vão do conhecimento fundamental para exercer a profissão, especializando a pessoa desenvolvedora em tecnologias full stack, com conteúdo massivo em front-end, back-end e ciências da computação, e também conhecimentos em soft skills, entregando um profissional pronto para ingressar na carreira e evoluir com eficiência e segurança. Estes são os exercícios praticados durante os estudos.
 
-**(EN)** This is Tiago Viegas porfolio filed with Trybe Full Stack Web Development course formation proposed assignments and projects. Trybe is a tech school focused on formation of web development professionals to IT market. The course aims into a strong basis knowledge of web development specializing on massive front-end, back-end and computer sciences content, and soft skills as well, to turn students into highly efficient and prepared professional. This are the assignments given during the course.
+**(EN)** This is Tiago Viegas porfolio filed with Trybe Full Stack Web Development course formation proposed assignments and projects. Trybe is a tech school focused on formation of web development professionals to IT market. The course aims into a strong basis knowledge of web development specializing on massive front-end, back-end and computer sciences content, and soft skills as well, to turn students into highly efficient and prepared professionals. These are the assignments given during the course.
 
 ## MÓDULO - FUNDAMENTOS
 
