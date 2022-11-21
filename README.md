@@ -263,8 +263,8 @@
 - [x] Dia 15: Dia Inteiro de Eu e o Mundo
 
 ### Seção 3 - Criatividade & Colaboração
-- [ ] Dia 01: PDI - Segundo Exercício
-- [ ] Dia 02: Introdução à criatividade
+- [x]Dia 01: PDI - Segundo Exercício
+- [x] Dia 02: Introdução à criatividade
 - [ ] Dia 03: Introdução à inovação
 - [ ] Dia 04: Criação - Barreiras à Criatividade
 - [ ] Dia 05: Criação - Sessão de Pitacos
@@ -315,9 +315,9 @@
 - [ ] Dia 05: Comprovando experiência com projetos da Trybe
 
 ### Seção 4 - Primeira Entrevista
-- [ ] Dia 01: Storytelling
-- [ ] Dia 02: Perguntas de entrevista
-- [ ] Dia 03: Preparação para entrevistas
+- [x] Dia 01: Storytelling
+- [x] Dia 02: Perguntas de entrevista
+- [x] Dia 03: Preparação para entrevistas
 - [ ] Dia 04: Simulação de entrevista
 
 ### Seção 5 - Etapas Técnicas
