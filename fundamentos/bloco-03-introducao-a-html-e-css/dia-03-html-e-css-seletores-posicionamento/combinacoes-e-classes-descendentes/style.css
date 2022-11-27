@@ -19,3 +19,11 @@ ol li:nth-of-type(odd) {
   font-style: normal;
   border: 1px solid black;
 }
+
+li {
+  font-size: 20px;
+}
+
+li > em {
+  font-weight: bold;
+}
