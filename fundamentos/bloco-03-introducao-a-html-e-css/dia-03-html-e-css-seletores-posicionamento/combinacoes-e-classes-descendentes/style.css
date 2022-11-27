@@ -27,3 +27,35 @@ li {
 li > em {
   font-weight: bold;
 }
+
+.linguagens {
+  color: blue;
+}
+
+.java {
+  background-color: pink;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a[href*="stackoverflow"]:hover {
+  color: orange;
+}
+
+a[href*="w3schools"]:hover {
+  color: green;
+}
+
+a[href*="mozilla"]:hover {
+  color: black;
+}
+
+a[href*="devdocs"]:hover {
+  color: yellow;
+}
+
+a[href*="trybe"]:hover {
+  color: green;
+}
