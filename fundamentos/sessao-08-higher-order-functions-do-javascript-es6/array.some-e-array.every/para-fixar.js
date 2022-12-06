@@ -16,7 +16,7 @@ const people = [
 ];
 
   //Adicione seu código aqui
-const verifyAges = (arr, age) => arr.every((person) => person.age > age);
+const verifyAges = (arr, age) => arr.every((person) => person.age >= age);
 
 console.log(verifyAges(people, 18));
 console.log(verifyAges(people, 14));
