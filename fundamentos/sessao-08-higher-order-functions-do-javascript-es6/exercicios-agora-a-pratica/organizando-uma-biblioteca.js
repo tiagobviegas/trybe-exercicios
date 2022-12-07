@@ -35,7 +35,7 @@ const books = [
     genre: 'Ficção Científica',
     author: {
       name: 'Frank Herbert',
-      birthYear: 1920,
+      birthYear: 1925,
     },
     releaseYear: 1965,
   },
@@ -63,11 +63,12 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const expectedResult = true;
+const expectedResult = false;
 
-const someBookWasReleaseOnThe80s = () => {
+const authorUnique = () => {
   // escreva seu código aqui
-  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990)
+  return books.every((book) => book.author.birthYear === !books.some((book2) => book2.author.birthYear));
 }
 
-console.log(someBookWasReleaseOnThe80s());
+
+console.log(authorUnique());
