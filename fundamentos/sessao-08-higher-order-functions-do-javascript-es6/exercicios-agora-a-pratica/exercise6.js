@@ -2,8 +2,7 @@ const expectedResult = false;
 
 const authorUnique = () => {
   // escreva seu código aqui
-  return books.every((book) => book.author.birthYear === !books.some((book2) => book2.author.birthYear));
+  return books.every((bookEvery) => books.some((bookSome) => bookSome.author.birthYear === bookEvery.author.birthYear));
 }
-
 
 console.log(authorUnique());
