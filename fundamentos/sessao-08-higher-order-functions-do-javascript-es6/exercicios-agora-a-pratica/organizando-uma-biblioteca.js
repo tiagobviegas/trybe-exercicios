@@ -78,12 +78,8 @@ const smallerName = () => {
   let nameBook;
   // escreva aqui o seu código
   books.forEach((book) => {
-    for (let i = 0; i < books.length; i += 1) {
-      if (books[i].name.length < book.name.length) {
-        nameBook = books[i].name;
-      } // else if (books[i].name.length > book.name.length) {
-      //   nameBook = book.name;
-      // }
+    if (!nameBook || nameBook.length > book.name.length) {
+      nameBook = book.name;
     }
   })
 
@@ -91,4 +87,5 @@ const smallerName = () => {
   return nameBook;
 }
 
-console.log(smallerName())
+console.log(smallerName());
+
