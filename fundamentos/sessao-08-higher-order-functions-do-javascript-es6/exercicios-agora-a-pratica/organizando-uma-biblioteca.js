@@ -66,10 +66,7 @@ const books = [
 const expectedResult = 'Stephen King';
 const authorBornIn1947 = () => {
   // escreva aqui o seu código
-  return books.find((book) => {
-    if (book.author.birthYear === 1947)
-    return book.author.name
-  })
+  return books.find((book) => book.author.birthYear === 1947).author.name;
 }
 
-console.log(authorBornIn1947())
+console.log(authorBornIn1947());
