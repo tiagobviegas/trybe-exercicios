@@ -63,63 +63,11 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const authorBornIn1947 = () => {
-  // escreva aqui o seu código
-  return books.find((book) => book.author.birthYear === 1947).author.name;
-}
+const expectedResult = true;
 
-console.log(authorBornIn1947());
-
-
-// ================================================
-
-
-// const expectedResult = 'Duna';
-const smallerName = () => {
-  let nameBook;
-  // escreva aqui o seu código
-  books.forEach((book) => {
-    if (!nameBook || nameBook.length > book.name.length) {
-      nameBook = book.name;
-    }
-  })
-
-  // Variável nameBook que receberá o valor do menor nome;
-  return nameBook;
-}
-
-console.log(smallerName());
-
-
-// ================================================
-
-// const expectedResult = {
-//   author: {
-//     birthYear: 1948,
-//     name: 'George R. R. Martin',
-//   },
-//   genre: 'Fantasia',
-//   id: 1,
-//   name: 'As Crônicas de Gelo e Fogo',
-//   releaseYear: 1991,
-// };
-
-const getNamedBook = () => {
+const someBookWasReleaseOnThe80s = () => {
   // escreva seu código aqui
-  return books.find((book) => book.name.length === 26);
-};
-
-console.log(getNamedBook());
-
-
-// ================================================
-
-// const expectedResult = false;
-
-function everyoneWasBornOnSecXX() {
-  // escreva seu código aqui
-  return books.every((book) => book.author.birthYear > 1901)
+  return books.some((book) => book.releaseYear >= 1980 && book.releaseYear < 1990)
 }
 
-console.log(everyoneWasBornOnSecXX());
-
+console.log(someBookWasReleaseOnThe80s());
