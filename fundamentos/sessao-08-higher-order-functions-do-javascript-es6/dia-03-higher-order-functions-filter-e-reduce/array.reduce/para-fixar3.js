@@ -84,5 +84,17 @@ const estudantes = [
 //   { name: 'Wilson', materia: 'Português' },
 // ]
 
+const maiorNota = () => {
+  
+}
 
-console.log(estudantes[0].materias[2].name)
+const melhorMateria = () => { 
+  return estudantes.map((estudante) => ({
+    name: estudante.nome,
+    materia: estudante.materias.reduce((materia, proxMateria) => {
+      return materia > proxMateria ? materia : proxMateria
+    })
+  })
+  ) 
+}
+console.log(melhorMateria())
