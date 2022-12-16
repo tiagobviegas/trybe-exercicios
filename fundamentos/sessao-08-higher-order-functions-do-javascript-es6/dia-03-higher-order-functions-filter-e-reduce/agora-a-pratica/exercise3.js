@@ -69,7 +69,7 @@ const booksByAuthorBirthYear = (birthYear) => {
   // escreva seu código aqui
   return books.filter((book) => book.author.birthYear === birthYear)
     .map((author) => author.name)
-}
+};
 // const result = booksByAuthorBirthYear(1920);
 
 console.log(booksByAuthorBirthYear(1920));
