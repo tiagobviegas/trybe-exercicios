@@ -52,9 +52,9 @@
 - [x] Dia 04: Projeto - JavaScript Testes Unitários
 
 ### Seção 8 - Higher Order Functions do JavaScript ES6
-- [ ] Dia 01: Introdução a Higher Order Functions
-- [ ] Dia 02: Higher Order Functions - sort e map
-- [ ] Dia 03: Higher Order Functions - filter e reduce
+- [x] Dia 01: Introdução a Higher Order Functions
+- [x] Dia 02: Higher Order Functions - sort e map
+- [x] Dia 03: Higher Order Functions - filter e reduce
 - [ ] Dia 04: JavaScript ES6 - spread operator, rest parameters e object destructuring
 - [ ] Dia 05: JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
 - [ ] Dia 06: Projeto - Zoo functions
