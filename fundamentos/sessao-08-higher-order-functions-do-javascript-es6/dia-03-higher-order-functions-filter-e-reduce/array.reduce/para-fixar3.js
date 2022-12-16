@@ -85,16 +85,15 @@ const estudantes = [
 // ]
 
 const maiorNota = () => {
-  
+
 }
 
 const melhorMateria = () => { 
   return estudantes.map((estudante) => ({
     name: estudante.nome,
     materia: estudante.materias.reduce((materia, proxMateria) => {
-      return materia > proxMateria ? materia : proxMateria
-    })
-  })
-  ) 
+      return materia.nota > proxMateria.nota ? materia : proxMateria
+    }).name
+  })) 
 }
 console.log(melhorMateria())
