@@ -63,34 +63,13 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-// const expectedResult = [
-//   {
-//     id: 6,
-//     name: 'O Chamado de Cthulhu',
-//     genre: 'Terror',
-//     author: { name: 'H. P. Lovecraft', birthYear: 1890 },
-//     releaseYear: 1928,
-//   },
-//   {
-//     id: 3,
-//     name: 'Fundação',
-//     genre: 'Ficção Científica',
-//     author: { name: 'Isaac Asimov', birthYear: 1920 },
-//     releaseYear: 1951,
-//   },
-//   {
-//     id: 2,
-//     name: 'O Senhor dos Anéis',
-//     genre: 'Fantasia',
-//     author: { name: 'J. R. R. Tolkien', birthYear: 1892 },
-//     releaseYear: 1954,
-//   },
-// ];
+// const expectedResult = [ 'Fundação', 'Duna' ];
 
-const oldBooksOrdered = () => {
+const booksByAuthorBirthYear = (birthYear) => {
   // escreva seu código aqui
-  const bookAge =  books.filter((book) => new Date().getFullYear() - book.releaseYear > 60)
-  return bookAge.sort((a, b) => a.releaseYear - b.releaseYear);
+  return books.filter((book) => book.author.birthYear === birthYear)
+    .map((author) => author.name)
 }
+// const result = booksByAuthorBirthYear(1920);
 
-console.log(oldBooksOrdered());
+console.log(booksByAuthorBirthYear(1920));
