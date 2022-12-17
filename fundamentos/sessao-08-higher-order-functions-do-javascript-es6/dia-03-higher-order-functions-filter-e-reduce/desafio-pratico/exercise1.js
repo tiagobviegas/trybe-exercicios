@@ -71,8 +71,8 @@ const countries = [
 
 const getPopulation = () => {
   // retorne o seu código aqui
-  return countries.map((countrie) => countrie.population)
+  return countries.map((country) => country.population)
     .reduce((population, nextPopulatio) => population + nextPopulatio, 0)
-}
+};
 
 console.log(getPopulation());
