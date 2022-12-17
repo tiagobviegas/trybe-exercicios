@@ -67,12 +67,13 @@ const countries = [
   }
 ];
 
-// const expectedResult = 120797034;
+// const expectedResult = 4311757;
 
-const getPopulation = () => {
-  // retorne o seu código aqui
-  return countries.map((countrie) => countrie.population)
-    .reduce((population, nextPopulatio) => population + nextPopulatio, 0)
+const getTotalArea = () => {
+// retorne seu código aqui
+  return countries.map((countrie) => countrie.area).reduce((area, nextArea) => {
+    return area + nextArea;
+  })
 }
 
-console.log(getPopulation());
+console.log(getTotalArea());
