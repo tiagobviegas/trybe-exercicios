@@ -27,7 +27,7 @@ console.log(comida, animal, bebida); // arroz gato água
 
 let numerosPares = [1, 3, 5, 6, 8, 10, 12];
 
-numerosPares = numerosPares.filter((numero) => numero % 2 === 0 ) 
+[,,, ...numerosPares] = numerosPares  
 
 console.log(numerosPares); // [6, 8, 10, 12];
 
