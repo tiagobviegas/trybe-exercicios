@@ -8,14 +8,10 @@ let newKey = 'lastName';
 const lastName = 'Ferreira';
 
 const adicionaPropriedade = (objeto, novaPropriedade, valor) => {
-  objeto[novaPropriedade] = valor
+  objeto[novaPropriedade] = valor;
 };
 
-adicionaPropriedade(customer, newKey, lastName);
-console.log(customer);
-
-newKey = 'fullName';
-const fullName = `${customer.firstName} ${customer.lastName}`;
-
-adicionaPropriedade(customer, newKey, fullName);
-console.log(customer);
+adicionaPropriedade(customer, 'adress', 'Vancouver CA')
+console.log(customer)
+adicionaPropriedade(customer, 'status', 'single')
+console.log(customer)
