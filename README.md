@@ -56,8 +56,8 @@
 - [x] Dia 02: Higher Order Functions - sort e map
 - [x] Dia 03: Higher Order Functions - filter e reduce
 - [x] Dia 04: JavaScript ES6 - spread operator, rest parameters e object destructuring
-- [ ] Dia 05: JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
-- [ ] Dia 06: Projeto - Zoo functions
+- [x] Dia 05: JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
+- [x] Dia 06: Projeto - Zoo functions
 
 ## MÓDULO - FRONT-END
 
