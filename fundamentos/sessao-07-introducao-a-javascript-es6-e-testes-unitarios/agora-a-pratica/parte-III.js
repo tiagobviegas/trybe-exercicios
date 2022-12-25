@@ -53,3 +53,19 @@ const allStudents = (obj) => {
 const getValueByNumber = (obj, pos) => getObjValues(obj)[pos];
 
 // console.log(getValueByNumber(lesson1, 0));
+
+
+const verifyPair = (obj, key, value) => {
+  const entries = Object.entries(obj);
+  for (let i = 0; i < entries.length; i += 1) {
+    if (getObjKeys(obj)[i] === key && getObjValues(obj)[i] === value) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
