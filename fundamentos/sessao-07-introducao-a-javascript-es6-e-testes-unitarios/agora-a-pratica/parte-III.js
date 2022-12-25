@@ -48,4 +48,8 @@ const allStudents = (obj) => {
   return sum;
 };
 
-console.log(allStudents(allLessons));
+// console.log(allStudents(allLessons));
+
+const getValueByNumber = (obj, pos) => getObjValues(obj)[pos];
+
+// console.log(getValueByNumber(lesson1, 0));
