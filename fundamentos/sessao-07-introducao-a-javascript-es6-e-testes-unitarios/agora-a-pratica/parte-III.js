@@ -19,24 +19,17 @@ const lesson3 = {
 };
 
 
-const addNightShift = (object, key, value) => {
-  object[key] = value
-  return lesson2
-};
+const addNightShift = (object, key, value) => object[key] = value;
 console.log(addNightShift(lesson2, 'turno', 'noite'));
 
-const keys = (object) => {
-  return Object.keys(object)
-};
-console.log(keys(lesson1))
+const getKeys = (object) => Object.keys(object)
+console.log(getKeys(lesson2))
 
-const objectSize = (object) => {
-  
-};
+const getSize = (object) => Object.entries(object).length
+console.log(getSize(lesson2))
 
-const objectValues = (object) => {
-
-};
+const getValues = (object) => Object.values(object)
+console.log(getValues(lesson2))
 
 const allLessons = {};
 Object.assign(allLessons, lesson1, lesson2, lesson3)
