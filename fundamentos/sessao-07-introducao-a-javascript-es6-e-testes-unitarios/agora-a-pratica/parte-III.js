@@ -18,39 +18,23 @@ const lesson3 = {
   turno: 'noite',
 };
 
-
 const addNightShift = (object, key, value) => object[key] = value;
-console.log(addNightShift(lesson2, 'turno', 'noite'));
+addNightShift(lesson2, 'turno', 'noite');
 
-const getKeys = (object) => Object.keys(object)
-console.log(getKeys(lesson2))
+const getObjKeys = (object) => Object.keys(object);
 
-const getSize = (object) => Object.entries(object).length
-console.log(getSize(lesson2))
+const getObjSize = (object) => Object.entries(object).length;
 
-const getValues = (object) => Object.values(object)
-console.log(getValues(lesson2))
+const getObjValues = (object) => Object.values(object);
 
+const lessons = [lesson1, lesson2, lesson3];
 const allLessons = {};
-Object.assign(allLessons, lesson1, lesson2, lesson3)
-
-// console.log(allLessons);
-/*
-{
-  lesson1:
-   { materia: 'Matemática',
-     numeroEstudantes: 20,
-     professor: 'Maria Clara',
-     turno: 'manhã' },
-  lesson2:
-   { materia: 'História',
-     numeroEstudantes: 20,
-     professor: 'Carlos',
-     turno: 'noite' },
-  lesson3:
-   { materia: 'Matemática',
-     numeroEstudantes: 10,
-     professor: 'Maria Clara',
-     turno: 'noite' }
+for (let i = 0; i < lessons.length; i += 1) {
+  const newObject = {};
+  const newKey = `lesson${i + 1}`;
+  const newValue = lessons[i];
+  newObject[newKey] = newValue
+  Object.assign(allLessons, newObject)
 };
-*/
+
+console.log(allLessons);
