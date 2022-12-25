@@ -39,10 +39,10 @@ const customerInfo = (order) => {
   const deliveryPerson = Object.values(order.order.delivery)[0];
   const name = order.name;
   const phone = order.phoneNumber;
-  const rua = Object.values(order.address)[0]
-  const numero = Object.values(order.address)[1]
-  const apto = Object.values(order.address)[2]
-  return console.log(`Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phone}, R. ${rua}, Nº: ${numero}, AP: ${apto}`)
+  const rua = Object.values(order.address)[0];
+  const numero = Object.values(order.address)[1];
+  const apto = Object.values(order.address)[2];
+  return console.log(`Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phone}, R. ${rua}, Nº: ${numero}, AP: ${apto}`);
 };
 
 customerInfo(order);
