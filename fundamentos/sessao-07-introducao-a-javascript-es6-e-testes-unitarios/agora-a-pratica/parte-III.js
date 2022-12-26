@@ -54,7 +54,6 @@ const getValueByNumber = (obj, pos) => getObjValues(obj)[pos];
 
 // console.log(getValueByNumber(lesson1, 0));
 
-
 const verifyPair = (obj, key, value) => {
   for (let i = 0; i < getObjSize(obj); i += 1) {
     if (getObjKeys(obj)[i] === key && getObjValues(obj)[i] === value) {
@@ -66,3 +65,34 @@ const verifyPair = (obj, key, value) => {
 
 // console.log(verifyPair(lesson3, 'turno', 'noite'));
 // console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+const sumMathStudents = (lessons) => {
+  let sum = 0;
+  for (let i = 0; i < getObjSize(lessons); i += 1) {
+    if(getObjValues(lessons)[i].materia === 'Matemática') {
+      sum += getObjValues(lessons)[i].numeroEstudantes
+    }
+  }
+  return sum;
+}
+
+const createReport = (obj, teacher) => {
+  let subject = [];
+  for (let i = 0; i < getObjSize(obj); i += 1) {
+    if (getObjValues(obj)[i].materia === 'Matemática') {
+      subject.push(getObjValues(obj)[i].materia)
+    }
+  }
+  return {
+    professor: teacher,
+    aulas: subject,
+    estudantes: sumMathStudents(obj),
+  };
+};
+
+console.log(createReport(allLessons, 'Maria Clara'));
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
