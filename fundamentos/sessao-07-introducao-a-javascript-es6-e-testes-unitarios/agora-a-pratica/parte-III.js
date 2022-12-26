@@ -77,17 +77,21 @@ const sumMathStudents = (lessons) => {
 }
 
 const createReport = (obj, teacher) => {
-  let subject = [];
+  const subject = [];
+  const report = {};
+  let newKey = '';
   for (let i = 0; i < getObjSize(obj); i += 1) {
     if (getObjValues(obj)[i].materia === 'Matemática') {
-      subject.push(getObjValues(obj)[i].materia)
+      subject.push(getObjValues(obj)[i].materia);
     }
   }
-  return {
-    professor: teacher,
-    aulas: subject,
-    estudantes: sumMathStudents(obj),
-  };
+  newKey = 'professor';
+  report[newKey] = teacher;
+  newKey = 'aulas';
+  report[newKey] = subject;
+  newKey = 'estudantes';
+  report[newKey] = sumMathStudents(obj);
+  return report;
 };
 
 console.log(createReport(allLessons, 'Maria Clara'));
