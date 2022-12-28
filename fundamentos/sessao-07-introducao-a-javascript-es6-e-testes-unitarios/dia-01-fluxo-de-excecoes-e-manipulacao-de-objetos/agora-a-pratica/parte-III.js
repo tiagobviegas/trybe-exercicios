@@ -63,8 +63,8 @@ const verifyPair = (obj, key, value) => {
   return false;
 };
 
-// console.log(verifyPair(lesson3, 'turno', 'noite'));
-// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 
 const sumMathStudents = (lessons) => {
   let sum = 0;
@@ -94,7 +94,7 @@ const createReport = (obj, teacher) => {
   return report;
 };
 
-console.log(createReport(allLessons, 'Maria Clara'));
+// console.log(createReport(allLessons, 'Maria Clara'));
 /* {
   professor: 'Maria Clara',
   aulas: [ 'Matemática', 'Matemática' ],
