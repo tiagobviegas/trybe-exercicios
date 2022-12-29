@@ -7,23 +7,17 @@ const noEmergencyTasksH3 = document.querySelectorAll('.no-emergency-tasks h3');
 const headerBgColor = document.querySelector('#header-container');
 const footerBgColor = document.querySelector('#footer-container');
 
-const emergencyStyle = (tasksDiv, tasks, h3) => {
-  for (let i = 0; i < tasksDiv.length; i += 1) {
-    h3[i].style.backgroundColor = '#C219E2';
-    tasksDiv[i].style.backgroundColor = '#FAA08A';
+const tasksStyle = (divA, tasksA, h3A, divB, tasksB, h3B) => {
+  for (let i = 0; i < divA.length; i += 1) {
+    h3A[i].style.backgroundColor = '#C219E2';
+    h3B[i].style.backgroundColor = '#303030';
+    divA[i].style.backgroundColor = '#FAA08A';
+    divB[i].style.backgroundColor = '#EFD446';
   };
-  tasks.style.backgroundColor = '#FAA08A';
+  tasksA.style.backgroundColor = '#FAA08A';
+  tasksB.style.backgroundColor = '#EFD446';
 };
 
-const noEmergencyStyle = (tasksDiv, tasks, h3) => {
-  for (let i = 0; i < tasksDiv.length; i += 1) {
-    h3[i].style.backgroundColor = '#303030';
-    tasksDiv[i].style.backgroundColor = '#EFD446';
-  };
-  tasks.style.backgroundColor = '#EFD446';
-};
-
-headerBgColor.style.backgroundColor = '#26B05C';
-emergencyStyle(emergencyDiv, emergencyTasks, emergencyTasksH3);
-noEmergencyStyle(noEmergencyDiv, noEmergencyTasks, noEmergencyTasksH3);
-footerBgColor.style.backgroundColor = '#0A462C';
+headerBgColor.style.backgroundColor = '#26B074';
+footerBgColor.style.backgroundColor = '#0E3E3E';
+tasksStyle(emergencyDiv, emergencyTasks, emergencyTasksH3, noEmergencyDiv, noEmergencyTasks, noEmergencyTasksH3);

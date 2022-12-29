@@ -32,19 +32,16 @@
   display: inline-block;
   height: 400px;
   width: 400px;
-  background-color: blue;
 }
 
 .no-emergency-tasks div {
   height: 198px;
-  background-color: green;
 }
 
 .no-emergency-tasks h3 {
   color: white;
   margin-top: 10px;
   padding: 10px;
-  background-color: yellow;
 }
 
 #footer-container {
