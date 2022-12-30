@@ -19,6 +19,11 @@
     const irmaoDeOndeEstou = document.createElement('section');
       irmaoDeOndeEstou.innerText = 'Irmão de Onde Estou';
       ondeEstou.appendChild(irmaoDeOndeEstou);
+    const bisneto = document.createElement('section');
+      bisneto.innerText = 'Filho do Primeiro Filho do Filho';
+      neto.appendChild(bisneto);
+    const terceiroFilho = bisneto.parentElement.parentElement.nextElementSibling;
+    
 
     // const createElement = (parent, element, name) => {
     //   const newElement = createElement('section');
