@@ -12,24 +12,21 @@
   <script>
     const ondeEstou = document.querySelector('#elementoOndeVoceEsta');
     const pai = ondeEstou.parentElement;
-    const neto = ondeEstou.firstElementChild;
-    const filhoDoPai = document.createElement('section');
-      filhoDoPai.innerText = 'Novo Filho do Pai';
-      pai.appendChild(filhoDoPai);
-    const irmaoDeOndeEstou = document.createElement('section');
-      irmaoDeOndeEstou.innerText = 'Irmão de Onde Estou';
-      ondeEstou.appendChild(irmaoDeOndeEstou);
-    const bisneto = document.createElement('section');
-      bisneto.innerText = 'Filho do Primeiro Filho do Filho';
-      neto.appendChild(bisneto);
-    const terceiroFilho = bisneto.parentElement.parentElement.nextElementSibling;
+    const primeiroFilhoDoFilho = ondeEstou.firstElementChild;      
     
+    const createNewElement = (parent, text) => {
+      const newElement = document.createElement('section');
+      newElement.innerText = text;
+      parent.appendChild(newElement);
+    }
 
-    // const createElement = (parent, element, name) => {
-    //   const newElement = createElement('section');
-    //     newElement.innerText = name;
-    //   parent.appendChild()
-    // }
-    // createElement
+    createNewElement(pai, 'Irmão de Onde Estou');
+    createNewElement(ondeEstou, 'Filho de Onde Estou');
+
+    const filhoDoPrimeiroFilhoDoFilho = document.createElement('section');
+      filhoDoPrimeiroFilhoDoFilho.innerText = 'Filho do Primeiro Filho do Filho';
+      primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+
+    const terceiroFilho = filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
   </script>
 </main>
