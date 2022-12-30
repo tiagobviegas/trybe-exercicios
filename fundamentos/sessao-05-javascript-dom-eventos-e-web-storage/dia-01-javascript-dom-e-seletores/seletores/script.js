@@ -16,8 +16,8 @@ const tasksStyle = (divA, tasksA, h3A, divB, tasksB, h3B) => {
   };
   tasksA.style.backgroundColor = '#FAA08A';
   tasksB.style.backgroundColor = '#EFD446';
+  headerBgColor.style.backgroundColor = '#26B074';
+  footerBgColor.style.backgroundColor = '#0E3E3E';
 };
 
-headerBgColor.style.backgroundColor = '#26B074';
-footerBgColor.style.backgroundColor = '#0E3E3E';
 tasksStyle(emergencyDiv, emergencyTasks, emergencyTasksH3, noEmergencyDiv, noEmergencyTasks, noEmergencyTasksH3);
