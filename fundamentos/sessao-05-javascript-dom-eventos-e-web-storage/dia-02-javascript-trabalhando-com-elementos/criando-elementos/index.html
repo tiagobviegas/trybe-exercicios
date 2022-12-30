@@ -9,4 +9,22 @@
     <section id="terceiroFilho"></section>
     <section id="quartoEUltimoFilho"></section>
   </section>
+  <script>
+    const ondeEstou = document.querySelector('#elementoOndeVoceEsta');
+    const pai = ondeEstou.parentElement;
+    const neto = ondeEstou.firstElementChild;
+    const filhoDoPai = document.createElement('section');
+      filhoDoPai.innerText = 'Novo Filho do Pai';
+      pai.appendChild(filhoDoPai);
+    const irmaoDeOndeEstou = document.createElement('section');
+      irmaoDeOndeEstou.innerText = 'Irmão de Onde Estou';
+      ondeEstou.appendChild(irmaoDeOndeEstou);
+
+    // const createElement = (parent, element, name) => {
+    //   const newElement = createElement('section');
+    //     newElement.innerText = name;
+    //   parent.appendChild()
+    // }
+    // createElement
+  </script>
 </main>
