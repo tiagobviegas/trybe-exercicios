@@ -93,12 +93,19 @@
       const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
       let i = 0;
       while(i < 10) {
-        const li = document.createElement('li')
+        const li = create('li');
           li.innerText = numbers[i];
         ul.appendChild(li);
-        i += 1
+        i += 1;
       };
       rightSection.appendChild(ul);
+
+      i = 0;
+      while(i < 3) {
+        const h3 = create('h3');
+        main.appendChild(h3);
+        i += 1;
+      };
 
     </script>
   </body>
