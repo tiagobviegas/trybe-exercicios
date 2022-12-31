@@ -119,6 +119,14 @@
       main.removeChild(leftSection);
       rightSection.style.marginRight = 'auto';
       main.style.backgroundColor = 'green';
+
+      i = document.getElementsByTagName('li').length;
+      c = i - 2;
+      while (i > c) {
+        ul.lastElementChild.remove();
+        i -= 1;
+      };
+
     </script>
   </body>
 </html>
