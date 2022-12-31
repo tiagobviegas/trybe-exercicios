@@ -88,6 +88,18 @@
         image.src = 'https://picsum.photos/200';
         image.className = 'small-image';
         leftSection.appendChild(image);
+      
+      const ul = create('ul'); 
+      const numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      let i = 0;
+      while(i < 10) {
+        const li = document.createElement('li')
+          li.innerText = numbers[i];
+        ul.appendChild(li);
+        i += 1
+      };
+      rightSection.appendChild(ul);
+
     </script>
   </body>
 </html>
