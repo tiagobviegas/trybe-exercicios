@@ -58,10 +58,15 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
-      const h1 = document.createElement('h1');
+      const create = (element) => document.createElement(element)
+      const h1 = create('h1');
         h1.innerText = 'TrybeTrip - Agência de Viagens';
       const body = document.querySelector('body');
         body.appendChild(h1);
+
+      const main = create('main');
+        main.className = 'main-content';
+        body.appendChild(main);
 
     </script>
   </body>
