@@ -32,17 +32,18 @@ while (i < length) {
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
-
-const addText = (field) => {
+const addText = (input) => {
   const tech = document.querySelector('.tech');
-  tech.innerText = field.target.value;
-}
-
+  tech.innerText = input.target.value;
+};
 input.addEventListener('keyup', addText);
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 //  - Que tal redirecionar para seu portfólio?
+
+const portofolio = () => location.replace('https://tiagobviegas.github.io/lessons-learned/index.html');
+myWebpage.addEventListener('dblclick', portofolio);
 
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
