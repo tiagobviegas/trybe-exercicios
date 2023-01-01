@@ -16,20 +16,18 @@ const myWebpage = document.getElementById('my-spotrybefy');
 const liList = document.getElementsByTagName('li');
 const length = liList.length;
 let i = 0;
-
 const addTech = (element) => {
   i = 0;
   while (i < length) {
     liList[i].classList.remove('tech');
     i += 1;
-  }
+  };
   element.target.className = 'tech';
-}
-
+};
 while (i < length) {
   liList[i].addEventListener('click', addTech);
   i += 1;
-}
+};
 
 
 
