@@ -32,13 +32,13 @@ while (i < length) {
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
-const tech = document.getElementsByClassName('tech');
 
 const addText = (field) => {
-  field.target.innerHTML = input.value;
+  const tech = document.querySelector('.tech');
+  tech.innerText = field.target.value;
 }
 
-tech.addEventListener('keydown', addText);
+input.addEventListener('keyup', addText);
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
