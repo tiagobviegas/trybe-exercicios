@@ -8,7 +8,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // - Copie esse arquivo e edite apenas ele;
 //  - Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
-/*  RESPOSTA: isso acontece devido à classe .tech que aplica o estilo transform: translateY(-20px);
+/*  RESPOSTA: isso acontece porque a classe "tech", que aplica o estilo transform: translateY(-20px), está aplicado à primeira caixa;
 */
 // - Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
@@ -29,10 +29,16 @@ while (i < length) {
   i += 1;
 };
 
-
-
 // - Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+
+const tech = document.getElementsByClassName('tech');
+
+const addText = (field) => {
+  field.target.innerHTML = input.value;
+}
+
+tech.addEventListener('keydown', addText);
 
 // - Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
