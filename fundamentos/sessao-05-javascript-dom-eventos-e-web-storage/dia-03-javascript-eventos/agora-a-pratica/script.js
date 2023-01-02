@@ -59,16 +59,16 @@ const classColorChange = () => {
       while (i < days.length) {
         days[i].style.backgroundColor = 'red';
         i += 1;
-      }
+      };
       holidayBtn.addEventListener('click', () => {
         i = 0;
         while (i < days.length) {
           days[i].style.backgroundColor = 'rgb(238,238,238)';
           i += 1;
-        }
+        };
         classColorChange();
-      })
-    })
+      });
+    });
 };
 
 classColorChange();
