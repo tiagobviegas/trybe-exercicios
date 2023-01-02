@@ -41,9 +41,9 @@ const createDaysOfTheMonth = () => {
 
 createDaysOfTheMonth();
 
-const createHolidays = () => {
+const createHolidays = (holiday) => {
   const btn = createElement('button');
 
 }
 
-createHolidays();
+createHolidays('Feriados');
