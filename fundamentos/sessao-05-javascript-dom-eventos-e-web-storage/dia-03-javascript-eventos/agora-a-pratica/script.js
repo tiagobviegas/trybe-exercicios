@@ -25,9 +25,12 @@ const createDaysOfTheMonth = () => {
     const li = createElement('li');
       li.innerText = decemberDaysList[i];
       li.className = 'day';
+    if (decemberDaysList[i] === 24 || decemberDaysList[i] === 25 || decemberDaysList[i] === 31) {
+      li.className = 'day holiday';
+    }
     daysUl.appendChild(li)
     i += 1;
   }
 }
-createDaysOfTheMonth();
 
+createDaysOfTheMonth();
