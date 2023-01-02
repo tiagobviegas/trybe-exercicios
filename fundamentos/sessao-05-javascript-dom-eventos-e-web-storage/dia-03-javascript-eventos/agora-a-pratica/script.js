@@ -27,16 +27,23 @@ const createDaysOfTheMonth = () => {
       li.className = 'day';
       if (decemberDaysList[i] === 24 || decemberDaysList[i] === 31) {
         li.className = 'day holiday';
-      }
+      };
       if (decemberDaysList[i] === 4 || decemberDaysList[i] === 11 || decemberDaysList[i] === 18) {
         li.className = 'day friday';
-      }
+      };
       if (decemberDaysList[i] === 25) {
         li.className = 'day holiday friday';
-      }
-    daysUl.appendChild(li)
+      };
+    daysUl.appendChild(li);
     i += 1;
-  }
-}
+  };
+};
 
 createDaysOfTheMonth();
+
+const createHolidays = () => {
+  const btn = createElement('button');
+
+}
+
+createHolidays();
