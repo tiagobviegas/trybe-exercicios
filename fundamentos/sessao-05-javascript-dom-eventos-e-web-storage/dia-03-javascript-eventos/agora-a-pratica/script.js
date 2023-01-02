@@ -106,3 +106,15 @@ const changeFriday = () => {
 };
 
 changeFriday();
+
+const allDays = document.getElementsByClassName('day');
+
+const zoomIn = (day) => day.target.style.fontSize = '25px';
+const zoomOut = (day) => day.target.style.fontSize = '20px';
+
+i = 0;
+while (i < allDays.length) {
+  allDays[i].addEventListener('mouseover', zoomIn);
+  allDays[i].addEventListener('mouseleave', zoomOut);
+  i += 1;
+};
