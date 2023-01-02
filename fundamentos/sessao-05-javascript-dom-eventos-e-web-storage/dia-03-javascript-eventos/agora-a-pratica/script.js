@@ -16,13 +16,13 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const createElement = (element) => document.createElement(element);
+const create = (element) => document.createElement(element);
 let i = 0;
 const daysUl = document.getElementById('days');
 
 const createDaysOfTheMonth = () => {
   while (i < decemberDaysList.length) {
-    const li = createElement('li');
+    const li = create('li');
       li.innerText = decemberDaysList[i];
       li.className = 'day';
       if (decemberDaysList[i] === 24 || decemberDaysList[i] === 31) {
@@ -42,7 +42,7 @@ const createDaysOfTheMonth = () => {
 createDaysOfTheMonth();
 
 const createHolidays = (holiday) => {
-  const btn = createElement('button');
+  const btn = create('button');
     btn.innerHTML = holiday;
     btn.id = 'btn-holiday';
   const buttonDiv = document.querySelector('.buttons-container');
@@ -74,7 +74,11 @@ const classColorChange = () => {
 classColorChange();
 
 const createFridayBtn = (friday) => {
-
+  const fridayBtn = create('button');
+    fridayBtn.innerText = friday;
+    fridayBtn.id = 'btn-friday';
+  const btnContainer = document.querySelector('.buttons-container');
+    btnContainer.appendChild(fridayBtn);
 };
 
 createFridayBtn('Sexta-feira');
