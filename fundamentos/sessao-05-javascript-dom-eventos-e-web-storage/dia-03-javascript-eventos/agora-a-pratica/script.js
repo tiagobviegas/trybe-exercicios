@@ -57,7 +57,7 @@ const classColorChange = () => {
     holidayBtn.addEventListener('click', () => {
       i = 0;
       while (i < days.length) {
-        days[i].style.backgroundColor = 'rgb(61, 255, 143)';
+        days[i].style.backgroundColor = 'rgb(255, 155, 100)';
         i += 1;
       };
       holidayBtn.addEventListener('click', () => {
@@ -82,3 +82,27 @@ const createFridayBtn = (friday) => {
 };
 
 createFridayBtn('Sexta-feira');
+
+
+const changeFriday = () => {
+  const fridays = document.getElementsByClassName('friday');
+  const numberDays = [4, 11, 18, 25];
+  const fridayBtn = document.getElementById('btn-friday');
+    fridayBtn.addEventListener('click', () => {
+      i = 0;
+      while (i < fridays.length) {
+        fridays[i].innerHTML = 'SEXTOU!';
+        i += 1;
+      };
+      fridayBtn.addEventListener('click', () => {
+        i = 0;
+        while (i < numberDays.length) {
+          fridays[i].innerText = numberDays[i];
+          i += 1;
+        };
+        changeFriday();
+      });
+    });
+};
+
+changeFriday();
