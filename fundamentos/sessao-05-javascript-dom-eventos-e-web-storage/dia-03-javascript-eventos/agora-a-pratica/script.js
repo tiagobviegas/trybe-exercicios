@@ -54,17 +54,17 @@ createHolidays('Feriados');
 const classColorChange = () => {
   const days = document.getElementsByClassName('holiday');
   const holidayBtn = document.getElementById('btn-holiday');
-    holidayBtn.addEventListener('click', () => {
-      i = 0;
-      while (i < days.length) {
-        if (days[i].style.backgroundColor === 'rgb(238, 238, 238)') {
-          days[i].style.backgroundColor = 'rgb(255, 155, 100)';
-        } else if (days[i].style.backgroundColor !== 'rgb(238, 238, 238)') {
-          days[i].style.backgroundColor = 'rgb(238, 238, 238)';
-        }
-        i += 1;
-      };
-    });
+  holidayBtn.addEventListener('click', () => {
+    i = 0;
+    while (i < days.length) {
+      if (days[i].style.backgroundColor === 'rgb(238, 238, 238)') {
+        days[i].style.backgroundColor = 'rgb(255, 155, 100)';
+      } else {
+        days[i].style.backgroundColor = 'rgb(238, 238, 238)';
+      }
+      i += 1;
+    };
+  });
 };
 
 classColorChange();
@@ -130,7 +130,7 @@ const addTaskLegend = (color) => {
 
 addTaskLegend('#FFC1F1');
 
-const setSelected = () => {
+const selectTask = () => {
   const tasks = document.getElementsByClassName('task');
   i = 0
   while (i < tasks.length) {
@@ -145,4 +145,22 @@ const setSelected = () => {
   };
 };
 
-setSelected();
+selectTask();
+
+const setDayTask = () => {
+  const getDay = document.getElementsByClassName('day');
+  i = 0;
+  while (i < getDay.length) {
+    getDay[i].addEventListener('click', (day) => {
+      const getTaskColor = document.querySelector('.selected').style.backgroundColor;
+      if (day.target.style.color === getTaskColor) {
+        day.target.style.color = 'rgb(119,119,119)';
+      } else if (day.target.style.backgroundColor !== getTaskColor) {
+        day.target.style.color = getTaskColor;
+      }
+    });
+    i += 1;
+  }
+}
+
+setDayTask();
