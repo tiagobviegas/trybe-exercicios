@@ -57,17 +57,13 @@ const classColorChange = () => {
     holidayBtn.addEventListener('click', () => {
       i = 0;
       while (i < days.length) {
-        days[i].style.backgroundColor = 'rgb(255, 155, 100)';
+        if (days[i].style.backgroundColor === 'rgb(238, 238, 238)') {
+          days[i].style.backgroundColor = 'rgb(255, 155, 100)';
+        } else if (days[i].style.backgroundColor !== 'rgb(238, 238, 238)') {
+          days[i].style.backgroundColor = 'rgb(238, 238, 238)';
+        }
         i += 1;
       };
-      holidayBtn.addEventListener('click', () => {
-        i = 0;
-        while (i < days.length) {
-          days[i].style.backgroundColor = 'rgb(238, 238, 238)';
-          i += 1;
-        };
-        classColorChange();
-      });
     });
 };
 
@@ -85,24 +81,20 @@ createFridayBtn('Sexta-feira');
 
 
 const changeFriday = () => {
-  const fridays = document.getElementsByClassName('friday');
   const numberDays = [4, 11, 18, 25];
+  const fridays = document.getElementsByClassName('friday');
   const fridayBtn = document.getElementById('btn-friday');
-    fridayBtn.addEventListener('click', () => {
-      i = 0;
-      while (i < fridays.length) {
-        fridays[i].innerHTML = 'SEXTOU!';
-        i += 1;
+  fridayBtn.addEventListener('click', () => {
+    i = 0;
+    while (i < fridays.length) {
+      if (fridays[i].innerText !== 'SEXTOU!') {
+        fridays[i].innerText = 'SEXTOU!';      
+      } else if (fridays[i].innerText === 'SEXTOU!') {
+        fridays[i].innerText = numberDays[i];
       };
-      fridayBtn.addEventListener('click', () => {
-        i = 0;
-        while (i < numberDays.length) {
-          fridays[i].innerText = numberDays[i];
-          i += 1;
-        };
-        changeFriday();
-      });
-    });
+      i += 1;
+    };
+  });
 };
 
 changeFriday();
@@ -137,3 +129,20 @@ const addTaskLegend = (color) => {
 }
 
 addTaskLegend('#FFC1F1');
+
+const setSelected = () => {
+  const tasks = document.getElementsByClassName('task');
+  i = 0
+  while (i < tasks.length) {
+    tasks[i].addEventListener('click', (element) => {
+      if (element.target.className.includes('selected')) {
+        element.target.classList.remove('selected');
+      } else if (element.target.style.backgroundColor === 'rgb(255, 193, 241)') {
+        element.target.setAttribute('class', 'task selected');
+      }
+    });
+    i += 1;
+  };
+};
+
+setSelected();
