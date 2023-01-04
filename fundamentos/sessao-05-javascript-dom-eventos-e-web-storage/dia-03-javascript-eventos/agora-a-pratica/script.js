@@ -119,11 +119,21 @@ while (i < allDays.length) {
   i += 1;
 };
 
+const parentDiv = document.querySelector('.my-tasks');
+
 const addTask = (task) => {
   const newTask = create('span');
     newTask.innerHTML = task;
-  const parentDiv = document.querySelector('.my-tasks');
     parentDiv.appendChild(newTask);
 }
 
 addTask('cozinhar');
+
+const addTaskLegend = (color) => {
+  const newDiv = create('div');
+    newDiv.className = 'task';
+    newDiv.style.backgroundColor = color;
+  parentDiv.appendChild(newDiv);
+}
+
+addTaskLegend('#FFC1F1');
