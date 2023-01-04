@@ -118,3 +118,12 @@ while (i < allDays.length) {
   allDays[i].addEventListener('mouseleave', zoomOut);
   i += 1;
 };
+
+const addTask = (task) => {
+  const newTask = create('span');
+    newTask.innerHTML = task;
+  const parentDiv = document.querySelector('.my-tasks');
+    parentDiv.appendChild(newTask);
+}
+
+addTask('cozinhar');
