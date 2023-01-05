@@ -135,10 +135,8 @@ const selectTask = () => {
   i = 0
   while (i < tasks.length) {
     tasks[i].addEventListener('click', (element) => {
-      if (element.target.className.includes('selected')) {
-        element.target.classList.remove('selected');
-      } else if (element.target.style.backgroundColor === 'rgb(255, 193, 241)') {
-        element.target.setAttribute('class', 'task selected');
+      if (element.target.className.includes('task')) {
+        element.target.classList.toggle('selected');
       }
     });
     i += 1;
@@ -164,3 +162,38 @@ const setDayTask = () => {
 }
 
 setDayTask();
+
+const addToCalendar = () => {
+  const addTaskBtn = document.getElementById('btn-add');
+  const taskInput = document.getElementById('task-input');
+  const taskContainer = document.querySelector('.task-list');
+
+  const emptyEnter = (event) => {
+    const enterKey = event.key;
+    if (taskInput.value === '' && enterKey === 'Enter') {
+      return window.alert('ERRO! - Digite uma tarefa!');
+    } else if (enterKey === 'Enter') {
+      const newElement = create('li');
+        newElement.innerHTML = taskInput.value;
+      taskContainer.appendChild(newElement);
+      taskInput.value = '';
+    };
+  };
+
+  const addTask = () => {
+    if (taskInput.value === '') {
+      window.alert('ERRO! - Digite uma tarefa!');
+    } else {
+      const newElement = create('li');
+        newElement.innerHTML = taskInput.value;
+      taskContainer.appendChild(newElement);
+      taskInput.value = '';
+    };
+  };
+
+  addTaskBtn.addEventListener('click', addTask);
+  taskInput.addEventListener('keydown', emptyEnter);
+
+};
+
+addToCalendar();
