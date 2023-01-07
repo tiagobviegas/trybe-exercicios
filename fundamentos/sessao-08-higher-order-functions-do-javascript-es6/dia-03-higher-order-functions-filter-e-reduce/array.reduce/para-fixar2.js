@@ -1,13 +1,5 @@
-const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
+const numbers = [50, 85, -30, 300, 15, 120];
 
-const evenNumbers = (number, nextNumber) => 
-  number % 2 === 0 && nextNumber % 2 === 0 ?
-  number + nextNumber :
-  number + 0;
+const checkBigger = (acc, currentNumber) => acc < currentNumber ? currentNumber : acc;
 
-const sumEven = numbers.reduce(evenNumbers, 0)
-console.log(sumEven);
-
-// resolvido em uma linha
-
-// console.log(numbers.reduce((number, nextNumber) => number % 2 === 0 && nextNumber % 2 === 0 ? number + nextNumber : number + 0, 0));
+console.log(numbers.reduce(checkBigger));
