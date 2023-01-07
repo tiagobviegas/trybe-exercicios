@@ -93,7 +93,8 @@ const melhorMateria = () => {
   return estudantes.map((estudante) => (
     { 
       name: estudante.nome, 
-      materia: estudante.materias.reduce(maiorNota).name }
+      materia: estudante.materias.reduce(maiorNota).name 
+    }
   ));
 };
 
