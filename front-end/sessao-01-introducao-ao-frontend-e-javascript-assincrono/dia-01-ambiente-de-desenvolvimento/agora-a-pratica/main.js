@@ -1,4 +1,5 @@
-// main.js
+// Não consegui fazer o exercícios, então recorri ao gabarito para estudar o código e entender melhor sua dinâmcia e a do exercício proposto
+
 // Vamos importar nossa biblioteca
 import validator from 'validator';
 import './style.css';
