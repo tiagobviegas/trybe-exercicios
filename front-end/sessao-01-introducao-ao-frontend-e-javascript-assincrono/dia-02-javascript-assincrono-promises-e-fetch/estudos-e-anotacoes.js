@@ -13,3 +13,5 @@ const resolvedPromise = () =>
       resolve(randomNumber);
     }, 1000);
   });
+
+console.log(resolvedPromise())
