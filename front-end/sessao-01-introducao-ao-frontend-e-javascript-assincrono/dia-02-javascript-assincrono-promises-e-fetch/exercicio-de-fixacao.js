@@ -28,10 +28,9 @@ usersSelect.addEventListener('change', () => {
     .then((response) => response.json())
     .then((data) => {
       const { posts } = data;
-      posts.reverse();
+      posts;
       fillPosts(posts);
-      const highlightedPostId = posts[posts.length - 1].id;
-      highlightedPostId;
+      const highlightedPostId = posts[0].id;
       fetch(`https://dummyjson.com/posts/${highlightedPostId}/comments`)
         .then((response) => response.json())
         .then((data) => {
