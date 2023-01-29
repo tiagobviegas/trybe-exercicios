@@ -62,8 +62,8 @@
 ## MÓDULO - FRONT-END
 
 ### Seção 1 - Introdução ao Front-End e JavaScript Assíncrono
-- [ ] Dia 01: Ambiente de desenvolvimento
-- [ ] Dia 02: JavaScript Assíncrono - Promises e fetch
+- [x] Dia 01: Ambiente de desenvolvimento
+- [x] Dia 02: JavaScript Assíncrono - Promises e fetch
 - [ ] Dia 03: Prática - Casa de câmbio
 - [ ] Dia 04: Async, await e testes assíncronos
 - [ ] Dia 05: Projeto - Carrinho de compras
@@ -265,12 +265,12 @@
 ### Seção 3 - Criatividade & Colaboração
 - [x]Dia 01: PDI - Segundo Exercício
 - [x] Dia 02: Introdução à criatividade
-- [ ] Dia 03: Introdução à inovação
-- [ ] Dia 04: Criação - Barreiras à Criatividade
-- [ ] Dia 05: Criação - Sessão de Pitacos
-- [ ] Dia 06: Introdução à colaboração
-- [ ] Dia 07: Colaboração - A Evolução da Confiança
-- [ ] Dia 08: A importância da assertividade para a colaboração
+- [x] Dia 03: Introdução à inovação
+- [x] Dia 04: Criação - Barreiras à Criatividade
+- [x] Dia 05: Criação - Sessão de Pitacos
+- [x] Dia 06: Introdução à colaboração
+- [x] Dia 07: Colaboração - A Evolução da Confiança
+- [x] Dia 08: A importância da assertividade para a colaboração
 - [ ] Dia 09: Colaboração em times ágeis de desenvolvimento
 - [ ] Dia 10: Ideação
 - [ ] Dia 11: Colaboração mediada por tecnologias
