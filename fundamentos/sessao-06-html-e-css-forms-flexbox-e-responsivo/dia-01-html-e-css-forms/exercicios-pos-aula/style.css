@@ -1,0 +1,10 @@
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p, #buttons {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
