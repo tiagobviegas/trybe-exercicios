@@ -5,56 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viage com a Trybe!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form action="" method="get">
     <fieldset>
       <legend>TrybeTrip</legend>
-      <div id="nome-completo">
+      <div id="nome-completo" class="">
         Nome completo:
         <input id="full-name" type="text" name="full-name" minlength="10" maxlength="40">
       </div>
-      <div id="email">
+      <div id="email" class="">
         E-mail:
         <input id="e-mail" type="email" name="email-adress" minlength="10" maxlength="50">
       </div>
-      <span id="localizacao">
-        <label for="cidade">
-          <input id="cidade" type="radio" name="destino" value="city"> Cidade
-        </label>
-        <label for="campo">
-          <input id="campo" type="radio" name="destino" value="countryside"> Campo
-        </label>
-        <label for="praia">
-          <input id="praia" type="radio" name="destino" value="beach"> Praia
-        </label>
-        <label for="montanhas">
-          <input id="montanhas" type="radio" name="destino" value="mountains"> Montanhas
-        </label>
-      </span>
-      <div>
-        <p>
+      <div id="localizacao" class="">
+        Destino Preferido:
+        <input id="cidade" type="radio" name="destino" value="city">
+        <label for="cidade">Cidade</label>
+        <input id="campo" type="radio" name="destino" value="countryside"> 
+        <label for="campo">Campo</label>
+        <input id="praia" type="radio" name="destino" value="beach">
+        <label for="praia">Praia</label>
+        <input id="montanhas" type="radio" name="destino" value="mountains"> 
+        <label for="montanhas">Montanhas</label>
+      </div>
+      <div class="">
+        <p class="">
           Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
         </p>
-        <textarea name="resposta" id="texto" cols="30" rows="10" maxlength="500" placeholder="máximo 500 caracteres"></textarea>
+        <textarea id="resposta" class="div" name="resposta" cols="50" rows="10"  placeholder="máximo 500 caracteres"></textarea>
       </div>
       <div>
-        Qual a melhor data para realizar sua viagem?  
+        Qual a melhor data para realizar sua viagem?
         <input id="data" type="date" name="data">
       </div>
       <div id="receber-newsletters">
+        <input id="newsletters" type="checkbox" name="recebe-ofertas">
         <label for="newsletters">
-          <input id="newsletters" type="checkbox" name="recebe-ofertas" value="newsletters">
           Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
         </label>
       </div>
       <div id="poll-disclaimer">
+        <input id="disclaimer" type="checkbox" name="aceita-termos">
         <label for="disclaimer">
-          <input id="disclaimer" type="checkbox" name="aceita-termos" value="disclaimer">
           Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
         </label>
       </div>
-      <button id="submitBtn" type="submit" name="submitBtn">Enviar</button>
+      <div id="buttons">
+        <button id="submitBtn" type="submit" name="submitBtn">Enviar</button>
+      </div>
     </fieldset>
   </form>
   <script src="script.js"></script>
