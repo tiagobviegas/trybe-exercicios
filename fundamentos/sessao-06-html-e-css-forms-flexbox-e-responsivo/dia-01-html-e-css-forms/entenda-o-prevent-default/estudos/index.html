@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Entendendo sobre o prevent default</h1>
+  <p> A função <strong>preventDefault()</strong> impede que o comportamento padrão do elemento. No caso abaixo, o botão <strong>Enviar</strong> é um elemento <strong>"button"</strong> de type <strong>submit</strong> que, por padrão, atualiza a página após o evento de "click" e retorna os elementos ao estado original.</p>
+  <p>
+  Por isso, a informação inserida no <strong>input</strong> e que deveria aparecer na tag <strong>p</strong> abaixo é perdida e o nome enviado não aparece como <strong>innerHTML</strong> do parágrafo.
+  </p>
+  <p>
+  Então, adicionamos ao elemento <strong>button</strong>, que recebe a ação de click, a função <strong>preventDefault()</strong> e assim impedimos que ele atualize a página.
+  Assim, a informação do <strong>input</strong> é inserida na tag <strong>p</strong> pelo <strong>innerHTML</strong>.
+  </p>
+  <form action="">
+    <input type="text" placeholder="Nome" id="inputNameUser">
+    <button type="submit" id="buttonSubmit">Enviar</button>
+  </form>
+  <p id="nameUser"></p>
+  <script src="script.js"></script>
+</body>
+</html>
