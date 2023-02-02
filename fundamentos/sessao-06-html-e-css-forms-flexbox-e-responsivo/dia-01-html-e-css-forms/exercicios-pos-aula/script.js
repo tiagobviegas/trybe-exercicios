@@ -1,31 +1,43 @@
-// Agora vamos utilizar um pouco de javascript, para isso crie o arquivo script.js e o referencie no HTML.
+const submitBtn = document.querySelector('#submitBtn')
+const buttons = document.querySelector('#buttons');
+const disclaimer = document.querySelector('#disclaimer');
+const nome = document.querySelector('#full-name');
+const email = document.querySelector('#e-mail');
+const textarea = document.querySelector('#resposta');
 
-//   Dica: Coloque a tag <script> no final do seu body.
-
-// 3 - Interrompa o comportamento padrão do botão submit utilizando o método preventDefault() . Nossa amiga Carol Silva nos contou um pouco sobre como fazer isso, lembra?
-const fieldset = document.querySelector('fieldset');
-const btnEnviar = document.querySelector('#btn-enviar');
-btnEnviar.addEventListener('click', function(event){
-  event.preventDefault();
-}) 
-fieldset.appendChild(btnEnviar);
-
-// 4 - Crie um botão que limpe as informações contidas nos campos; -->
-
-const btnLimpar = document.createElement('button');
-btnLimpar.innerText = 'Limpar'
-function clear() {
-  const inputs = document.querySelectorAll('input');
-  const textArea = document.querySelector('textarea');
-  const checkbox = document.querySelectorAll('checkbox');
-  for (let i = 0; i < inputs.length; i += 1) {
-    inputs[i].value = '';
-    textArea.value = '';
-    
-  }
-  for (let i = 0; i < checkbox.length; i += 1) {
-    checkbox[i].value = false;
-  }
+function createClearButton() {
+  const clearButton = document.createElement('button')
+    clearButton.setAttribute('id', 'erase');
+    clearButton.setAttribute('type', 'reset');
+    clearButton.setAttribute('name', 'clear-form');
+    clearButton.innerHTML = 'Apagar';
+  return buttons.appendChild(clearButton);
 }
-btnLimpar.addEventListener('clik', clear)
-fieldset.appendChild(btnLimpar);
+createClearButton();
+
+function removeLenghtLimits() {
+  nome.removeAttribute('minlength');
+  nome.removeAttribute('maxlength');
+  email.removeAttribute('minlength');
+  email.removeAttribute('maxlength');
+  textarea.removeAttribute('maxlength');
+}
+removeLenghtLimits();
+
+submitBtn.addEventListener('click', (event) => {
+  if(nome.value.length < 10 || nome.value.length > 40) {
+    event.preventDefault();
+    alert('Dados inválidos');
+  } else if (email.value.length < 10 || email.value.length > 50) {
+    event.preventDefault();
+    alert('Dados inválidos');
+  } else if (textarea.value.length > 500) {
+    event.preventDefault();
+    alert('Dados inválidos');
+  } else if (!disclaimer.checked) {
+    event.preventDefault();
+    alert('Permita o uso das suas imagens das férias com a Trybe!');
+  } else {
+    alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.')
+  }
+});
