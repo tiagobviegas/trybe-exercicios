@@ -19,7 +19,12 @@ const clearCurrencies = () => {
 
 const handleCurrencies = (currency) => {
   const currencyArr = Object.entries(currency);
-  return console.log(currencyArr);
+  currencyTitle.innerHTML = `Valores referentes à 1 ${input.value}`;
+  currencyArr.forEach(([country, value]) => {
+    const li = document.createElement('li');
+    li.innerHTML = `${country} ${value}`;
+    ul.appendChild(li);
+  });
 };
 
 const getCurrencies = () =>
