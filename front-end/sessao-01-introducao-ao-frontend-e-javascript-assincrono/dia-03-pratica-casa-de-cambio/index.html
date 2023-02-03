@@ -5,20 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./src/main.js" type="module" defer></script>
 </head>
 <body>
   <main>
-    <header id="title">
-      <h1>Casa de Câmbio</h1>
-      <section id="input-currency">
-        <input type="text" name="moeda" id="input-moeda">
-        <button name="search" id="btn">Pesquisar</button>
-      </section>
+    <header>
+      <h1 id="title">Casa de Câmbio</h1>
+      <label id="input-currency" for="input-moeda">
+        Digite a moeda:
+        <input type="text" id="input-moeda">
+      </label>
+      <button>Pesquisar</button>
     </header>
     <section id="container-values">
-
+      <h2></h2>
+      <ul></ul>
     </section>
   </main>
-  <script src="./src/main.js" type="module"></script>
 </body>
 </html>
