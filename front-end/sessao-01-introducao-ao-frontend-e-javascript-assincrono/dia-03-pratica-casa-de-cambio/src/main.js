@@ -5,8 +5,11 @@ const btn = document.querySelector('button');
 const currency = document.querySelector('h2');
 const ul = document.querySelector('ul');
 
-// const BASE_API = `https://api.exchangerate.host/latest?base=${moeda}`;
+const getFetch = (moeda) => {
+  const BASE_API = `https://api.exchangerate.host/latest?base=${moeda}`;
+  return fetch(BASE_API)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
 
-btn.addEventListener('click', () => {
-
-});
+btn.addEventListener('click', getFetch(input.value));
