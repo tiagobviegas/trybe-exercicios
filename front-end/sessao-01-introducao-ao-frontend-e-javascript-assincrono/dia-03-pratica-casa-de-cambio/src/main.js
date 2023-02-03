@@ -2,7 +2,7 @@
 
 const input = document.querySelector('#input-moeda');
 const btn = document.querySelector('button');
-const currency = document.querySelector('h2');
+const currencyTitle = document.querySelector('h2');
 const ul = document.querySelector('#currencies');
 
 const getFetch = (moeda) => {
@@ -13,4 +13,21 @@ const getFetch = (moeda) => {
     .catch((error) => error);
 };
 
-btn.addEventListener('click', getFetch(input.value));
+const clearCurrencies = () => {
+
+};
+
+const handleCurrencies = (currency) => {
+  const currencyArr = Object.entries(currency);
+  return console.log(currencyArr);
+};
+
+const getCurrencies = () =>
+  getFetch(input.value)
+    .then((data) => {
+      const { rates } = data;
+      handleCurrencies(rates);
+    })
+    .catch((error) => console.log(error));
+
+btn.addEventListener('click', getCurrencies);
