@@ -9,7 +9,8 @@ const getFetch = (moeda) => {
   const BASE_API = `https://api.exchangerate.host/latest?base=${moeda}`;
   return fetch(BASE_API)
     .then((response) => response.json())
-    .then((data) => data);
+    .then((data) => data)
+    .catch((error) => error);
 };
 
 btn.addEventListener('click', getFetch(input.value));
