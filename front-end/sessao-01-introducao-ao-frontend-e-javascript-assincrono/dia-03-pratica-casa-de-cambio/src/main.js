@@ -29,6 +29,7 @@ const handleCurrencies = (currency) => {
     li.innerHTML = `${country} ${value}`;
     ul.appendChild(li);
   });
+  input.value = '';
 };
 
 const getCurrencies = () =>
