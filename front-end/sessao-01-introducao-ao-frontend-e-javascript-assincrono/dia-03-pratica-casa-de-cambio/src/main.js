@@ -5,8 +5,8 @@ const btn = document.querySelector('button');
 const currencyTitle = document.querySelector('h2');
 const ul = document.querySelector('#currencies');
 
-const getFetch = (moeda) => {
-  const BASE_API = `https://api.exchangerate.host/latest?base=${moeda}`;
+const getFetch = (currency) => {
+  const BASE_API = `https://api.exchangerate.host/latest?base=${currency}`;
   return fetch(BASE_API)
     .then((response) => response.json())
     .then((data) => data)
@@ -14,11 +14,15 @@ const getFetch = (moeda) => {
 };
 
 const clearCurrencies = () => {
-
+  const getLi = document.getElementsByTagName('li');
+  for(let i = getLi.length; i > 0; i -= 1) {
+    ul.removeChild(ul.firstElementChild);
+  }
 };
 
 const handleCurrencies = (currency) => {
   const currencyArr = Object.entries(currency);
+  clearCurrencies();
   currencyTitle.innerHTML = `Valores referentes à 1 ${input.value}`;
   currencyArr.forEach(([country, value]) => {
     const li = document.createElement('li');
