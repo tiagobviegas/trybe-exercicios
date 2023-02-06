@@ -33,9 +33,9 @@
         checkSum(value1, value2, result);
         document.getElementById('result').innerHTML = `Resultado: ${result}`;
       } catch (e) {
-        document.getElementById('result').innerHTML = ''
-        document.getElementById('result').innerHTML = e.message
-        console.log(e.message)
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('result').innerHTML = e.message;
+        console.log(e.message);
       } finally {
         document.getElementById('value1').value = '';
         document.getElementById('value2').value = '';
