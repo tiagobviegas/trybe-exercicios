@@ -15,33 +15,36 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
-    const verifyIfIsFilled = (value1, value2) => {
-      if (isNaN(value1) || isNaN(value2 || isNaN(value1) && isNaN(value2))) {
-        throw new Error('Valor inserido não é um número')
-      } else if (value1 === '' || value2 === '') {
-        throw new Error('Campo não preenchido')
+    function checkSum(value1, value2, result) {
+      if (!value1 && !value2) {
+        throw new Error('Nenhum campo preenchido');
+      } else if (isNaN(value1) === true || isNaN(value2) === true) {
+        throw new Error('O valor inserido não é um número');
+      } else if (!value1 || !value2) {
+        throw new Error('Campo não preenchido');
       }
-    };
+    }
+
     function sum() {
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
-      const result = Number(value1) + Number(value2)
-      const tryCacthResult = document.getElementById('result').innerHTML
-      try { 
-        verifyIfIsFilled(value1, value2)
-        return document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      const result = Number(value1) + Number(value2);
+      try {
+        checkSum(value1, value2, result);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
       } catch (e) {
-        return document.getElementById('result').innerHTML = e.message
+        document.getElementById('result').innerHTML = ''
+        document.getElementById('result').innerHTML = e.message
+        console.log(e.message)
       } finally {
         document.getElementById('value1').value = '';
         document.getElementById('value2').value = '';
-      };  
+      }
     }
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
     }
-    
   </script>
 </body>
 </html>
