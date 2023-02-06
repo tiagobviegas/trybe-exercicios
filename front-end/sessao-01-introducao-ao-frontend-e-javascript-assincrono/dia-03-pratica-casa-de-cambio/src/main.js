@@ -13,16 +13,9 @@ const getFetch = (currency) => {
     .catch((error) => error);
 };
 
-const clearCurrencies = () => {
-  const getLi = document.getElementsByTagName('li');
-  for(let i = getLi.length; i > 0; i -= 1) {
-    ul.removeChild(ul.firstElementChild);
-  }
-};
-
 const handleCurrencies = (currency) => {
   const currencyArr = Object.entries(currency);
-  clearCurrencies();
+  ul.innerHTML = '';
   currencyTitle.innerHTML = `Valores referentes à 1 ${input.value}`;
   currencyArr.forEach(([country, value]) => {
     const li = document.createElement('li');
