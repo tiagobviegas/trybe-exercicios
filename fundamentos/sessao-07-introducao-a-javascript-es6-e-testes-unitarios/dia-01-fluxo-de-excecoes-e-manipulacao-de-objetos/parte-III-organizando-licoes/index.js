@@ -36,18 +36,29 @@ console.log(allLessons);
 const getStudents = (allClasses) => {
   let allStudents = 0;
   const arrStudents = Object.values(allClasses);
-  for (let i = 0; i < arrStudents.length; i += 1) {
-    allStudents += arrStudents[i].numeroEstudantes
+  for (let value of arrStudents) {
+    allStudents += value.numeroEstudantes
   }
-  return allStudents;
+  return allStudents
 }
 console.log(getStudents(allLessons));
 
+const getValueByNumber = (object, index) => {
+  const key = Object.values(object)
+  return key[index];
+}
+console.log(getValueByNumber(lesson1, 0));
 
-// console.log(getValueByNumber(lesson1, 0));
-// Output: 'Matemática'
-
-// console.log(verifyPair(lesson3, 'turno', 'noite'));
+const verifyPair = (object, key, value) => {
+  const entries = Object.entries(object);
+  for (let i = 0; i < entries.length; i += 1) {
+    if (entries[i][0] === key && entries[i][1] === value) {
+      return true;
+    }
+  }
+  return false;
+};
+console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
-// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
