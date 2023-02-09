@@ -62,3 +62,9 @@ console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+const arrEntries = Object.entries(lesson1)
+const objEntries = Object.fromEntries(arrEntries)
+
+console.log(arrEntries);
+console.log(objEntries);
