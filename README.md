@@ -64,7 +64,7 @@
 ### Seção 1 - Introdução ao Front-End e JavaScript Assíncrono
 - [x] Dia 01: Ambiente de desenvolvimento
 - [x] Dia 02: JavaScript Assíncrono - Promises e fetch
-- [ ] Dia 03: Prática - Casa de câmbio
+- [x] Dia 03: Prática - Casa de câmbio
 - [ ] Dia 04: Async, await e testes assíncronos
 - [ ] Dia 05: Projeto - Carrinho de compras
 
