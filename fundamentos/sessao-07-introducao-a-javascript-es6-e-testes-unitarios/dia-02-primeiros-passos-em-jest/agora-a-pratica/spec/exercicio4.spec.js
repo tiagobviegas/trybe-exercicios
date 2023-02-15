@@ -4,9 +4,9 @@ describe('Testa a função techList', () => {
   it('Testa se a função techList é definida', () => {
     expect(techList).toBeDefined();
   });
-  // it('Testa se techList é uma função', () => {
-  //   expect(typeof techList).toBe('function');
-  // });
+  it('Testa se techList é uma função', () => {
+    expect(typeof techList).toBe('function');
+  });
   // it('Lista com 5 tecnologias deve retornar uma lista de objetos ordenados', () => {
   //   expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
   //     {
