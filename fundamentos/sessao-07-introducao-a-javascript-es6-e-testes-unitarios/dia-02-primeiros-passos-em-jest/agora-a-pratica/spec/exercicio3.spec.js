@@ -16,9 +16,14 @@ describe('Testa as funções encode e decode', () => {
   });
   
   test('Se as demais letras/números não são convertidos para cada caso;', () => {
-     expect(encode('Tiago')).toBe('T31g4');
-     expect(decode('T31g4')).toBe('Tiago');
+    expect(encode('Tiago')).toBe('T31g4');
+    expect(decode('T31g4')).toBe('Tiago');
   });
   
-
+  test('Se a string que é retornada pelas funções tem o mesmo número de caracteres que a string passada como parâmetro.', () => {
+    const name = 'Schumacher';
+    expect(encode(name).length === name.length).toBeTruthy();
+    expect(decode(name).length === name.length).toBeTruthy();
+  });
+  
 });
