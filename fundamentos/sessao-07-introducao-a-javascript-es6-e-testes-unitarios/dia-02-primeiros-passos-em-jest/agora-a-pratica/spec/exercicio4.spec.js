@@ -31,9 +31,9 @@ describe('Testa a função techList', () => {
       }
     ]);
   });
-  // it('Lista com 0 tecnologias deve retornar uma mensagem de erro "Vazio!"', () => {
-  //   expect(techList([], 'Lucas')).toBe('Vazio!');
-  // });
+  it('Lista com 0 tecnologias deve retornar uma mensagem de erro "Vazio!"', () => {
+    expect(techList([], 'Lucas')).toBe('Vazio!');
+  });
 });
 
 module.exports = techList;
