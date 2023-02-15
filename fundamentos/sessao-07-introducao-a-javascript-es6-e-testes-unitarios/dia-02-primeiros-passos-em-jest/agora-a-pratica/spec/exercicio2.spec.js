@@ -15,11 +15,11 @@ describe('Testa o função myFizzBuzz', () => {
   });
 
   it('Checa se ao receber um número que não é divisível por 3 ou 5, myFizzBuzz(num) retorna o esperado.', () => {
-    expect(myFizzBuzz(2)).toBe(2);    
+    expect(myFizzBuzz(2)).toBe(2);   
   });
 
-  // it('', () => {
-    
-  // });
+  it('Verifica se função myFizzBuzz(num), sendo num um parâmetro que não é um número, retorna o esperado.', () => {
+    expect(myFizzBuzz(undefined)).toBeFalsy();
+  });
   
 });
