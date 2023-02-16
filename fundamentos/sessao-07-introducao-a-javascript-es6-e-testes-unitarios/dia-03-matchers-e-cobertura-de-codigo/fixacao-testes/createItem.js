@@ -16,6 +16,6 @@ const createItem = (name, unit, price, quantity) => {
   };
 }
 
-// console.log(createItem('banana', 'kg', 1.99))
+// console.log(createItem(1.99, 'kg', 'banana', 20))
 
 module.exports = createItem;
