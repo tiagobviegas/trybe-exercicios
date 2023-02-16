@@ -1,8 +1,8 @@
 const createItem = require('./createItem');
 describe('a função createItem', () => {
-  it.skip('cria um item válido', () => {
-    expect(createItem('BMW', 'M3', 850.000, 4))
-      .toEqual({ name: 'BMW', quantity: 4, unit: 'M3', price: 850 })
+  it('cria um item válido', () => {
+    expect(createItem('banana', 'kg', 1.99, 20))
+      .toEqual({ name: 'banana', quantity: 20, unit: 'kg', price: 1.99 })
   });
   it.todo('utiliza zero como quantidade padrão');
   it.todo('Lança um erro quando não recebe parâmetros');
