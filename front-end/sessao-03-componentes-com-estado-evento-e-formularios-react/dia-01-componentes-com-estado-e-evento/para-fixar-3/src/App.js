@@ -15,7 +15,7 @@ class App extends React.Component {
   }
   
   handleFirstName(add) {
-    this.setState((estadoAnterior, _props) => {
+    this.setState((estadoAnterior) => {
       if ((estadoAnterior.btn1 + add) % 2 === 0) {
         console.log('verde');
       }
@@ -24,7 +24,7 @@ class App extends React.Component {
   };
  
   handleMiddleName() {
-    this.setState((estadoAnterior, _props) => {
+    this.setState((estadoAnterior) => {
       if ((estadoAnterior.btn2 + 1) % 2 === 0) {
         console.log('verde');
       }
@@ -33,7 +33,7 @@ class App extends React.Component {
   };
 
   handleLastName() {
-    this.setState((estadoAnterior, _props) => {
+    this.setState((estadoAnterior) => {
       if ((estadoAnterior.btn3 + 1) % 2 === 0) {
         console.log('verde');
       }
