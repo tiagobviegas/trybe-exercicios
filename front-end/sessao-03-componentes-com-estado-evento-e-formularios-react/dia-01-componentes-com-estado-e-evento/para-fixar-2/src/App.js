@@ -14,21 +14,21 @@ class App extends React.Component {
     };
   }
   
-  handleFirstName() {
+  handleFirstName(add) {
     this.setState((estadoAnterior, _props) => (
-      { btn1: estadoAnterior.btn1 + 1}
+      { btn1: estadoAnterior.btn1 + add }
     ))
   };
   
   handleMiddleName() {
     this.setState((estadoAnterior, _props) => (
-      { btn2: estadoAnterior.btn2 + 1}
+      { btn2: estadoAnterior.btn2 + 1 }
     ))
   };
 
   handleLastName() {
     this.setState((estadoAnterior, _props) => (
-      { btn3: estadoAnterior.btn3 + 1}
+      { btn3: estadoAnterior.btn3 + 1 }
     ))
   };
 
@@ -43,8 +43,8 @@ class App extends React.Component {
   //   };
   // }
 
-  // handleFirstName = () => this.setState((estadoAnterior, _props) =>
-  //   ({ btn1: estadoAnterior.btn1 + 1}));
+  // handleFirstName = (add) => this.setState((estadoAnterior, _props) =>
+  //   ({ btn1: estadoAnterior.btn1 + add}));
   // handleMiddleName = () => this.setState((estadoAnterior, _props) => 
   //   ({ btn2: estadoAnterior.btn2 + 1}));
   // handleLastName = () => this.setState((estadoAnterior, _props) =>
@@ -54,9 +54,23 @@ class App extends React.Component {
     const { btn1, btn2, btn3 } = this.state
     return (
       <>
-        <button onClick={this.handleFirstName}>{`Tiago ${btn1}`}</button>
-        <button onMouseUp={this.handleMiddleName}>{`Barbosa ${btn2}`}</button>
-        <button onMouseLeave={this.handleLastName}>{`Viegas ${btn3}`}</button>
+        <button onMouseDown={
+          () => this.handleFirstName(1)
+        }>
+          {`Tiago ${btn1}`}
+        </button>
+
+        <button onMouseUp={
+          this.handleMiddleName
+        }>
+          {`Barbosa ${btn2}`}
+        </button>
+        
+        <button onMouseLeave={
+          this.handleLastName
+        }>
+          {`Viegas ${btn3}`}
+        </button>
       </>
     )
    }
