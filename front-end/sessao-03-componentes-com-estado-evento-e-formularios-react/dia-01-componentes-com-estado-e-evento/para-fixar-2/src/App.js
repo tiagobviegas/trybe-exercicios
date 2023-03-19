@@ -3,9 +3,9 @@ import React from 'react';
 class App extends React.Component {
   constructor(_props) {
     super(_props)
-    this.firstName = this.firstName.bind(this);
-    this.middleName = this.middleName.bind(this);
-    this.lastName = this.lastName.bind(this)
+    this.handleFirstName = this.handleFirstName.bind(this);
+    this.handleMiddleName = this.handleMiddleName.bind(this);
+    this.handleLastName = this.handleLastName.bind(this)
 
     this.state = {
       btn1: 0,
@@ -14,19 +14,19 @@ class App extends React.Component {
     };
   }
   
-  firstName() {
+  handleFirstName() {
     this.setState((estadoAnterior, _props) => (
       { btn1: estadoAnterior.btn1 + 1}
     ))
   };
   
-  middleName() {
+  handleMiddleName() {
     this.setState((estadoAnterior, _props) => (
       { btn2: estadoAnterior.btn2 + 1}
     ))
   };
 
-  lastName() {
+  handleLastName() {
     this.setState((estadoAnterior, _props) => (
       { btn3: estadoAnterior.btn3 + 1}
     ))
@@ -43,20 +43,20 @@ class App extends React.Component {
   //   };
   // }
 
-  // firstName = () => this.setState((estadoAnterior, _props) =>
+  // handleFirstName = () => this.setState((estadoAnterior, _props) =>
   //   ({ btn1: estadoAnterior.btn1 + 1}));
-  // middleName = () => this.setState((estadoAnterior, _props) => 
+  // handleMiddleName = () => this.setState((estadoAnterior, _props) => 
   //   ({ btn2: estadoAnterior.btn2 + 1}));
-  // lastName = () => this.setState((estadoAnterior, _props) =>
+  // handleLastName = () => this.setState((estadoAnterior, _props) =>
   //   ({ btn3: estadoAnterior.btn3 + 1}));
   
   render() {
     const { btn1, btn2, btn3 } = this.state
     return (
       <>
-        <button onClick={this.firstName}>{`Tiago ${btn1}`}</button>
-        <button onMouseUp={this.middleName}>{`Barbosa ${btn2}`}</button>
-        <button onMouseLeave={this.lastName}>{`Viegas ${btn3}`}</button>
+        <button onClick={this.handleFirstName}>{`Tiago ${btn1}`}</button>
+        <button onMouseUp={this.handleMiddleName}>{`Barbosa ${btn2}`}</button>
+        <button onMouseLeave={this.handleLastName}>{`Viegas ${btn3}`}</button>
       </>
     )
    }
