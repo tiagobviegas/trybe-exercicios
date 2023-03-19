@@ -72,7 +72,7 @@ class Form extends Component {
               name="age"
               onChange={this.handleChangeAge}
               value={age}>
-              <option value="">Selecione</option>
+              <option value="none">Selecione</option>
               <option value="adult">Maior que 18</option>
               <option value="underage">Menor que 18</option>
             </select>
