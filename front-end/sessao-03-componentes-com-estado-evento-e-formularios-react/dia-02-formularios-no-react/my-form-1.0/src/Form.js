@@ -104,6 +104,17 @@ class Form extends Component {
               </section>
 
               <section>
+                <label htmlFor='file'>
+                  <div>Envie um arquivo com sua anedota:</div> 
+                  <input
+                    id="file"
+                    name="file"
+                    type="file"
+                  />
+                </label>
+              </section>
+
+              <section>
                 <label htmlFor='newsletter'>
                   <input
                     id="newsletter"
@@ -115,21 +126,7 @@ class Form extends Component {
                     Desejo receber notícias sobre trocadalhos do carilho!
                 </label>
               </section>
-              
-              <section>
-
-                <label htmlFor='file'>
-                  <div>Envie um arquivo com sua anedota:</div> 
-                  <input
-                    id="file"
-                    name="file"
-                    type="file"
-                  />
-                </label>
-              </section>
-
-            </fieldset>
-            
+            </fieldset>            
           </form>
         </fieldset>
       </div>
