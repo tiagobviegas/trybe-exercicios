@@ -10,84 +10,128 @@ class Form extends Component {
       email: '',
       name: '',
       age: '',
-      joke: '',
+      anecdote: '',
+      newsletter: '',
     };
+
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange = (event) => this.setState({
-    email: event.target.value
-  });
-
-  handleChangeName = (event) => this.setState({
-    name: event.target.value
-  });
-
-  handleChangeAge = (event) => this.setState({
-    age: event.target.value
-  });
-
-  handleChangeJoke = (event) => this.setState({
-    joke: event.target.value
-  });
+  handleChange({ target }) {
+    const { name } = target
+    const value = (target.type === 'checkbox') ? 
+      target.checked : 
+      target.value;
+    
+    this.setState({
+      [name]: value
+    });
+  } 
 
   render() {
     const {
       email,
       name,
       age,
-      joke }
-      = this.state;
+      anecdote,
+      newsletter,
+    } = this.state;
 
     return (
       <div>
-        <h1>
-          Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
-        </h1>
-        <form className="form">
-          <label htmlFor="name">
-            Nome:
-            <input
-              id="name"
-              name="name"
-              type="text"
-              onChange={this.handleChangeName}
-              value={name} />
-          </label>
+        <fieldset>
+          <h1>
+            Estados e React - Tecnologia fantástica ou reagindo a regionalismos?
+          </h1>
+          <form className="form">
+            <fieldset>
+              <legend>Dados pessoais</legend>
+              <section>
+                <label htmlFor="name">
+                  Nome:
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"                    
+                    onChange={this.handleChange}
+                    value={name}
+                  />
+                </label>
+              </section>
 
-          <label htmlFor="email">
-            Email:
-            <input
-              id="email"
-              name="email"
-              type="email"
-              onChange={this.handleChange}
-              value={email}
-            />
-          </label>
+              <section>                
+                <label htmlFor="email">
+                  Email:
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    onChange={this.handleChange}
+                    value={email}
+                  />
+                </label>
+              </section>
 
-          <label htmlFor="age">
-            Idade:
-            <select
-              id="age"
-              name="age"
-              onChange={this.handleChangeAge}
-              value={age}>
-              <option value="none">Selecione</option>
-              <option value="adult">Maior que 18</option>
-              <option value="underage">Menor que 18</option>
-            </select>
-          </label>
+              <section>
+                <label htmlFor="age">
+                  Idade:
+                  <select
+                    id="age"
+                    name="age"
+                    onChange={this.handleChange}
+                    value={age}
+                  >
+                    <option value="none">Selecione</option>
+                    <option value="adult">Maior que 18</option>
+                    <option value="underage">Menor que 18</option>
+                  </select>
+                </label>
+              </section>
+            </fieldset>
 
-          <label htmlFor="anecdote">
-            Anedota:
-            <textarea
-              id="anecdote"
-              name="anecdote"
-              onChange={this.handleChangeJoke}
-              value={joke}
-            />
-          </label>
-        </form>
+            <fieldset>
+              <legend>Sua piadoca</legend>
+              <section>
+                <label htmlFor="anecdote">
+                  <div>Anedota:</div>
+                  <textarea
+                    id="anecdote"
+                    name="anecdote"
+                    onChange={this.handleChange}
+                    value={anecdote}
+                  />
+                </label>
+              </section>
+
+              <section>
+                <label htmlFor='newsletter'>
+                  <input
+                    id="newsletter"
+                    type="checkbox"
+                    name="newsletter"
+                    value={newsletter}
+                    onChange={this.handleChange}
+                  />
+                    Desejo receber notícias sobre trocadalhos do carilho!
+                </label>
+              </section>
+              
+              <section>
+
+                <label htmlFor='file'>
+                  <div>Envie um arquivo com sua anedota:</div> 
+                  <input
+                    id="file"
+                    name="file"
+                    type="file"
+                  />
+                </label>
+              </section>
+
+            </fieldset>
+            
+          </form>
+        </fieldset>
       </div>
     );
   }
