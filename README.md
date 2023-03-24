@@ -65,17 +65,17 @@
 - [x] Dia 01: Ambiente de desenvolvimento
 - [x] Dia 02: JavaScript Assíncrono - Promises e fetch
 - [x] Dia 03: Prática - Casa de câmbio
-- [ ] Dia 04: Async, await e testes assíncronos
-- [ ] Dia 05: Projeto - Carrinho de compras
+- [x] Dia 04: Async, await e testes assíncronos
+- [x] Dia 05: Projeto - Carrinho de compras
 
 ### Seção 2 - Introdução ao React
-- [ ] Dia 01: 'Hello, world!' no React!
-- [ ] Dia 02: Componentes React
-- [ ] Dia 03: Projeto - Solar System
+- [x] Dia 01: 'Hello, world!' no React!
+- [x] Dia 02: Componentes React
+- [x] Dia 03: Projeto - Solar System
 
 ### Seção 3 - Componentes com Estado, Eventos e Formulário com React
-- [ ] Dia 01: Componentes com estado e eventos
-- [ ] Dia 02: Formulários no React
+- [x] Dia 01: Componentes com estado e eventos
+- [x] Dia 02: Formulários no React
 - [ ] Dia 03: Projeto - Tryunfo
 
 ### Seção 4 - Ciclo de Vida de Componentes e React Router
