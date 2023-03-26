@@ -1,19 +1,18 @@
 import React from 'react';
 
-const firstName = () => console.log('Tiago');
-const middleName = () => console.log('Barbosa');
-const lastName = () => console.log('Viegas');
-
+const handleButton1 = () => console.log('O Botão 1 foi clicado!');
+const handleButton2 = () => console.log('O Botão 2 foi clicado!');
+const handleButton3 = () => console.log('O Botão 3 foi clicado!');
 class App extends React.Component {
   render() {
     return (
-      <>
-        <button onClick={firstName}>First Name</button>
-        <button onMouseUp={middleName}>Middle Name</button>
-        <button onMouseLeave={lastName}>Last Name</button>
-      </>
-    )
-   } 
-};
+      <div>
+        <button onClick={ handleButton1 }>Clique-me 1</button>
+        <button onClick={ handleButton2 }>Clique-me 2</button>
+        <button onClick={ handleButton3 }>Clique-me 3</button>
+      </div>
+    );
+  }
+}
 
 export default App;
