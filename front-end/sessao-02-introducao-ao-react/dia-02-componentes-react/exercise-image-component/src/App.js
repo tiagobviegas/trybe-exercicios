@@ -6,7 +6,7 @@ class App extends Component {
     const image = 'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg';
     const msg = 'Cute cat staring';
     return (
-        <div>
+      <div>
         <Image
           source={ image }
           alternativeText={ msg } />
