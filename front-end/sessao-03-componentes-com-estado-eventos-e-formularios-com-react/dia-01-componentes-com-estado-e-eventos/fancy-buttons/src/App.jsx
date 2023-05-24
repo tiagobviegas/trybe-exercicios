@@ -63,13 +63,13 @@ class App extends React.Component {
 
     return (
       <div>
-        <button onClick={this.handleClick1}>
+        <button type="button" onClick={this.handleClick1}>
           { `Cliques no Botão 1: ${counter1}` }
         </button>
-        <button onClick={this.handleClick2}>
+        <button type="button" onClick={this.handleClick2}>
           { `Cliques no Botão 2: ${counter2}` }
         </button>
-        <button onClick={this.handleClick3}>
+        <button type="button" onClick={this.handleClick3}>
           { `Cliques no Botão 3: ${counter3}` }
         </button>
       </div>
