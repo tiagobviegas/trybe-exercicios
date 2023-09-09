@@ -18,9 +18,9 @@
 //  const b = 5;
 // 
 //  if (a > b) {
-//    console.log(a);
+//    console.log(a + ' é maior que ' + b);
 //  } else if (b > a) {
-//    console.log(b);
+//    console.log(b + ' é maior que ' + a);
 //  } else {
 //    console.log('os números são iguais');
 //  }
@@ -33,11 +33,11 @@
 //  const c = 3;
 //
 //  if (a > b && a > c) {
-//    console.log(a);
+//    console.log(a + ' é maior que ' + b + ' e ' + c);
 //  } else if (b > a && b > c) {
-//    console.log(b);
+//    console.log(b + ' é maior que ' + a + ' e ' + c);
 //  } else if (c > a && c > b) {
-//    console.log(c);
+//    console.log(c + ' é maior que ' + a + ' e ' + b);
 //  } else {
 //    console.log('os números são iguais')
 //  }
@@ -45,14 +45,18 @@
 //
 //  4)
 // 
-//  const a = 10;
-//  if (a > 0) {
-//    console.log('positive');
-//  } else if (a < 0) {
-//    console.log('negative');
-//  } else {
-//    console.log('zero');
-//  }
+// const a = 10;
+// const b = 60;
+// const c = 10;
+// const triangulo = (a + b + c);
+// 
+// if ((a <= 0) || (b <= 0) || (c <= 0)) {
+  // console.log('Ângulo inválido!');
+// } else {
+  // triangulo === 180 ? console.log(true) : console.log(false)
+// }
+// 
+// 
 //
 //
 //  5)
