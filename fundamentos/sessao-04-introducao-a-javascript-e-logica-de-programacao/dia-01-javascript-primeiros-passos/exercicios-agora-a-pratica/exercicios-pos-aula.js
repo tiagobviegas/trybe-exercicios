@@ -18,9 +18,9 @@
 //  const b = 5;
 // 
 //  if (a > b) {
-//    console.log(a);
+//    console.log(a + ' é maior que ' + b);
 //  } else if (b > a) {
-//    console.log(b);
+//    console.log(b + ' é maior que ' + a);
 //  } else {
 //    console.log('os números são iguais');
 //  }
@@ -33,11 +33,11 @@
 //  const c = 3;
 //
 //  if (a > b && a > c) {
-//    console.log(a);
+//    console.log(a + ' é maior que ' + b + ' e ' + c);
 //  } else if (b > a && b > c) {
-//    console.log(b);
+//    console.log(b + ' é maior que ' + a + ' e ' + c);
 //  } else if (c > a && c > b) {
-//    console.log(c);
+//    console.log(c + ' é maior que ' + a + ' e ' + b);
 //  } else {
 //    console.log('os números são iguais')
 //  }
@@ -45,32 +45,20 @@
 //
 //  4)
 // 
-//  const a = 10;
-//  if (a > 0) {
-//    console.log('positive');
-//  } else if (a < 0) {
-//    console.log('negative');
-//  } else {
-//    console.log('zero');
-//  }
-//
+// const a = 10;
+// const b = 60;
+// const c = 10;
+// const triangulo = (a + b + c);
+// 
+// if ((a <= 0) || (b <= 0) || (c <= 0)) {
+  // console.log('Ângulo inválido!');
+// } else {
+  // triangulo === 180 ? console.log(true) : console.log(false)
+// }
+// 
 //
 //  5)
 //
-//  const a = 60;
-//  const b = 60;
-//  const c = 60;
-//  const soma = (a + b + c);
-//  const triangulo = true;
-//  if (soma == 180) {
-//    console.log(triangulo);
-//  } else {
-//    console.log(!triangulo);
-//  }
-//
-//
-//  6) 
-// 
 //  let peca = 'BIG';
 //  let convertPeca = peca.toLocaleLowerCase();
 //  console.log(convertPeca);
@@ -99,53 +87,7 @@
 //  }
 //
 //
-//  7)
-//
-//  > Porcentagem >= 90 -> A
-//  > Porcentagem >= 80 -> B
-//  > Porcentagem >= 70 -> C
-//  > Porcentagem >= 60 -> D
-//  > Porcentagem >= 50 -> E
-//  > Porcentagem < 50 -> F
-//  
-//  > O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
-//
-//  const grade = 149;
-//  if (grade < 0 || grade > 100) {
-//    console.log('Erro! Nota inválida!');
-//  } else if (grade >= 90) {
-//    console.log('A');
-//  } else if (grade >= 80) {
-//    console.log('B');
-//  } else if (grade >= 70) {
-//    console.log('C');
-//  } else if (grade >= 60) {
-//    console.log('D');
-//  } else if (grade >= 50) {
-//    console.log('E');
-//  } else {
-//    console.log('F');
-//  }
-//
-//
-//  8)
-//
-//  Bonus: use somente um if.
-//
-//  const a = 4;
-//  const b = 1;
-//  const c = 5;
-//  const even = true;
-//  if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
-//    console.log(even);
-//  } else {
-//    console.log(!even);
-//  }
-//
-//
-// 9)
-//
-//  Bonus: use somente um if .
+//  6)
 //
 //  const a = 7;
 //  const b = 6;
@@ -158,25 +100,8 @@
 //  }
 //
 //
-//  10)
-//  
-//  const valorCusto = -2;
-//  const valorVenda = 0;
-//  const impostoSobreOCusto = valorCusto * 0.20;
-//  let valorCustoTotal;
-//  let lucro;
-//  
-//  if (valorCusto < 0 || valorVenda < 0) {
-//    console.log('Erro! Valor inválido');
-//  } else {
-//    valorCustoTotal = valorCusto + impostoSobreOCusto;
-//    lucro = (valorVenda - valorCustoTotal) * 1000;
-//    console.log(lucro);
-//  }
+//  7)
 //
-//
-//  11) 
-//  
 //  let salarioBruto;
 //  let salarioComInss; 
 //  let irAliquota;
