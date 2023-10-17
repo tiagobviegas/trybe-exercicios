@@ -1,16 +1,9 @@
-
-* {
-  margin: 0px;
-  float: left;
-}
-
 .caixa {
   color: white;
   display: inline-block;
   line-height: 50px;
   text-align: center;
   vertical-align: top;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .width-and-height {
