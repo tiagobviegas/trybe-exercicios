@@ -6,30 +6,27 @@
 
 ## MÓDULO - FUNDAMENTOS
 
-### Seção 1 - Unix & Bash
-- [x] Dia 01: Unix & Bash - Parte 1
-- [x] Dia 02: Unix & Bash - Parte 2
+### Seção 1 - Unix, Shell e Git
+- [x] Dia 01: Unix & Shell - Parte 1
+- [x] Dia 02: Git - O que é e para que serve
+- [x] Dia 03: Git & GitHub - Entendendo os comandos
 
-### Seção 2 - Git $ GitHub
-- [x] Dia 01: Git - O que é e para que serve
-- [x] Dia 02: Git & GitHub - Entendendo os comandos
-
-### Seção 3 - Introdução à HTML $ CSS
+### Seção 2 - Introdução à HTML $ CSS
 - [x] Dia 01: HTML & CSS - Estruturas de página
 - [x] Dia 02: HTML & CSS - Primeiros passos em CSS
 - [x] Dia 03: HTML & CSS - Seletores e posicionamento
 - [x] Dia 04: HTML Semântico
 - [x] Dia 05: Projeto - Lessons Learned
 
-### Seção 4 - Introdução à JavaScript
-- [x] Dia 01: JavaScript - Primeiros passos
-- [x] Dia 02: JavaScript - Array e loop For
-- [x] Dia 03: JavaScript - Lógica de Programação e Algoritmos
-- [x] Dia 04: JavaScript - Objetos e funções
-- [x] Dia 05: JavaScript ES6 - let, const, arrow functions e template literals
-- [x] Dia 06: Projeto - Playground Functions
+### Seção 3 - Introdução à JavaScript
+- [x] Dia 01: Primeiros passos no JavaScript
+- [x] Dia 02: Array e Estrutura de Repetição
+- [x] Dia 03: Funções
+- [x] Dia 04: Objetos
+- [x] Dia 05: JSON e dia de prática
+- [ ] Dia 06: Projeto - Supermercado Pirilampo
 
-### Seção 5 - JavaScript - DOM, Eventos e Web Storage
+### Seção 4 - JavaScript - DOM, Eventos e Web Storage
 - [x] Dia 01: JavaScript - DOM e seletores
 - [x] Dia 02: JavaScript - Trabalhando com elementos
 - [x] Dia 03: JavaScript - Eventos
@@ -37,7 +34,7 @@
 - [x] Dia 05: Projeto - Arte com Pixels
 - [ ] Dia 06: Projetos Bônus
 
-### Seção 6 - HTML & CSS: Forms, Flexbox e Resposivo
+### Seção 5 - HTML & CSS: Forms, Flexbox e Resposivo
 - [x] Dia 01: HTML & CSS - Forms
 - [x] Dia 02: Bibliotecas JavaScript e Frameworks CSS
 - [x] Dia 03: CSS Flexbox - Parte 1
@@ -45,18 +42,18 @@
 - [x] Dia 05: CSS Responsivo - Mobile First
 - [x] Dia 06: Projeto - Trybewarts
 
-### Seção 7 - Introdução à JavaScript ES6 e Testes Unitários
-- [x] Dia 01: Fluxo de exceções e manipulação de objetos
+### Seção 6 - Introdução à JavaScript ES6 e Testes Unitários
+- [x] Dia 01: Fluxo de exceções
 - [x] Dia 02: Primeiros passos em Jest
 - [x] Dia 03: Matchers e cobertura de código
 - [x] Dia 04: Projeto - JavaScript Testes Unitários
 
-### Seção 8 - Higher Order Functions do JavaScript ES6
-- [x] Dia 01: Introdução a Higher Order Functions
-- [x] Dia 02: Higher Order Functions - sort e map
-- [x] Dia 03: Higher Order Functions - filter e reduce
-- [x] Dia 04: JavaScript ES6 - spread operator, rest parameters e object destructuring
-- [x] Dia 05: JavaScript ES6 - Array destructuring, Default destructuring, Object property shorthand e default parameters
+### Seção 7 - Métodos de Array
+- [x] Dia 01: Métodos de Array - map
+- [x] Dia 02: Métodos de Array - filter e sort
+- [x] Dia 03: Métodos de Array - find e forEach
+- [x] Dia 04: Métodos de Array - reduce
+- [x] Dia 05: Live Coding
 - [x] Dia 06: Projeto - Zoo functions
 
 ## MÓDULO - FRONT-END
