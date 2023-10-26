@@ -49,11 +49,11 @@
 - [x] Dia 04: Projeto - JavaScript Testes Unitários
 
 ### Seção 7 - Métodos de Array
-- [ ] Dia 01: Métodos de Array - map
-- [ ] Dia 02: Métodos de Array - filter e sort
-- [ ] Dia 03: Métodos de Array - find e forEach
-- [ ] Dia 04: Métodos de Array - reduce
-- [ ] Dia 05: Live Coding
+- [x] Dia 01: Métodos de Array - map
+- [x] Dia 02: Métodos de Array - filter e sort
+- [x] Dia 03: Métodos de Array - find e forEach
+- [x] Dia 04: Métodos de Array - reduce
+- [x] Dia 05: Live Coding
 - [x] Dia 06: Projeto - Zoo functions
 
 ## MÓDULO - FRONT-END
