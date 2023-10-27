@@ -11,7 +11,7 @@
 - [x] Dia 02: Git - O que é e para que serve
 - [x] Dia 03: Git & GitHub - Entendendo os comandos
 
-### Seção 2 - Introdução à HTML $ CSS
+### Seção 2 - Introdução à HTML e CSS
 - [x] Dia 01: HTML & CSS - Estruturas de página
 - [x] Dia 02: HTML & CSS - Primeiros passos em CSS
 - [x] Dia 03: HTML & CSS - Seletores e posicionamento
